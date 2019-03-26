@@ -1,0 +1,132 @@
+@font-face {
+  font-family: 'Gobold Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gobold Regular"), url("fonts/Gobold-Regular.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Gobold Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gobold Bold"), url("fonts/Gobold-Bold.woff") format("woff"); }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+a,
+a:hover,
+button,
+button:hover,
+.anime {
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+  cursor: pointer; }
+
+body {
+  padding: 3vw 6.35vw;
+  background-color: #fff;
+  font-family: 'Lato', sans-serif; }
+
+h1 {
+  font-family: 'Gobold Bold';
+  font-size: 8.99vmin;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase; }
+  h1 span {
+    font-size: 5.5vmin; }
+
+h2 {
+  font-family: 'Gobold Regular';
+  font-size: 3.35vmin;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase; }
+
+.align_center {
+  margin: 0 auto; }
+
+.double_items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap; }
+
+.column {
+  margin-right: 10vw; }
+  .column:last-child {
+    margin-right: 0; }
+  .column__item {
+    margin-bottom: 5vmin;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
+input[type='checkbox'] {
+  border: none;
+  background-color: transparent; }
+
+input[type='checkbox']:after {
+  line-height: 1.5em;
+  content: '';
+  display: inline-block;
+  width: 3vmin;
+  height: 3vmin;
+  margin-top: -0.67vmin;
+  margin-left: -0.67vmin;
+  border: 0.5vmin solid #000;
+  background: #fff; }
+
+input[type='checkbox']:checked:after {
+  width: 4vmin;
+  height: 4vmin;
+  background-color: #bb2832;
+  border: none; }
+
+label {
+  padding-left: 4vmin;
+  font-family: 'Gobold Regular';
+  font-size: 3.25vmin;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #000; }
+
+.page_title {
+  margin-top: 0;
+  margin-bottom: 5vw;
+  text-align: center;
+  color: #bb2832; }
+
+.animal_image {
+  width: 75.71vw;
+  height: 44.26vw;
+  margin-bottom: 3vmin; }
+  .animal_image img {
+    width: 100%;
+    height: 100%; }
+
+.description {
+  margin-bottom: 2vmin;
+  font-size: 4vmin; }
+
+.beef_types {
+  margin-bottom: 5vmin; }
+  .beef_types .beef_type {
+    margin-right: 0.5vmin; }
+    .beef_types .beef_type:last-child {
+      margin-right: 0; }
+    .beef_types .beef_type .type_name {
+      margin-bottom: 1vmin;
+      color: #bb2832; }
+      .beef_types .beef_type .type_name span {
+        text-transform: none; }
+    .beef_types .beef_type .type_kinds {
+      font-size: 3.25vmin;
+      line-height: 1.5;
+      color: #3c3c3c;
+      text-align: center; }

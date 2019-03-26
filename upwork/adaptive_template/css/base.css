@@ -1,0 +1,1349 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+a,
+a:hover,
+button,
+button:hover,
+.anime {
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+  cursor: pointer; }
+
+body {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  position: relative;
+  background-color: #f5f8fa;
+  font-family: 'Assistant', QlikView Sans, sans-serif !important;
+  font-size: 1.24vmax;
+  color: #707475; }
+
+.disable_page {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 101;
+  display: none;
+  background-color: rgba(213, 216, 219, 0.5); }
+
+.container {
+  width: 100%;
+  height: auto;
+  padding: 0 4.74vw; }
+
+.form_title {
+  width: 100%;
+  height: 4.5vw;
+  padding: 1.3vw;
+  background-color: #1da1f3;
+  font-size: 1.6vmax;
+  text-align: right;
+  color: #fff; }
+
+.button {
+  width: 11.44vw;
+  height: 3.06vw;
+  padding: 0;
+  background-color: #3689c2;
+  border-radius: 1.82vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.24vmax;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff; }
+  .button:hover {
+    text-decoration: underline; }
+
+.block_content .graph_2 {
+  width: 100%;
+  height: 9.84vw;
+  margin-bottom: 1.31vw;
+  margin-top: 1.82vw;
+  border: 1px solid #000; }
+
+.block_content .graph_3 {
+  width: 100%;
+  height: 13vw;
+  margin-bottom: 0.73vw;
+  margin-top: 2.19vw;
+  border: 1px solid #000; }
+
+.block_content .percentages_description,
+.block_content .sex_percentages_description {
+  width: 100%; }
+
+.block_content .sex_percentages_description {
+  margin-top: 2.19vw; }
+  .block_content .sex_percentages_description .item {
+    width: 50%; }
+    .block_content .sex_percentages_description .item_image {
+      width: 100%;
+      height: 15.09vw;
+      margin-bottom: 0.36vw;
+      position: relative; }
+      .block_content .sex_percentages_description .item_image .hide_block {
+        width: 100%;
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.9); }
+
+.block_content .item_image {
+  width: 3.64vw;
+  height: 3.28vw;
+  margin-bottom: 1.31vw; }
+  .block_content .item_image img {
+    width: 100%;
+    height: 100%; }
+
+.block_content .item_percent {
+  margin-bottom: 0.36vw; }
+
+.block_content .item_description {
+  font-size: 0.91vmax; }
+
+.how_often_they_visit_you .item_image {
+  margin-bottom: 0.36vw; }
+
+.graphs_row {
+  width: 100%;
+  height: auto; }
+
+.graph_block {
+  height: auto;
+  min-height: 15.67vw;
+  padding: 1.09vw 1.46vw;
+  margin-bottom: 2.19vw;
+  background-color: #fff;
+  -webkit-box-shadow: 5px 10px 25px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 10px 25px 0 rgba(0, 0, 0, 0.3); }
+  .graph_block .block_title {
+    margin-bottom: 1.31vw;
+    text-align: right; }
+  .graph_block.one_third {
+    width: 31%; }
+  .graph_block.one_half {
+    width: 48%; }
+  .graph_block.two_thirds {
+    width: 65%; }
+  .graph_block.full_width {
+    width: 100%; }
+
+.popup_header {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2.19vw; }
+  .popup_header .close_btn {
+    width: 1.31vw;
+    height: 1.31vw;
+    cursor: pointer; }
+    .popup_header .close_btn svg {
+      width: 100%;
+      height: 100%;
+      fill: #707475; }
+    .popup_header .close_btn .popup_title {
+      font-size: 1.9vmax;
+      text-align: right; }
+
+.popup_content .container {
+  padding: 0 15.67vw; }
+
+.switcher {
+  width: 4.74vw;
+  height: 1.09vw;
+  margin: 0 1.31vw;
+  display: inline-block;
+  position: relative; }
+  .switcher input {
+    opacity: 0;
+    width: 0;
+    height: 0; }
+    .switcher input:checked + .slider:before {
+      -webkit-transform: translateX(3.28vw);
+              transform: translateX(3.28vw); }
+  .switcher .slider {
+    width: 100%;
+    height: 0.73vw;
+    position: absolute;
+    background-color: #d5d8db;
+    border-radius: 0.36vw;
+    cursor: pointer;
+    -webkit-transition: .4s;
+    transition: .4s; }
+    .switcher .slider:before {
+      width: 2.19vw;
+      height: 2.19vw;
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: -0.73vw;
+      background-color: #1da1f3;
+      border-radius: 50%;
+      -webkit-transition: .4s;
+      transition: .4s; }
+
+.left_value.disabled,
+.right_value.disabled {
+  color: #b3b3b3; }
+
+.blue_font {
+  color: #3689c2; }
+
+.header_main {
+  width: 100%;
+  height: auto;
+  padding: 1.82vw 0 1.31vw 0;
+  background-color: #fff; }
+
+.header_mobile {
+  width: 100%;
+  height: auto;
+  margin-bottom: 3vw;
+  background-color: #f5f8fa;
+  display: none; }
+  .header_mobile .header_top {
+    width: 100%;
+    height: auto;
+    padding-bottom: 3vw;
+    background-color: #fff; }
+    .header_mobile .header_top .greetings {
+      margin-bottom: 0; }
+      .header_mobile .header_top .greetings img {
+        width: 13vw;
+        height: 13vw;
+        margin-right: 0; }
+    .header_mobile .header_top .calendar_picker .calendar_icon {
+      width: 6vw;
+      height: 6vw; }
+    .header_mobile .header_top .calendar_picker p {
+      font-size: 2.5vmax; }
+  .header_mobile .header_tabs {
+    width: 100%;
+    height: auto;
+    padding: 4.74vw 4.74vw 0 4.74vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: wrap-reverse;
+            flex-flow: wrap-reverse;
+    background-color: #fff; }
+    .header_mobile .header_tabs input {
+      display: none; }
+    .header_mobile .header_tabs label {
+      width: 20%;
+      margin-left: 3.28vw; }
+    .header_mobile .header_tabs input:checked + label {
+      padding-bottom: 2vw;
+      font-weight: 700;
+      color: #3689c2;
+      position: relative; }
+      .header_mobile .header_tabs input:checked + label:after {
+        width: 100%;
+        height: 3px;
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -0.73vw;
+        background-color: #3689c2; }
+    .header_mobile .header_tabs input:disabled + label {
+      color: #b3b3b3; }
+
+.greetings {
+  margin-bottom: 2.19vw;
+  font-size: 1.31vmax; }
+  .greetings img {
+    width: 5.47vw;
+    height: 5.47vw;
+    margin-right: 3.64vw; }
+
+.general_stat {
+  margin-bottom: 3.94vw; }
+  .general_stat .general_month_income {
+    margin-left: 1.82vw; }
+  .general_stat .item_description {
+    margin: 0 0.73vw 0 0; }
+  .general_stat .item_value {
+    font-size: 1.6vmax;
+    font-weight: 600;
+    color: #3689c2; }
+
+.calendar_picker .calendar_icon {
+  width: 2.19vw;
+  height: 2.19vw;
+  margin-right: 1.46vw;
+  cursor: pointer; }
+  .calendar_picker .calendar_icon img {
+    width: 100%;
+    height: 100%; }
+
+.calendar_picker #selected_date_range {
+  margin: 0;
+  font-size: 2.84vmax;
+  font-weight: 300; }
+
+.create_offer_block img,
+.advance_payments_block img {
+  width: 15.09vw;
+  height: 9.84vw;
+  margin-bottom: 0.73vw; }
+
+.create_offer_block .description,
+.advance_payments_block .description {
+  margin-top: 0;
+  margin-bottom: 0.73vw;
+  text-align: center; }
+
+#offer_saved {
+  width: 30vw;
+  height: auto;
+  position: fixed;
+  top: 20%;
+  right: calc( 50% - 7vw);
+  z-index: 102;
+  display: none;
+  background-color: #fff;
+  border-radius: 4px; }
+  #offer_saved .form_title {
+    height: 3vw; }
+  #offer_saved .form_content {
+    width: 100%;
+    height: auto;
+    padding: 2vw; }
+    #offer_saved .form_content .info_text {
+      margin-bottom: 3vw;
+      font-size: 1.6vmax;
+      text-align: center; }
+    #offer_saved .form_content #ok_btn {
+      width: 8vw;
+      height: 3vw;
+      margin: 0 auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      background-color: #1da1f3;
+      font-size: 1.6vmax;
+      color: #fff; }
+
+#offer_content {
+  width: 30vw;
+  height: auto;
+  position: fixed;
+  top: 20%;
+  right: calc( 50% - 15vw);
+  z-index: 102;
+  display: none;
+  background-color: #fff;
+  border-radius: 4px; }
+  #offer_content .form_title {
+    height: 5.5vw;
+    padding: 1vw;
+    text-align: center; }
+    #offer_content .form_title span {
+      font-size: 2vmax; }
+  #offer_content .form_content {
+    width: 100%;
+    height: auto;
+    padding: 2vw; }
+    #offer_content .form_content .buttons {
+      padding: 2vw 3vw; }
+    #offer_content .form_content #approve_btn,
+    #offer_content .form_content #cancel_btn {
+      width: 8vw;
+      height: 3vw;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      background-color: #1da1f3;
+      font-size: 1.6vmax;
+      color: #fff; }
+    #offer_content .form_content #cancel_btn {
+      background-color: transparent;
+      border: 1px solid #1da1f3;
+      color: #1da1f3; }
+
+#create_offer {
+  width: 90vw;
+  height: auto;
+  padding: 3vw;
+  position: fixed;
+  top: 2vh;
+  right: calc( 50% - 45vw);
+  z-index: 102;
+  display: none;
+  background-color: #fff;
+  border-radius: 4px; }
+
+.disable_page.open,
+#create_offer.open,
+#offer_content.open,
+#offer_saved.open {
+  display: block; }
+
+.create_offer__form {
+  margin-bottom: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .create_offer__form .offer_type_tabs {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-color: #3689c2; }
+    .create_offer__form .offer_type_tabs input {
+      display: none; }
+    .create_offer__form .offer_type_tabs label {
+      width: 31%;
+      height: 3vw;
+      padding: 1vw;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row nowrap;
+              flex-flow: row nowrap;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      position: relative;
+      z-index: 5;
+      cursor: pointer;
+      font-size: 1.31vmax;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.5); }
+    .create_offer__form .offer_type_tabs input:checked + label {
+      font-weight: 700;
+      color: #fff; }
+    .create_offer__form .offer_type_tabs .tabs_content {
+      width: 100%;
+      height: auto;
+      background-color: #fff; }
+    .create_offer__form .offer_type_tabs .steps_tabs {
+      margin: 1.5vw 0;
+      padding: 0.5vw;
+      background-color: #eff2f5;
+      border: 1px solid #1da1f3; }
+      .create_offer__form .offer_type_tabs .steps_tabs label {
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        color: #707475; }
+      .create_offer__form .offer_type_tabs .steps_tabs .row,
+      .create_offer__form .offer_type_tabs .steps_tabs .row_with_button {
+        width: 100%;
+        margin-bottom: 1vw;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        /* When button is active */ }
+        .create_offer__form .offer_type_tabs .steps_tabs .row_element,
+        .create_offer__form .offer_type_tabs .steps_tabs .row_with_button_element {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-flow: column nowrap;
+                  flex-flow: column nowrap;
+          -webkit-box-pack: start;
+              -ms-flex-pack: start;
+                  justify-content: flex-start;
+          -webkit-box-align: start;
+              -ms-flex-align: start;
+                  align-items: flex-start; }
+        .create_offer__form .offer_type_tabs .steps_tabs .row label,
+        .create_offer__form .offer_type_tabs .steps_tabs .row_with_button label {
+          width: auto;
+          margin-right: 0;
+          font-weight: 400; }
+        .create_offer__form .offer_type_tabs .steps_tabs .row input,
+        .create_offer__form .offer_type_tabs .steps_tabs .row_with_button input {
+          display: block;
+          background-color: transparent;
+          border: none;
+          border-bottom: 1px solid #d5d8db; }
+          .create_offer__form .offer_type_tabs .steps_tabs .row input.error,
+          .create_offer__form .offer_type_tabs .steps_tabs .row_with_button input.error {
+            color: #ed1c24; }
+        .create_offer__form .offer_type_tabs .steps_tabs .row .age_ranges,
+        .create_offer__form .offer_type_tabs .steps_tabs .row_with_button .age_ranges {
+          height: 2.5vw;
+          padding: 0.25vw 2vw;
+          background-color: transparent;
+          border: none;
+          border-bottom: 1px solid #d5d8db; }
+          .create_offer__form .offer_type_tabs .steps_tabs .row .age_ranges .button-text,
+          .create_offer__form .offer_type_tabs .steps_tabs .row_with_button .age_ranges .button-text {
+            font-weight: normal; }
+        .create_offer__form .offer_type_tabs .steps_tabs .row input[type="checkbox"] + label::before,
+        .create_offer__form .offer_type_tabs .steps_tabs .row_with_button input[type="checkbox"] + label::before {
+          /* Outer Circle of radio button */
+          width: 2vw;
+          height: 2vw;
+          margin-left: 0.5vw;
+          display: block;
+          content: ' ';
+          border: 1px solid #d5d8db;
+          -webkit-transition: border 0.15s ease-in-out;
+          transition: border 0.15s ease-in-out; }
+        .create_offer__form .offer_type_tabs .steps_tabs .row input[type="checkbox"] + label::after,
+        .create_offer__form .offer_type_tabs .steps_tabs .row_with_button input[type="checkbox"] + label::after {
+          /* Inner Circle of radio button */
+          width: 2vw;
+          height: 2vw;
+          -webkit-transform: scale(0.8);
+                  transform: scale(0.8);
+          display: block;
+          content: ' ';
+          position: absolute;
+          left: 3.9vw;
+          top: 0.47vw;
+          background: transparent;
+          border: 0px solid #80c242;
+          -webkit-transition: border 0.15s ease-in-out;
+          transition: border 0.15s ease-in-out; }
+        .create_offer__form .offer_type_tabs .steps_tabs .row input[type="checkbox"] + label::after,
+        .create_offer__form .offer_type_tabs .steps_tabs .row_with_button input[type="checkbox"] + label::after {
+          left: 4vw;
+          top: 0.51vw; }
+        .create_offer__form .offer_type_tabs .steps_tabs .row input[type="checkbox"]:last-of-type + label::after,
+        .create_offer__form .offer_type_tabs .steps_tabs .row_with_button input[type="checkbox"]:last-of-type + label::after {
+          right: 1.1vw; }
+        .create_offer__form .offer_type_tabs .steps_tabs .row input[type="checkbox"],
+        .create_offer__form .offer_type_tabs .steps_tabs .row_with_button input[type="checkbox"] {
+          display: none; }
+        .create_offer__form .offer_type_tabs .steps_tabs .row input[type="checkbox"]:checked + label::after,
+        .create_offer__form .offer_type_tabs .steps_tabs .row_with_button input[type="checkbox"]:checked + label::after {
+          background: #80c242; }
+        .create_offer__form .offer_type_tabs .steps_tabs .row #offer_start,
+        .create_offer__form .offer_type_tabs .steps_tabs .row #offer_end,
+        .create_offer__form .offer_type_tabs .steps_tabs .row_with_button #offer_start,
+        .create_offer__form .offer_type_tabs .steps_tabs .row_with_button #offer_end {
+          width: 8vw;
+          height: 2.5vw; }
+        .create_offer__form .offer_type_tabs .steps_tabs .row #percentage_picker,
+        .create_offer__form .offer_type_tabs .steps_tabs .row_with_button #percentage_picker {
+          width: 52%;
+          height: auto;
+          padding: 1vw 1vw 0 1vw;
+          position: absolute;
+          left: 10%;
+          bottom: 20%;
+          z-index: 200;
+          display: none;
+          background-color: #fff;
+          border: 1px solid #d5d8db; }
+          .create_offer__form .offer_type_tabs .steps_tabs .row #percentage_picker.open,
+          .create_offer__form .offer_type_tabs .steps_tabs .row_with_button #percentage_picker.open {
+            display: block; }
+          .create_offer__form .offer_type_tabs .steps_tabs .row #percentage_picker .percentage_values,
+          .create_offer__form .offer_type_tabs .steps_tabs .row_with_button #percentage_picker .percentage_values {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: reverse;
+                -ms-flex-direction: row-reverse;
+                    flex-direction: row-reverse;
+            -webkit-padding-start: 0;
+                    padding-inline-start: 0; }
+            .create_offer__form .offer_type_tabs .steps_tabs .row #percentage_picker .percentage_values .percentage_item,
+            .create_offer__form .offer_type_tabs .steps_tabs .row_with_button #percentage_picker .percentage_values .percentage_item {
+              margin-right: 1vw;
+              margin-bottom: 1vw;
+              list-style: none; }
+              .create_offer__form .offer_type_tabs .steps_tabs .row #percentage_picker .percentage_values .percentage_item:nth-child(4n),
+              .create_offer__form .offer_type_tabs .steps_tabs .row_with_button #percentage_picker .percentage_values .percentage_item:nth-child(4n) {
+                margin-right: 0; }
+              .create_offer__form .offer_type_tabs .steps_tabs .row #percentage_picker .percentage_values .percentage_item label,
+              .create_offer__form .offer_type_tabs .steps_tabs .row_with_button #percentage_picker .percentage_values .percentage_item label {
+                width: 4vw;
+                height: 4vw;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                    -ms-flex-flow: row nowrap;
+                        flex-flow: row nowrap;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                cursor: pointer;
+                border-radius: 50%; }
+                .create_offer__form .offer_type_tabs .steps_tabs .row #percentage_picker .percentage_values .percentage_item label:hover,
+                .create_offer__form .offer_type_tabs .steps_tabs .row_with_button #percentage_picker .percentage_values .percentage_item label:hover {
+                  background-color: #d5d8db; }
+                .create_offer__form .offer_type_tabs .steps_tabs .row #percentage_picker .percentage_values .percentage_item label:before, .create_offer__form .offer_type_tabs .steps_tabs .row #percentage_picker .percentage_values .percentage_item label:after,
+                .create_offer__form .offer_type_tabs .steps_tabs .row_with_button #percentage_picker .percentage_values .percentage_item label:before,
+                .create_offer__form .offer_type_tabs .steps_tabs .row_with_button #percentage_picker .percentage_values .percentage_item label:after {
+                  display: none; }
+              .create_offer__form .offer_type_tabs .steps_tabs .row #percentage_picker .percentage_values .percentage_item input[type="radio"],
+              .create_offer__form .offer_type_tabs .steps_tabs .row_with_button #percentage_picker .percentage_values .percentage_item input[type="radio"] {
+                display: none; }
+                .create_offer__form .offer_type_tabs .steps_tabs .row #percentage_picker .percentage_values .percentage_item input[type="radio"]:checked + label,
+                .create_offer__form .offer_type_tabs .steps_tabs .row_with_button #percentage_picker .percentage_values .percentage_item input[type="radio"]:checked + label {
+                  background-color: #1da1f3; }
+        .create_offer__form .offer_type_tabs .steps_tabs .row input[type="text"][disabled],
+        .create_offer__form .offer_type_tabs .steps_tabs .row_with_button input[type="text"][disabled] {
+          color: rgba(112, 116, 117, 0.5); }
+      .create_offer__form .offer_type_tabs .steps_tabs .row_with_button {
+        margin-bottom: 0;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end; }
+      .create_offer__form .offer_type_tabs .steps_tabs input:checked + label {
+        font-weight: 600;
+        color: #707475; }
+      .create_offer__form .offer_type_tabs .steps_tabs input:first-child + label {
+        background-color: #fff; }
+      .create_offer__form .offer_type_tabs .steps_tabs #continue_discount_btn,
+      .create_offer__form .offer_type_tabs .steps_tabs #continue_1plus1_offer_btn,
+      .create_offer__form .offer_type_tabs .steps_tabs #continue_purchase_btn {
+        width: 10vw;
+        height: 3vw;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        background-color: #d5d8db;
+        font-size: 1.6vmax;
+        color: #fff; }
+        .create_offer__form .offer_type_tabs .steps_tabs #continue_discount_btn:enabled,
+        .create_offer__form .offer_type_tabs .steps_tabs #continue_1plus1_offer_btn:enabled,
+        .create_offer__form .offer_type_tabs .steps_tabs #continue_purchase_btn:enabled {
+          background-color: #1da1f3; }
+    .create_offer__form .offer_type_tabs .steps_tabs input#tab_create_discount_step_1:checked ~ .steps_tabs_content #content_step_1,
+    .create_offer__form .offer_type_tabs .steps_tabs input#tab_create_discount_step_2:checked ~ .steps_tabs_content #content_step_2 {
+      background-color: #fff; }
+    .create_offer__form .offer_type_tabs .step_tab {
+      width: 50%;
+      height: auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: column nowrap;
+              flex-flow: column nowrap;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: start;
+      text-align: right; }
+      .create_offer__form .offer_type_tabs .step_tab .step_no {
+        width: 3vw;
+        height: 3vw;
+        margin-left: 1vw;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        border-radius: 1.5vw;
+        background-color: #80c242;
+        font-size: 2.5vmax;
+        color: #fff; }
+    .create_offer__form .offer_type_tabs .tab_content {
+      z-index: -100;
+      display: none; }
+  .create_offer__form .offer_type_tabs input#tab_create_discount:checked ~ .tabs_content #content_create_discount,
+  .create_offer__form .offer_type_tabs input#tab_create_1plus1_offer:checked ~ .tabs_content #content_create_1plus1_offer,
+  .create_offer__form .offer_type_tabs input#tab_create_purchase_offer:checked ~ .tabs_content #content_create_purchase_offer {
+    display: block;
+    z-index: 100; }
+  .create_offer__form .error_message {
+    margin-top: 1.5vw;
+    padding: 1vw;
+    position: absolute;
+    z-index: -1;
+    font-size: 0.85vmax;
+    color: #ed1c24;
+    display: none; }
+    .create_offer__form .error_message.open {
+      display: block; }
+
+#close_btn {
+  width: 2.25vw;
+  height: 2.25vw;
+  position: absolute;
+  top: 4vw;
+  left: 4vw;
+  fill: #fff;
+  cursor: pointer; }
+
+.home_page {
+  width: 100%;
+  height: auto;
+  padding-top: 4.74vw;
+  display: none; }
+  .home_page.open {
+    display: block; }
+  .home_page .container {
+    padding: 0 15.67vw; }
+
+.home_page_mobile {
+  display: none; }
+  .home_page_mobile.open {
+    display: block; }
+
+.customers_detailed_info,
+.customers_detailed_info_mobile {
+  width: 100%;
+  height: auto;
+  padding-top: 3.06vw;
+  display: none; }
+  .customers_detailed_info.open,
+  .customers_detailed_info_mobile.open {
+    display: block; }
+  .customers_detailed_info .tools_bar,
+  .customers_detailed_info_mobile .tools_bar {
+    width: 100%;
+    height: 3.28vw;
+    margin-bottom: 3.06vw;
+    border-bottom: 3px solid #f5f8fa;
+    -webkit-box-shadow: 5px 10px 25px 0 rgba(0, 0, 0, 0.3);
+            box-shadow: 5px 10px 25px 0 rgba(0, 0, 0, 0.3); }
+  .customers_detailed_info .settings_bar,
+  .customers_detailed_info_mobile .settings_bar {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.46vw; }
+    .customers_detailed_info .settings_bar .setting,
+    .customers_detailed_info_mobile .settings_bar .setting {
+      margin-left: 4.74vw; }
+      .customers_detailed_info .settings_bar .setting:last-child,
+      .customers_detailed_info_mobile .settings_bar .setting:last-child {
+        margin-left: 0; }
+      .customers_detailed_info .settings_bar .setting .title,
+      .customers_detailed_info_mobile .settings_bar .setting .title {
+        margin-bottom: 1.09vw; }
+    .customers_detailed_info .settings_bar .notes,
+    .customers_detailed_info_mobile .settings_bar .notes {
+      width: 3.64vw;
+      -webkit-appearance: none;
+         -moz-appearance: none;
+              appearance: none;
+      border: none;
+      color: #1da1f3;
+      background: url("../images/icons/arrow_down.svg") left center no-repeat;
+      background-size: 1.09vw 0.73vw;
+      font-size: 1.24vmax; }
+    .customers_detailed_info .settings_bar .club_members_switcher .switcher,
+    .customers_detailed_info_mobile .settings_bar .club_members_switcher .switcher {
+      -webkit-transform: scale(0.75);
+              transform: scale(0.75); }
+
+.products_detailed_info,
+.products_detailed_info_mobile {
+  width: 100%;
+  height: auto;
+  padding-top: 3.06vw;
+  display: none; }
+  .products_detailed_info.open,
+  .products_detailed_info_mobile.open {
+    display: block; }
+  .products_detailed_info .leading_amount_products_switcher .switcher,
+  .products_detailed_info .leading_quantity_products_switcher .switcher,
+  .products_detailed_info_mobile .leading_amount_products_switcher .switcher,
+  .products_detailed_info_mobile .leading_quantity_products_switcher .switcher {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75); }
+  .products_detailed_info .leading_amount_products_switcher span,
+  .products_detailed_info .leading_quantity_products_switcher span,
+  .products_detailed_info_mobile .leading_amount_products_switcher span,
+  .products_detailed_info_mobile .leading_quantity_products_switcher span {
+    font-size: 0.91vmax; }
+  .products_detailed_info .quantity_of_products,
+  .products_detailed_info .percent_of_total,
+  .products_detailed_info_mobile .quantity_of_products,
+  .products_detailed_info_mobile .percent_of_total {
+    margin-bottom: 0.73vw;
+    font-size: 0.91vmax; }
+  .products_detailed_info .quantity_of_products,
+  .products_detailed_info_mobile .quantity_of_products {
+    padding-right: 1.31vw;
+    position: relative; }
+    .products_detailed_info .quantity_of_products:before,
+    .products_detailed_info_mobile .quantity_of_products:before {
+      width: 0.73vw;
+      height: 0.73vw;
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 20;
+      background-color: #3689c2; }
+  .products_detailed_info .percent_of_total,
+  .products_detailed_info_mobile .percent_of_total {
+    padding-right: 1.31vw;
+    position: relative; }
+    .products_detailed_info .percent_of_total:before,
+    .products_detailed_info_mobile .percent_of_total:before {
+      width: 0.73vw;
+      height: 0.73vw;
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 20;
+      background-color: #707475;
+      border-radius: 50%; }
+  .products_detailed_info .descending_stars,
+  .products_detailed_info .immigrant_stars,
+  .products_detailed_info_mobile .descending_stars,
+  .products_detailed_info_mobile .immigrant_stars {
+    padding: 0 0.36vw;
+    border: 1px solid #707475;
+    border-radius: 0.36vw; }
+
+.percent_from_month_average {
+  color: #3689c2; }
+  .percent_from_month_average .incomes_sum {
+    margin-bottom: 1.82vw;
+    font-size: 2.84vmax;
+    font-weight: 600; }
+  .percent_from_month_average .incomes_indicator {
+    width: 11.44vw;
+    height: 2.19vw;
+    margin-bottom: 1.46vw;
+    padding: 1px;
+    position: relative;
+    border: 3px solid #3689c2;
+    border-radius: 1.09vw; }
+    .percent_from_month_average .incomes_indicator span {
+      display: block;
+      height: 100%;
+      left: 0;
+      background-color: #3689c2;
+      border-radius: 1.09vw; }
+  .percent_from_month_average #incomes_percentage {
+    font-size: 1.6vmax; }
+
+.average_market_incomes .item {
+  margin-right: 0.36vw;
+  margin-bottom: 2.19vw; }
+  .average_market_incomes .item:last-child {
+    margin-bottom: 0; }
+  .average_market_incomes .item_description {
+    font-size: 0.91vmax; }
+  .average_market_incomes .item_icon {
+    width: 3.28vw;
+    height: 3.06vw;
+    margin-left: 0.73vw; }
+    .average_market_incomes .item_icon img {
+      width: 100%;
+      height: 100%; }
+
+.average_market_incomes .graph_1 {
+  width: 20.04vw;
+  height: 13vw;
+  border: 1px solid #000; }
+
+.incomes_graph {
+  padding-bottom: 3.94vw; }
+  .incomes_graph .block_title {
+    margin-bottom: 6.2vw; }
+
+.show_clients_detailed_info {
+  cursor: pointer; }
+
+.customers_info_graph {
+  width: 100%;
+  height: auto; }
+  .customers_info_graph .how_much_they_spend,
+  .customers_info_graph .how_often_they_visit_you {
+    width: 45%;
+    height: auto;
+    margin-bottom: 1.46vw; }
+
+.surprising_month_products {
+  width: 100%;
+  height: auto; }
+  .surprising_month_products .block_content {
+    margin-top: 5.5vw; }
+  .surprising_month_products .item_image {
+    width: 3.28vw;
+    height: 5.47vw;
+    margin-bottom: 1.46vw; }
+    .surprising_month_products .item_image img {
+      width: 100%;
+      height: 100%; }
+  .surprising_month_products .item_description {
+    margin-bottom: 1.82vw;
+    font-size: 0.91vmax; }
+  .surprising_month_products .item_product_name {
+    margin-bottom: 0.73vw;
+    font-size: 1.6vmax;
+    font-weight: 700; }
+  .surprising_month_products .item_percentage {
+    margin-bottom: 2.19vw; }
+    .surprising_month_products .item_percentage .arrow_down,
+    .surprising_month_products .item_percentage .arrow_up {
+      width: 1vw;
+      height: 1.5vw; }
+      .surprising_month_products .item_percentage .arrow_down svg,
+      .surprising_month_products .item_percentage .arrow_up svg {
+        width: 100%;
+        height: 100%; }
+    .surprising_month_products .item_percentage .arrow_up {
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg); }
+    .surprising_month_products .item_percentage .percentage {
+      font-size: 1.6vmax; }
+  .surprising_month_products .show_products_detailed_info {
+    cursor: pointer; }
+
+.receipts_dividing_graph {
+  width: 100%;
+  height: auto; }
+  .receipts_dividing_graph .block_title {
+    margin-bottom: 4.74vw; }
+  .receipts_dividing_graph .graph_4 {
+    width: 90%;
+    height: 10.57vw;
+    margin-bottom: 2.19vw;
+    border: 1px solid #000; }
+
+.do_they_use_digital_devices {
+  width: 100%;
+  height: 100%; }
+  .do_they_use_digital_devices .block_content {
+    margin-top: 1.82vw; }
+    .do_they_use_digital_devices .block_content .item {
+      margin-bottom: 1.46vw; }
+      .do_they_use_digital_devices .block_content .item_image {
+        width: 3.06vw;
+        height: 2.55vw;
+        margin-left: 2.55vw;
+        margin-bottom: 0; }
+        .do_they_use_digital_devices .block_content .item_image img {
+          width: auto;
+          height: 100%;
+          margin: 0 auto; }
+      .do_they_use_digital_devices .block_content .item_percentage {
+        margin-left: 3.06vw;
+        font-size: 1.6vmax;
+        font-weight: 700;
+        color: #707475; }
+      .do_they_use_digital_devices .block_content .item_description {
+        font-size: 0.91vmax; }
+
+.tabs_with_graphs,
+.tabs_with_graphs_mobile {
+  width: 100%;
+  height: auto; }
+  .tabs_with_graphs input,
+  .tabs_with_graphs_mobile input {
+    display: none; }
+  .tabs_with_graphs label,
+  .tabs_with_graphs_mobile label {
+    margin-left: 3.28vw; }
+  .tabs_with_graphs input:checked + label,
+  .tabs_with_graphs_mobile input:checked + label {
+    font-weight: 700;
+    color: #3689c2;
+    position: relative; }
+    .tabs_with_graphs input:checked + label:after,
+    .tabs_with_graphs_mobile input:checked + label:after {
+      width: 100%;
+      height: 3px;
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -0.73vw;
+      background-color: #3689c2; }
+  .tabs_with_graphs .tabs_content,
+  .tabs_with_graphs_mobile .tabs_content {
+    width: 100%;
+    height: auto; }
+  .tabs_with_graphs .tab_content,
+  .tabs_with_graphs_mobile .tab_content {
+    z-index: -100;
+    display: none; }
+  .tabs_with_graphs .graph_6,
+  .tabs_with_graphs_mobile .graph_6 {
+    width: 100%;
+    height: 15.67vw;
+    margin: 1.46vw auto 0.73vw;
+    border: 1px solid #000; }
+
+.tabs_with_graphs_mobile {
+  display: none; }
+
+.tabs_with_graphs input#tab_total_sales_graph:checked ~ .tabs_content #content_total_sales_graph,
+.tabs_with_graphs input#tab_products_qty_graph:checked ~ .tabs_content #content_products_qty_graph,
+.tabs_with_graphs input#tab_transactions_qty_graph:checked ~ .tabs_content #content_transactions_qty_graph,
+.tabs_with_graphs input#tab_how_much_you_spend_graph:checked ~ .tabs_content #content_how_much_you_spend_graph,
+.tabs_with_graphs input#tab_how_many_visitors_graph:checked ~ .tabs_content #content_how_many_visitors_graph,
+.tabs_with_graphs input#tab_average_deal_graph:checked ~ .tabs_content #content_average_deal_graph {
+  display: block;
+  z-index: 100; }
+
+.tabs_with_graphs_mobile input#tab_total_sales_mobile_graph:checked ~ .tabs_content #content_total_sales_mobile_graph,
+.tabs_with_graphs_mobile input#tab_products_qty_mobile_graph:checked ~ .tabs_content #content_products_qty_mobile_graph,
+.tabs_with_graphs_mobile input#tab_transactions_qty_mobile_graph:checked ~ .tabs_content #content_transactions_qty_mobile_graph,
+.tabs_with_graphs_mobile input#tab_how_much_you_spend_mobile_graph:checked ~ .tabs_content #content_how_much_you_spend_mobile_graph,
+.tabs_with_graphs_mobile input#tab_how_many_visitors_mobile_graph:checked ~ .tabs_content #content_how_many_visitors_mobile_graph,
+.tabs_with_graphs_mobile input#tab_average_deal_mobile_graph:checked ~ .tabs_content #content_average_deal_mobile_graph {
+  display: block;
+  z-index: 100; }
+
+.footer_main {
+  width: 100vw;
+  height: 22.5vw;
+  margin-top: -5vw; }
+  .footer_main img {
+    width: 100%;
+    height: 100%; }
+
+@media all and (max-width: 1024px) {
+  body {
+    font-size: 1.5vmax; }
+  .button {
+    font-size: 1.35vmax; }
+  .general_stat .item_value {
+    font-size: 2.5vmax; }
+  .incomes_graph .average_market_incomes .item_description {
+    font-size: 1.25vmax; }
+  .surprising_month_products .item_description {
+    font-size: 1.25vmax; }
+  .customers_info_graph .block_content .item_description {
+    font-size: 1vmax; } }
+
+@media all and (max-width: 768px) {
+  body {
+    font-size: 2vmin; }
+  .header_main .container {
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse; }
+    .header_main .container .greetings {
+      font-size: 2vmin; }
+    .header_main .container .left_part,
+    .header_main .container .right_part {
+      width: 100%; }
+    .header_main .container .left_part {
+      margin-bottom: 3vw; }
+      .header_main .container .left_part .general_stat {
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start; }
+    .header_main .container .right_part {
+      -ms-flex-pack: distribute;
+          justify-content: space-around; }
+  .home_page .container {
+    padding: 0 4vw; }
+  .button {
+    width: 20vw;
+    height: 4vw;
+    margin-bottom: 3vw;
+    font-size: 2.25vmin; }
+  .general_stat .item_value {
+    font-size: 3.75vmin; }
+  .incomes_graph .percent_from_month_average .incomes_sum {
+    font-size: 5vmin; }
+  .incomes_graph .percent_from_month_average .incomes_indicator {
+    width: 20vmin;
+    height: 4vmin;
+    border-radius: 2vw; }
+  .incomes_graph .percent_from_month_average #incomes_percentage {
+    font-size: 2.75vmin; }
+  .incomes_graph .average_market_incomes .graph_1 {
+    width: 30vw;
+    height: 15vw; }
+  .incomes_graph .average_market_incomes .item {
+    margin-right: 1.5vmin; }
+  .incomes_graph .average_market_incomes .item_icon {
+    margin-left: 2vmin;
+    -webkit-transform: scale(1.35);
+            transform: scale(1.35); }
+  .incomes_graph .average_market_incomes .item_description {
+    font-size: 2vmin; }
+  .surprising_month_products {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2; }
+    .surprising_month_products .item_image {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5); }
+    .surprising_month_products .item_percentage .arrow_up {
+      -webkit-transform: scale(2) rotate(180deg);
+              transform: scale(2) rotate(180deg); }
+    .surprising_month_products .arrow_down {
+      -webkit-transform: scale(2);
+              transform: scale(2); }
+    .surprising_month_products .item_description {
+      font-size: 1.75vmin; }
+    .surprising_month_products .item_product_name {
+      font-size: 2.6vmin; }
+  .customers_info_graph {
+    width: 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1; }
+    .customers_info_graph .block_content .item_image {
+      -webkit-transform: scale(1.25);
+              transform: scale(1.25); }
+    .customers_info_graph .block_content .item_description {
+      font-size: 2vmin; }
+  .receipts_dividing_graph {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3; }
+  .tabs_with_graphs {
+    width: 100%;
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4; } }
+
+@media all and (max-width: 550px) {
+  body {
+    font-size: 3.25vmin; }
+  .graph_block {
+    padding: 2vw;
+    margin-bottom: 5vw; }
+    .graph_block .block_title {
+      margin-bottom: 5vw;
+      font-size: 4.75vmin; }
+  .block_content .item_description {
+    font-size: 2.91vmin; }
+  .header_main {
+    display: none; }
+  .header_mobile {
+    display: block; }
+    .header_mobile .calendar_picker #selected_date_range {
+      font-size: 6.5vmin; }
+    .header_mobile .header_buttons_block {
+      width: 100%;
+      height: auto;
+      margin-bottom: 5vw; }
+      .header_mobile .header_buttons_block .advance_payments_block,
+      .header_mobile .header_buttons_block .create_offer_block {
+        width: 50%; }
+        .header_mobile .header_buttons_block .advance_payments_block img,
+        .header_mobile .header_buttons_block .create_offer_block img {
+          width: 90%;
+          height: auto; }
+        .header_mobile .header_buttons_block .advance_payments_block .description,
+        .header_mobile .header_buttons_block .create_offer_block .description {
+          margin-bottom: 3vw; }
+        .header_mobile .header_buttons_block .advance_payments_block .button,
+        .header_mobile .header_buttons_block .create_offer_block .button {
+          width: 90%;
+          height: 7vw;
+          font-size: 3.5vmin; }
+    .header_mobile .general_stat {
+      margin-bottom: 5vw;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .header_mobile .general_stat .general_year_income,
+      .header_mobile .general_stat .general_month_income {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; }
+        .header_mobile .general_stat .general_year_income .item_value,
+        .header_mobile .general_stat .general_month_income .item_value {
+          margin-bottom: 1vw;
+          font-size: 4.75vmin; }
+        .header_mobile .general_stat .general_year_income .item_description,
+        .header_mobile .general_stat .general_month_income .item_description {
+          margin-right: 0; }
+      .header_mobile .general_stat .general_year_income {
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end; }
+  .graph_block {
+    padding: 2vw; }
+  .percent_from_month_average {
+    padding: 10vw 0; }
+    .percent_from_month_average .incomes_sum {
+      margin-bottom: 3vw;
+      font-size: 9vmin; }
+    .percent_from_month_average .incomes_indicator {
+      width: 40vw;
+      height: 6vw;
+      margin-bottom: 5vw;
+      border-radius: 3vw; }
+      .percent_from_month_average .incomes_indicator span {
+        height: 100%;
+        border-radius: 3vw; }
+    .percent_from_month_average #incomes_percentage {
+      font-size: 5.5vmin; }
+  .average_market_incomes {
+    display: none; }
+  .average_market_incomes_mobile {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    display: block; }
+    .average_market_incomes_mobile .graph_1 {
+      width: 100%;
+      height: 35vw;
+      margin-bottom: 3vw;
+      border: 1px solid #000; }
+    .average_market_incomes_mobile .bottom_part {
+      margin-bottom: 3vw; }
+  .how_often_they_visit_you,
+  .how_much_they_spend {
+    width: 90%;
+    height: auto;
+    margin: 0 auto; }
+    .how_often_they_visit_you .graph_3,
+    .how_often_they_visit_you .graph_2,
+    .how_much_they_spend .graph_3,
+    .how_much_they_spend .graph_2 {
+      width: 100%;
+      height: 35vw;
+      margin-bottom: 3vw; }
+    .how_often_they_visit_you .percentages_description,
+    .how_much_they_spend .percentages_description {
+      margin-bottom: 3vw; }
+      .how_often_they_visit_you .percentages_description .item_image,
+      .how_much_they_spend .percentages_description .item_image {
+        width: 10vw;
+        height: 9vw; }
+  .surprising_month_products {
+    width: 90%;
+    height: auto;
+    margin: 0 auto; }
+    .surprising_month_products .block_content {
+      margin-top: 10vw;
+      margin-bottom: 3vw; }
+    .surprising_month_products .item_image {
+      width: 6.5vw;
+      height: 11.5vw;
+      margin-bottom: 6.5vw; }
+    .surprising_month_products .item_product_name {
+      font-size: 4.5vmin; }
+    .surprising_month_products .item_percentage .percentage {
+      font-size: 4vmin; }
+    .surprising_month_products .item_percentage .arrow_up,
+    .surprising_month_products .item_percentage .arrow_down {
+      width: 2vw;
+      height: 3vw; }
+  .receipts_dividing_graph {
+    width: 90%;
+    height: auto;
+    margin: 0 auto; }
+    .receipts_dividing_graph .graph_4 {
+      width: 100%;
+      height: 45vw;
+      margin-bottom: 3vw; }
+  .tabs_with_graphs,
+  .tabs_with_graphs_2 {
+    display: none; }
+  .tabs_with_graphs_mobile,
+  .tabs_with_graphs_mobile_2 {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    display: block; }
+    .tabs_with_graphs_mobile label,
+    .tabs_with_graphs_mobile_2 label {
+      padding-bottom: 1vw;
+      font-size: 2.75vmin; }
+    .tabs_with_graphs_mobile .tabs_content,
+    .tabs_with_graphs_mobile_2 .tabs_content {
+      margin-top: 5vw;
+      margin-bottom: 3vw; }
+    .tabs_with_graphs_mobile .graph_6,
+    .tabs_with_graphs_mobile_2 .graph_6 {
+      height: 40vw; }
+  .popup_header {
+    margin-bottom: 5vw; }
+    .popup_header .close_btn {
+      width: 4vw;
+      height: 4vw; }
+    .popup_header .popup_title {
+      font-size: 4.25vmin; }
+  .popup_content .container {
+    padding: 0 4.74vw; }
+  .popup_content .tools_bar {
+    height: 7vw;
+    margin-bottom: 5vw; }
+  .popup_content .settings_bar {
+    margin-bottom: 5vw;
+    font-size: 3.5vmin; }
+    .popup_content .settings_bar .notes {
+      width: 9.64vw;
+      background-size: 3vw 1.75vw; }
+  .popup_content .sex_percentages_description {
+    margin-bottom: 5vw; }
+    .popup_content .sex_percentages_description .item_image {
+      height: 35vw;
+      margin-bottom: 5vw; }
+    .popup_content .sex_percentages_description .item_percent {
+      margin-bottom: 2vw;
+      font-size: 5vmin; }
+  .popup_content .graph_2 {
+    height: 35vw; }
+  .popup_content .do_they_use_digital_devices .block_content {
+    margin: 0 auto 5vw; }
+    .popup_content .do_they_use_digital_devices .block_content .item {
+      margin: 0 auto; }
+    .popup_content .do_they_use_digital_devices .block_content .item_image {
+      width: 10vw;
+      height: 10vw;
+      margin-left: 15vw; }
+    .popup_content .do_they_use_digital_devices .block_content .item_percentage {
+      margin-left: 15vw;
+      font-size: 5vmin; }
+    .popup_content .do_they_use_digital_devices .block_content .item_description {
+      font-size: 3vmin; } }
+

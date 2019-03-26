@@ -1,0 +1,7 @@
+{
+  "offer_min_date": "13/01/19",
+  "error_field_is_required": "It's a mandatory field. Please fill it",
+  "error_field_should_be_number": "Value should be a number",
+  "error_field_min_value": "Value couldn't be less than ",
+  "error_should_be_greater": "should be greater than"
+}

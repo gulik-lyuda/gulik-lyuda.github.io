@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Catalog Page</title>
+
+    <!-- Connect our stylesheets -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/vendors/slick.css">
+    <link rel="stylesheet" href="css/vendors/slick-theme.css">
+    <link rel="stylesheet" href="css/general-flex-css.css">
+    <link rel="stylesheet" href="css/base.css">
+    <!-- Add favicon -->
+    <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon" />
+    <!-- Add fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+    <!-- Additional library for using media queries for IE 8.0 and less -->
+    <script type="text/javascript" src="js/vendors/respond.min.js"></script>
+</head>
+
+<body>
+    <div class="disable_page"></div>
+    <!-- end of .disable_page -->
+
+    <!-- Search Panel for mobile devices -->
+    <div id="search_panel">
+        <form class="search_keyword
+                     main_flex__nowrap
+                     flex__jcontent_between
+                     flex__align-items_center" method="post" action="/search-our-site.cfm">
+
+            <input name="searchpart" type="text" />
+            <input type="submit" value="Search Keyword" class="button" />
+
+        </form>
+        <!-- end of .search_keyword -->
+
+        <form class="search_part_no
+                    main_flex__nowrap
+                    flex__jcontent_between
+                    flex__align-items_center" method="post" action="/search-our-site.cfm">
+
+            <input name="searchkeyword" type="text" />
+            <input type="submit" value="Search Part No." class="button" />
+
+        </form>
+        <!-- end of .search_part_no -->
+    </div>
+    <!-- end of Search Panel for mobile devices -->
+
+    <div class="container">
+
+        <header class="header">
+
+            <div class="header__top
+                        main_flex__nowrap
+                        flex__jcontent_between
+                        flex__align-items_center">
+
+                <div class="left_part
+                            main_flex__nowrap
+                            flex__jcontent_between
+                            flex__align-items_center">
+
+                    <div class="logo
+                                main_flex__nowrap
+                                flex__jcontent_center
+                                flex__align-items_center">
+                        <a href="#">
+                            <img src="images/icons/logo.png" alt="Logo Image">
+                        </a>
+                    </div>
+                    <!-- end of .logo -->
+
+                    <div class="phones
+                                main_flex__nowrap
+                                flex__jcontent_between
+                                flex__align-items_start">
+
+                        <div class="phones__top">
+                            <a href="tel:1-888-688-2188">
+                                1 888-688-2188
+                            </a>
+                        </div>
+                        <!-- end of .phones__top -->
+
+                        <div class="phones__bottom">
+                            <p>
+                                1 (727) 209-1300 | Mon-Fri 9a-5p ET
+                            </p>
+                        </div>
+                        <!-- end of .phones__bottom -->
+                    </div>
+                    <!-- end of .phones -->
+                </div>
+                <!-- end of .left_part -->
+
+                <div class="mobile_buttons
+                            main_flex__nowrap
+                            flex__jcontent_between
+                            flex__align-items_center">
+
+                    <div id="search_btn" class="button
+                                main_flex__nowrap
+                                flex__jcontent_center
+                                flex__align-items_center">
+
+                        <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30.239 30.239"
+                            style="enable-background:new 0 0 30.239 30.239;" xml:space="preserve">
+                            <path d="M20.194,3.46c-4.613-4.613-12.121-4.613-16.734,0c-4.612,4.614-4.612,12.121,0,16.735
+                                c4.108,4.107,10.506,4.547,15.116,1.34c0.097,0.459,0.319,0.897,0.676,1.254l6.718,6.718c0.979,0.977,2.561,0.977,3.535,0
+                                c0.978-0.978,0.978-2.56,0-3.535l-6.718-6.72c-0.355-0.354-0.794-0.577-1.253-0.674C24.743,13.967,24.303,7.57,20.194,3.46z
+                                M18.073,18.074c-3.444,3.444-9.049,3.444-12.492,0c-3.442-3.444-3.442-9.048,0-12.492c3.443-3.443,9.048-3.443,12.492,0
+                                C21.517,9.026,21.517,14.63,18.073,18.074z" />
+                        </svg>
+                    </div>
+
+                    <div class="cart_btn 
+                                button">
+
+                        <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 44.16 44.16"
+                            style="enable-background:new 0 0 44.16 44.16;" xml:space="preserve">
+                            <path d="M44.16,6.6H11.592L10.66,1.179H2.408C1.076,1.179,0,2.257,0,3.588v2.408h6.602l4.248,24.709
+                                c0.094,0.544,0.617,0.985,1.17,0.985h28.527c1.332,0,2.41-1.077,2.41-2.411v-2.406H15.078l-0.587-3.414h22.042
+                                c2.66,0,5.172-2.128,5.611-4.75L44.16,6.6z" />
+                            <circle cx="19.47" cy="38.817" r="4.165" />
+                            <path d="M29.762,38.816c0,2.299,1.863,4.164,4.162,4.164c2.301,0,4.168-1.865,4.168-4.164
+                                c0-2.299-1.867-4.166-4.168-4.166C31.625,34.65,29.762,36.518,29.762,38.816z" />
+                        </svg>
+
+                    </div>
+
+                    <div id="hamburger_menu_btn" class="button
+                                                        main_flex__nowrap
+                                                        flex__jcontent_center
+                                                        flex__align-items_center">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+                <div class="right_part
+                            main_flex__nowrap
+                            flex__jcontent_between
+                            flex__align-items_center
+                            flex__align-content_center">
+
+                    <form class="search_keyword" method="post" action="/search-our-site.cfm">
+                        <input name="searchpart" type="text" />
+                        <input type="submit" value="Search Keyword" class="button" />
+                    </form>
+                    <!-- end of .search_keyword -->
+
+                    <form class="search_part_no" method="post" action="/search-our-site.cfm">
+                        <input name="searchkeyword" type="text" />
+                        <input type="submit" value="Search Part No." class="button" />
+                    </form>
+                    <!-- end of .search_part_no -->
+
+                    <a href="https://secure.usbgear.com/viewcart.php" class="button
+                            main_flex__nowrap
+                            flex__jcontent_center
+                            flex__align-items_center" id="cart_button" rel="nofollow">
+
+                        <div class="cart_icon">
+                            <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 44.16 44.16"
+                                style="enable-background:new 0 0 44.16 44.16;" xml:space="preserve">
+                                <path style="fill:#010002;" d="M44.16,6.6H11.592L10.66,1.179H2.408C1.076,1.179,0,2.257,0,3.588v2.408h6.602l4.248,24.709
+                                    c0.094,0.544,0.617,0.985,1.17,0.985h28.527c1.332,0,2.41-1.077,2.41-2.411v-2.406H15.078l-0.587-3.414h22.042
+                                    c2.66,0,5.172-2.128,5.611-4.75L44.16,6.6z" />
+                                <circle style="fill:#010002;" cx="19.47" cy="38.817" r="4.165" />
+                                <path style="fill:#010002;" d="M29.762,38.816c0,2.299,1.863,4.164,4.162,4.164c2.301,0,4.168-1.865,4.168-4.164
+                                    c0-2.299-1.867-4.166-4.168-4.166C31.625,34.65,29.762,36.518,29.762,38.816z" />
+                            </svg>
+                        </div>
+
+                        (
+                        <span id="cic">0</span>) Cart
+
+                    </a>
+                    <!-- end of #cart_button -->
+
+                </div>
+                <!-- end of .right_part -->
+            </div>
+            <!-- end of .header__top -->
+
+            <nav class="main_menu">
+                <ul class="main_flex__nowrap
+                           flex__jcontent_between
+                           flex__align-items_center">
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="company.html">Company/Contact</a>
+                    </li>
+                    <li>
+                        <a href="search.html">Search</a>
+                    </li>
+                    <li>
+                        <a href="security.html">Security</a>
+                    </li>
+                    <li>
+                        <a href="privacy_policy.html">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="terms.html">Terms/Conditions</a>
+                    </li>
+                    <li>
+                        <a href="rma.html">Returns/RMA</a>
+                    </li>
+                    <li>
+                        <a href="presale.html">Pre-Sale Information</a>
+                    </li>
+                    <li>
+                        <a href="press.html">Press</a>
+                    </li>
+                    <li>
+                        <a href="downloads.html">Downloads</a>
+                    </li>
+                    <li>
+                        <a href="gethelp.cfm">Help</a>
+                    </li>
+
+                </ul>
+            </nav>
+            <!-- end of .main_menu -->
+
+            <nav class="bread_crumbs">
+                <a href="index.html">Home</a> / USB Adapters
+            </nav>
+            <!-- end of .bread_crumbs -->
+
+        </header>
+        <!-- end of .header -->
+
+        <div class="wrapper
+                    main_flex__nowrap
+                    flex__jcontent_start">
+
+            <aside class="left_menu">
+
+                <nav class="usb_gear_products_menu">
+                    <h2 class="nav_title">USBGear Products</h2>
+
+                    <div class="nav_content">
+                        <section>
+                            <div class="main_item
+                                        main_flex__nowrap
+                                        flex__jcontent_between
+                                        flex__align-items_center">
+
+                                <a href="#">C-Type USB</a>
+
+                                <div class="open_submenu_btn">
+                                    <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 451.847 451.847"
+                                        style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                        <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                                            c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                                            c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"
+                                        />
+                                    </svg>
+                                </div>
+
+                            </div>
+                            <!-- end of .main_item -->
+
+                            <ul class="submenu_items">
+                                <li>
+                                    <a href="#item_1_submenu1" class="submenu_item">Subitem 1</a>
+                                </li>
+                                <li>
+                                    <a href="#item_1_submenu2" class="submenu_item">Subitem 2</a>
+                                </li>
+                                <li>
+                                    <a href="#item_1_submenu3" class="submenu_item">Subitem 3</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <!-- end of Main Item 1 -->
+
+                        <section id="item_2">
+                            <div class="main_item
+                                        main_flex__nowrap
+                                        flex__jcontent_between
+                                        flex__align-items_center">
+
+                                <a href="#">Multiport USB Chargers</a>
+
+                                <div class="open_submenu_btn">
+                                    <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 451.847 451.847"
+                                        style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                        <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                                            c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                                            c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"
+                                        />
+                                    </svg>
+                                </div>
+
+                            </div>
+                            <!-- end of .main_item -->
+
+                            <ul class="submenu_items">
+                                <li>
+                                    <a href="#item_2_submenu1" class="submenu_item">Subitem 1</a>
+                                </li>
+                                <li>
+                                    <a href="#item_2_submenu2" class="submenu_item">Subitem 2</a>
+                                </li>
+                                <li>
+                                    <a href="#item_2_submenu3" class="submenu_item">Subitem 3</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <!-- end of #item_2 -->
+
+                        <section id="item_3">
+                            <div class="main_item
+                                        main_flex__nowrap
+                                        flex__jcontent_between
+                                        flex__align-items_center">
+
+                                <a href="#">Screw Lock USB</a>
+
+                                <div class="open_submenu_btn">
+                                    <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 451.847 451.847"
+                                        style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                        <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                                            c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                                            c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- end of .main_item -->
+
+                            <ul class="submenu_items">
+                                <li>
+                                    <a href="#item_3_submenu1" class="submenu_item">Subitem 1</a>
+                                </li>
+                                <li>
+                                    <a href="#item_3_submenu2" class="submenu_item">Subitem 2</a>
+                                </li>
+                                <li>
+                                    <a href="#item_3_submenu3" class="submenu_item">Subitem 3</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <!-- end of #item_3 -->
+
+                        <section id="item_4">
+                            <div class="main_item
+                                        main_flex__nowrap
+                                        flex__jcontent_between
+                                        flex__align-items_center">
+
+                                <a href="#">USB 2 Products</a>
+
+                                <div class="open_submenu_btn">
+                                    <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 451.847 451.847"
+                                        style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                        <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                                            c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                                            c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- end of .main_item -->
+
+                            <ul class="submenu_items">
+                                <li>
+                                    <a href="#item_4_submenu1" class="submenu_item">Subitem 1</a>
+                                </li>
+                                <li>
+                                    <a href="#item_4_submenu2" class="submenu_item">Subitem 2</a>
+                                </li>
+                                <li>
+                                    <a href="#item_4_submenu3" class="submenu_item">Subitem 3</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <!-- end of #item_4 -->
+
+                        <section id="item_5">
+                            <div class="main_item
+                                        main_flex__nowrap
+                                        flex__jcontent_between
+                                        flex__align-items_center">
+
+                                <a href="#">USB 3.0</a>
+
+                                <div class="open_submenu_btn">
+                                    <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 451.847 451.847"
+                                        style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                        <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                                            c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                                            c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- end of .main_item -->
+
+                            <ul class="submenu_items">
+                                <li>
+                                    <a href="#item_5_submenu1" class="submenu_item">Subitem 1</a>
+                                </li>
+                                <li>
+                                    <a href="#item_5_submenu2" class="submenu_item">Subitem 2</a>
+                                </li>
+                                <li>
+                                    <a href="#item_5_submenu3" class="submenu_item">Subitem 3</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <!-- end of #item_5 -->
+
+                        <section id="item_6">
+                            <div class="main_item
+                                        main_flex__nowrap
+                                        flex__jcontent_between
+                                        flex__align-items_center">
+
+                                <a href="#">USB 3.0 Cable</a>
+
+                                <div class="open_submenu_btn">
+                                    <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 451.847 451.847"
+                                        style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                        <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                                            c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                                            c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- end of .main_item -->
+
+                            <ul class="submenu_items">
+                                <li>
+                                    <a href="#item_6_submenu1" class="submenu_item">Subitem 1</a>
+                                </li>
+                                <li>
+                                    <a href="#item_6_submenu2" class="submenu_item">Subitem 2</a>
+                                </li>
+                                <li>
+                                    <a href="#item_6_submenu3" class="submenu_item">Subitem 3</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <!-- end of #item_6 -->
+
+                        <section id="item_7">
+                            <div class="main_item
+                                        main_flex__nowrap
+                                        flex__jcontent_between
+                                        flex__align-items_center">
+
+                                <a href="#">USB 3.0 Hub</a>
+
+                                <div class="open_submenu_btn">
+                                    <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 451.847 451.847"
+                                        style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                        <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                                            c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                                            c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- end of .main_item -->
+
+                            <ul class="submenu_items">
+                                <li>
+                                    <a href="#item_7_submenu1" class="submenu_item">Subitem 1</a>
+                                </li>
+                                <li>
+                                    <a href="#item_7_submenu2" class="submenu_item">Subitem 2</a>
+                                </li>
+                                <li>
+                                    <a href="#item_7_submenu3" class="submenu_item">Subitem 3</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <!-- end of #item_7 -->
+
+                        <section id="item_8">
+                            <div class="main_item
+                                        active
+                                        main_flex__nowrap
+                                        flex__jcontent_between
+                                        flex__align-items_center">
+
+                                <a href="#">USB Adapters</a>
+
+                                <div class="open_submenu_btn">
+                                    <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 451.847 451.847"
+                                        style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                        <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                                            c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                                            c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- end of .main_item -->
+
+                            <ul class="submenu_items">
+                                <li>
+                                    <a href="#item_8_submenu1" class="submenu_item">Subitem 1</a>
+                                </li>
+                                <li>
+                                    <a href="#item_8_submenu2" class="submenu_item">Subitem 2</a>
+                                </li>
+                                <li>
+                                    <a href="#item_8_submenu3" class="submenu_item">Subitem 3</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <!-- end of #item_8 -->
+
+                        <section id="item_9">
+                            <div class="main_item
+                                        main_flex__nowrap
+                                        flex__jcontent_between
+                                        flex__align-items_center">
+
+                                <a href="#">USB Audio</a>
+
+                                <div class="open_submenu_btn">
+                                    <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 451.847 451.847"
+                                        style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                        <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                                            c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                                            c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- end of .main_item -->
+
+                            <ul class="submenu_items">
+                                <li>
+                                    <a href="#item_9_submenu1" class="submenu_item">Subitem 1</a>
+                                </li>
+                                <li>
+                                    <a href="#item_9_submenu2" class="submenu_item">Subitem 2</a>
+                                </li>
+                                <li>
+                                    <a href="#item_9_submenu3" class="submenu_item">Subitem 3</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <!-- end of #item_9 -->
+
+                        <section id="item_10">
+                            <div class="main_item
+                                        main_flex__nowrap
+                                        flex__jcontent_between
+                                        flex__align-items_center">
+
+                                <a href="#">USB C Adapters</a>
+
+                                <div class="open_submenu_btn">
+                                    <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 451.847 451.847"
+                                        style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                        <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                                            c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                                            c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- end of .main_item -->
+
+                            <ul class="submenu_items">
+                                <li>
+                                    <a href="#item_10_submenu1" class="submenu_item">Subitem 1</a>
+                                </li>
+                                <li>
+                                    <a href="#item_10_submenu2" class="submenu_item">Subitem 2</a>
+                                </li>
+                                <li>
+                                    <a href="#item_10_submenu3" class="submenu_item">Subitem 3</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <!-- end of #item_10 -->
+
+                        <section id="item_11">
+                            <div class="main_item
+                                        main_flex__nowrap
+                                        flex__jcontent_between
+                                        flex__align-items_center">
+
+                                <a href="#">USB C Cables</a>
+
+                                <div class="open_submenu_btn">
+                                    <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 451.847 451.847"
+                                        style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                        <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                                            c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                                            c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- end of .main_item -->
+
+                            <ul class="submenu_items">
+                                <li>
+                                    <a href="#item_11_submenu1" class="submenu_item">Subitem 1</a>
+                                </li>
+                                <li>
+                                    <a href="#item_11_submenu2" class="submenu_item">Subitem 2</a>
+                                </li>
+                                <li>
+                                    <a href="#item_11_submenu3" class="submenu_item">Subitem 3</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <!-- end of #item_11 -->
+
+                        <section id="item_12">
+                            <div class="main_item
+                                        main_flex__nowrap
+                                        flex__jcontent_between
+                                        flex__align-items_center">
+
+                                <a href="#">USB C Display Adapters</a>
+
+                                <div class="open_submenu_btn">
+                                    <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 451.847 451.847"
+                                        style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                        <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                                            c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                                            c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- end of .main_item -->
+
+                            <ul class="submenu_items">
+                                <li>
+                                    <a href="#item_12_submenu1" class="submenu_item">Subitem 1</a>
+                                </li>
+                                <li>
+                                    <a href="#item_12_submenu2" class="submenu_item">Subitem 2</a>
+                                </li>
+                                <li>
+                                    <a href="#item_12_submenu3" class="submenu_item">Subitem 3</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <!-- end of #item_12 -->
+
+                        <section id="item_13">
+                            <div class="main_item
+                                        main_flex__nowrap
+                                        flex__jcontent_between
+                                        flex__align-items_center">
+
+                                <a href="#">USB C Docks</a>
+                            </div>
+                            <!-- end of .main_item -->
+                        </section>
+                        <!-- end of #item_13 -->
+
+                        <section id="item_14">
+                            <div class="main_item
+                                        main_flex__nowrap
+                                        flex__jcontent_between
+                                        flex__align-items_center">
+
+                                <a href="#">USB C eMarker</a>
+                            </div>
+                            <!-- end of .main_item -->
+                        </section>
+                        <!-- end of #item_14 -->
+                    </div>
+                    <!-- end of .nav_content -->
+
+                </nav>
+                <!-- end of .usb_gear_products_menu -->
+
+                <nav class="other_products_menu">
+                    <h2 class="nav_title
+                                main_flex__nowrap
+                                flex__jcontent_center
+                                flex__align-items_center">
+
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 231 231" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 231 231">
+                            <rect width="181" x="50" y="164.5" height="33" />
+                            <rect width="181" x="50" y="99.5" height="33" />
+                            <rect width="181" x="50" y="32.5" height="33" />
+                            <rect width="33" y="165.5" height="33" />
+                            <rect width="33" y="99.5" height="33" />
+                            <rect width="33" y="32.5" height="33" />
+                        </svg>
+
+                        Other Products
+                    </h2>
+
+                    <div class="nav_content">
+
+                        <section id="item_21">
+                            <a href="#item_21" class="other_main_item">1 x 422/485 TCP/IP</a>
+                        </section>
+                        <!-- end of #item_21 -->
+
+                        <section id="item_22">
+                            <a href="#item_22" class="other_main_item">1 x Serial TCP/IP</a>
+                        </section>
+                        <!-- end of #item_22 -->
+
+                        <section id="item_23">
+                            <a href="#item_23" class="other_main_item">16x Serial Adapter</a>
+                        </section>
+                        <!-- end of #item_23 -->
+
+                    </div>
+                </nav>
+                <!-- end of .other_products_menu -->
+            </aside>
+            <!-- end of .left_menu -->
+
+            <main class="catalog">
+
+                <h1 class="catalog__title">
+                    USB Adapters
+                </h1>
+                <!-- end of .catalog__title -->
+
+                <div class="settings_panel
+                            main_flex__nowrap
+                            flex__jcontent_between
+                            flex__align-items_center">
+                            
+                    <div class="order_list">
+                        <select>
+                            <option>Best Match</option>
+                            <option>Title: A-Z</option>
+                            <option>Newest Products</option>
+                            <option>Price: Lowest to Highest</option>
+                            <option>Price: Highest to Lowest</option>
+                            <option>Rating: Highest to Lowest</option>
+                        </select>
+                    </div>
+                    <!-- end of .order_list -->
+
+                    <div class="pagination_block">
+                        <a href="#">&laquo;</a>
+                        <a href="#">1</a>
+                        <a href="#" class="active">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">&raquo;</a>
+                    </div>
+                    <!-- end of .pagination_block -->
+
+                    <div class="page_items_count">
+                        <select>
+                            <option>5 Items Per Page</option>
+                            <option>25 Items Per Page</option>
+                            <option>50 Items Per Page</option>
+                            <option>100 Items Per Page</option>                            
+                        </select>
+                    </div>
+                    <!-- end of .page_items_count -->
+                </div>
+                <!-- end of .settings_panel -->
+
+                <div class="products">
+
+                    <!-- Item 1 -->
+                    <div class="products__item
+                                main_flex__nowrap
+                                flex__jcontent_between
+                                flex__align-items_stretch">
+
+                        <div class="left_part
+                                    main_flex__nowrap
+                                    flex__jcontent_between
+                                    flex__align-items_start">
+
+                            <div class="item_image">
+                                <img src="images/content/product_01_1.jpg" alt="Product Image">
+                            </div>
+                            <!-- end of .item_image -->
+
+                            <div class="item_info">
+                                <h2 class="item_title">
+                                    Catalog Item Title
+                                </h2>
+
+                                <div class="row
+                                            main_flex__nowrap
+                                            flex__jcontent_start
+                                            flex__align-items_center">
+
+                                    <span class="stars_container">★★★★★</span>
+
+                                    <div class="count_in_stock">
+                                        -
+                                        <span id="item_count_in_stock">19299</span>
+                                        in Stock & ready for ship!!!
+                                    </div>
+                                </div>
+                                <!-- end of .row -->
+
+                                <div class="item_description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus
+                                    accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque
+                                    penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla
+                                    luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+                                </div>
+                            </div>
+                            <!-- end of .item_info -->
+                        </div>
+                        <!-- end of .left_part -->
+
+                        <div class="right_part
+                                    main_flex__nowrap
+                                    flex__jcontent_between
+                                    flex__align-content_flex-end">
+
+                            <div class="product_id">
+                                Product ID: 4867
+                            </div>
+
+                            <div class="row
+                                        main_flex__nowrap
+                                        flex__jcontent_between
+                                        flex__align-items_center">
+
+                                <div class="item_price">
+                                    $12.36
+                                </div>
+
+                                <label>
+                                    Qty:
+                                    <input type="text" name="qty">
+                                </label>
+                            </div>
+                            <!-- end of .row -->
+
+                            <button class="add_to_cart_btn
+                                            button
+                                            main_flex__nowrap
+                                            flex__jcontent_center
+                                            flex__align-items_center">
+                                add to cart
+                            </button>
+                            <!-- end of .add_to_cart_btn -->
+
+                            <div class="volume_pricing_info
+                                        main_flex__nowrap
+                                        flex__jcontent_end
+                                        flex__align-items_center">
+
+                                <p>Volume Pricing</p>
+
+                                <a href="#" class="question_icon">
+                                    <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                                        style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                        <path d="M256,0C114.833,0,0,114.833,0,256s114.833,256,256,256s256-114.833,256-256S397.167,0,256,0z M245.333,426.667
+                                        c-17.646,0-32-14.354-32-32s14.354-32,32-32c17.646,0,32,14.354,32,32S262.979,426.667,245.333,426.667z M277.333,296.542v34.125
+                                        c0,5.896-4.771,10.667-10.667,10.667H224c-5.896,0-10.667-4.771-10.667-10.667v-53.333c0-23.521,19.146-42.667,42.667-42.667
+                                        s42.667-19.146,42.667-42.667S279.521,149.333,256,149.333S213.333,168.479,213.333,192v10.667
+                                        c0,5.896-4.771,10.667-10.667,10.667H160c-5.896,0-10.667-4.771-10.667-10.667V192c0-58.813,47.854-106.667,106.667-106.667
+                                        S362.667,133.188,362.667,192C362.667,243.188,326.604,286.563,277.333,296.542z" />
+                                    </svg>
+
+                                    <span>Some text about Volume Pricing</span>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!-- end of .right_part -->
+                    </div>
+                    <!-- end of .products__item -->
+
+                    <!-- Item 2 -->
+                    <div class="products__item
+                                main_flex__nowrap
+                                flex__jcontent_between
+                                flex__align-items_stretch">
+
+                        <div class="left_part
+                                    main_flex__nowrap
+                                    flex__jcontent_between
+                                    flex__align-items_start">
+
+                            <div class="item_image">
+                                <img src="images/content/product_01_1.jpg" alt="Product Image">
+                            </div>
+                            <!-- end of .item_image -->
+
+                            <div class="item_info">
+                                <h2 class="item_title">
+                                    Catalog Item Title
+                                </h2>
+
+                                <div class="row
+                                            main_flex__nowrap
+                                            flex__jcontent_start
+                                            flex__align-items_center">
+
+                                    <span class="stars_container">★★★★★</span>
+
+                                    <div class="count_in_stock">
+                                        -
+                                        <span id="item_count_in_stock">19299</span>
+                                        in Stock & ready for ship!!!
+                                    </div>
+                                </div>
+                                <!-- end of .row -->
+
+                                <div class="item_description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus
+                                    accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque
+                                    penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla
+                                    luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+                                </div>
+                            </div>
+                            <!-- end of .item_info -->
+                        </div>
+                        <!-- end of .left_part -->
+
+                        <div class="right_part
+                                    main_flex__nowrap
+                                    flex__jcontent_between
+                                    flex__align-content_flex-end">
+
+                            <div class="product_id">
+                                Product ID: 4867
+                            </div>
+
+                            <div class="row
+                                        main_flex__nowrap
+                                        flex__jcontent_between
+                                        flex__align-items_center">
+
+                                <div class="item_price">
+                                    $12.36
+                                </div>
+
+                                <label>
+                                    Qty:
+                                    <input type="text" name="qty">
+                                </label>
+                            </div>
+                            <!-- end of .row -->
+
+                            <button class="add_to_cart_btn
+                                            button
+                                            main_flex__nowrap
+                                            flex__jcontent_center
+                                            flex__align-items_center">
+                                add to cart
+                            </button>
+                            <!-- end of .add_to_cart_btn -->
+
+                            <div class="volume_pricing_info
+                                        main_flex__nowrap
+                                        flex__jcontent_end
+                                        flex__align-items_center">
+
+                                <p>Volume Pricing</p>
+
+                                <a href="#" class="question_icon">
+                                    <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                                        style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                        <path d="M256,0C114.833,0,0,114.833,0,256s114.833,256,256,256s256-114.833,256-256S397.167,0,256,0z M245.333,426.667
+                                        c-17.646,0-32-14.354-32-32s14.354-32,32-32c17.646,0,32,14.354,32,32S262.979,426.667,245.333,426.667z M277.333,296.542v34.125
+                                        c0,5.896-4.771,10.667-10.667,10.667H224c-5.896,0-10.667-4.771-10.667-10.667v-53.333c0-23.521,19.146-42.667,42.667-42.667
+                                        s42.667-19.146,42.667-42.667S279.521,149.333,256,149.333S213.333,168.479,213.333,192v10.667
+                                        c0,5.896-4.771,10.667-10.667,10.667H160c-5.896,0-10.667-4.771-10.667-10.667V192c0-58.813,47.854-106.667,106.667-106.667
+                                        S362.667,133.188,362.667,192C362.667,243.188,326.604,286.563,277.333,296.542z" />
+                                    </svg>
+
+                                    <span>Some text about Volume Pricing</span>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!-- end of .right_part -->
+                    </div>
+                    <!-- end of .products__item-->
+
+                    <!-- Item 3 -->
+                    <div class="products__item
+                                main_flex__nowrap
+                                flex__jcontent_between
+                                flex__align-items_stretch">
+
+                        <div class="left_part
+                                    main_flex__nowrap
+                                    flex__jcontent_between
+                                    flex__align-items_start">
+
+                            <div class="item_image">
+                                <img src="images/content/product_01_1.jpg" alt="Product Image">
+                            </div>
+                            <!-- end of .item_image -->
+
+                            <div class="item_info">
+                                <h2 class="item_title">
+                                    Catalog Item Title
+                                </h2>
+
+                                <div class="row
+                                            main_flex__nowrap
+                                            flex__jcontent_start
+                                            flex__align-items_center">
+
+                                    <span class="stars_container">★★★★★</span>
+
+                                    <div class="count_in_stock">
+                                        -
+                                        <span id="item_count_in_stock">19299</span>
+                                        in Stock & ready for ship!!!
+                                    </div>
+                                </div>
+                                <!-- end of .row -->
+
+                                <div class="item_description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus
+                                    accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque
+                                    penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla
+                                    luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+                                </div>
+                            </div>
+                            <!-- end of .item_info -->
+                        </div>
+                        <!-- end of .left_part -->
+
+                        <div class="right_part
+                                    main_flex__nowrap
+                                    flex__jcontent_between
+                                    flex__align-content_flex-end">
+
+                            <div class="product_id">
+                                Product ID: 4867
+                            </div>
+
+                            <div class="row
+                                        main_flex__nowrap
+                                        flex__jcontent_between
+                                        flex__align-items_center">
+
+                                <div class="item_price">
+                                    $12.36
+                                </div>
+
+                                <label>
+                                    Qty:
+                                    <input type="text" name="qty">
+                                </label>
+                            </div>
+                            <!-- end of .row -->
+
+                            <button class="add_to_cart_btn
+                                            button
+                                            main_flex__nowrap
+                                            flex__jcontent_center
+                                            flex__align-items_center">
+                                add to cart
+                            </button>
+                            <!-- end of .add_to_cart_btn -->
+
+                            <div class="volume_pricing_info
+                                        main_flex__nowrap
+                                        flex__jcontent_end
+                                        flex__align-items_center">
+
+                                <p>Volume Pricing</p>
+
+                                <a href="#" class="question_icon">
+                                    <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                                        style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                        <path d="M256,0C114.833,0,0,114.833,0,256s114.833,256,256,256s256-114.833,256-256S397.167,0,256,0z M245.333,426.667
+                                        c-17.646,0-32-14.354-32-32s14.354-32,32-32c17.646,0,32,14.354,32,32S262.979,426.667,245.333,426.667z M277.333,296.542v34.125
+                                        c0,5.896-4.771,10.667-10.667,10.667H224c-5.896,0-10.667-4.771-10.667-10.667v-53.333c0-23.521,19.146-42.667,42.667-42.667
+                                        s42.667-19.146,42.667-42.667S279.521,149.333,256,149.333S213.333,168.479,213.333,192v10.667
+                                        c0,5.896-4.771,10.667-10.667,10.667H160c-5.896,0-10.667-4.771-10.667-10.667V192c0-58.813,47.854-106.667,106.667-106.667
+                                        S362.667,133.188,362.667,192C362.667,243.188,326.604,286.563,277.333,296.542z" />
+                                    </svg>
+
+                                    <span>Some text about Volume Pricing</span>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!-- end of .right_part -->
+                    </div>
+                    <!-- end of .products__item-->
+
+                    <!-- Item 4 with parameters -->
+                    <div class="products__item
+                                main_flex__nowrap
+                                flex__jcontent_between
+                                flex__align-items_stretch">
+
+                        <div class="left_part
+                                    main_flex__nowrap
+                                    flex__jcontent_between
+                                    flex__align-items_start">
+
+                            <div class="item_image">
+                                <img src="images/content/product_01_1.jpg" alt="Product Image">
+                            </div>
+                            <!-- end of .item_image -->
+
+                            <div class="item_info">
+                                <h2 class="item_title">
+                                    Catalog Item Title
+                                </h2>
+
+                                <div class="row
+                                            main_flex__nowrap
+                                            flex__jcontent_start
+                                            flex__align-items_center">
+
+                                    <span class="stars_container">★★★★★</span>
+
+                                    <div class="count_in_stock">
+                                        -
+                                        <span id="item_count_in_stock">19299</span>
+                                        in Stock & ready for ship!!!
+                                    </div>
+                                </div>
+                                <!-- end of .row -->
+
+                                <div class="item_description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus
+                                    accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque
+                                    penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla
+                                    luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+                                </div>
+                                <!-- end of .item_description -->
+
+                                <div class="item_parameters">
+
+                                    <div class="color_param">
+                                        <ul class="filter__list
+                                                    main_flex
+                                                    flex__jcontent_start
+                                                    flex__align-items_start">
+
+                                            <!-- color_01 -->
+                                            <li>
+                                                <input id="color_01" type="checkbox">
+                                                <label for="color_01" style="background-color:#1476f1"></label>
+                                            </li>
+
+                                            <!-- color_02 -->
+                                            <li>
+                                                <input id="color_02" type="checkbox">
+                                                <label for="color_02" style="background-color:#82d889"></label>
+                                            </li>
+
+                                            <!-- color_03 -->
+                                            <li>
+                                                <input id="color_03" type="checkbox">
+                                                <label for="color_03" style="background-color:#3c3d41"></label>
+                                            </li>
+
+                                            <!-- color_04 -->
+                                            <li>
+                                                <input id="color_04" type="checkbox">
+                                                <label for="color_04" style="background-color:#838d8f"></label>
+                                            </li>
+
+                                            <!-- color_05 -->
+                                            <li>
+                                                <input id="color_05" type="checkbox">
+                                                <label for="color_05" style="background-color:#b8c6c7"></label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- end of .color_param -->
+
+                                    <div class="size_param">
+                                        <ul class="filter__list
+                                                    main_flex
+                                                    flex__jcontent_start
+                                                    flex__align-items_start">
+
+                                            <!-- size_01 -->
+                                            <li>
+                                                <input id="size_01" type="checkbox">
+                                                <label for="size_01">1.5ft</label>
+                                            </li>
+
+                                            <!-- size_02 -->
+                                            <li>
+                                                <input id="size_02" type="checkbox">
+                                                <label for="size_02">3ft</label>
+                                            </li>
+
+                                            <!-- size_03 -->
+                                            <li>
+                                                <input id="size_03" type="checkbox">
+                                                <label for="size_03">6ft</label>
+                                            </li>
+
+                                            <!-- size_04 -->
+                                            <li>
+                                                <input id="size_04" type="checkbox">
+                                                <label for="size_04">10ft</label>
+                                            </li>
+
+                                            <!-- size_05 -->
+                                            <li>
+                                                <input id="size_05" type="checkbox">
+                                                <label for="size_05">15ft</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- end of .size_param -->
+                                </div>
+                                <!-- end of .item_parameters -->
+                            </div>
+                            <!-- end of .item_info -->
+                        </div>
+                        <!-- end of .left_part -->
+
+                        <div class="right_part
+                                    main_flex__nowrap
+                                    flex__jcontent_between
+                                    flex__align-items_stretch
+                                    flex__align-content_flex-end">
+
+                            <div class="product_id">
+                                Product ID: 4867
+                            </div>
+
+                            <div class="row
+                                        main_flex__nowrap
+                                        flex__jcontent_between
+                                        flex__align-items_center">
+
+                                <div class="item_price">
+                                    $12.36
+                                </div>
+
+                                <label>
+                                    Qty:
+                                    <input type="text" name="qty">
+                                </label>
+                            </div>
+                            <!-- end of .row -->
+
+                            <button class="add_to_cart_btn
+                                            button
+                                            main_flex__nowrap
+                                            flex__jcontent_center
+                                            flex__align-items_center">
+                                add to cart
+                            </button>
+                            <!-- end of .add_to_cart_btn -->
+
+                            <div class="volume_pricing_info
+                                        main_flex__nowrap
+                                        flex__jcontent_end
+                                        flex__align-items_center">
+
+                                <p>Volume Pricing</p>
+
+                                <a href="#" class="question_icon">
+                                    <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                                        style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                        <path d="M256,0C114.833,0,0,114.833,0,256s114.833,256,256,256s256-114.833,256-256S397.167,0,256,0z M245.333,426.667
+                                        c-17.646,0-32-14.354-32-32s14.354-32,32-32c17.646,0,32,14.354,32,32S262.979,426.667,245.333,426.667z M277.333,296.542v34.125
+                                        c0,5.896-4.771,10.667-10.667,10.667H224c-5.896,0-10.667-4.771-10.667-10.667v-53.333c0-23.521,19.146-42.667,42.667-42.667
+                                        s42.667-19.146,42.667-42.667S279.521,149.333,256,149.333S213.333,168.479,213.333,192v10.667
+                                        c0,5.896-4.771,10.667-10.667,10.667H160c-5.896,0-10.667-4.771-10.667-10.667V192c0-58.813,47.854-106.667,106.667-106.667
+                                        S362.667,133.188,362.667,192C362.667,243.188,326.604,286.563,277.333,296.542z" />
+                                    </svg>
+
+                                    <span>Some text about Volume Pricing</span>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!-- end of .right_part -->
+                    </div>
+                    <!-- end of .products__item-->
+
+                    <!-- Item 5 with Sale Marker -->
+                    <div class="products__item
+                                main_flex__nowrap
+                                flex__jcontent_between
+                                flex__align-items_stretch">
+
+                        <div class="left_part
+                                    main_flex__nowrap
+                                    flex__jcontent_between
+                                    flex__align-items_start">
+
+                            <div class="item_image">
+                                <img class="sale_badge" src="images/content/mp-sale-badge.png" alt="Sale Badge">
+                                <img src="images/content/product_01_1.jpg" alt="Product Image">
+                            </div>
+                            <!-- end of .item_image -->
+
+                            <div class="item_info">
+                                <h2 class="item_title">
+                                    Catalog Item Title
+                                </h2>
+
+                                <div class="row
+                                            main_flex__nowrap
+                                            flex__jcontent_start
+                                            flex__align-items_center">
+
+                                    <span class="stars_container">★★★★★</span>
+
+                                    <div class="count_in_stock">
+                                        -
+                                        <span id="item_count_in_stock">19299</span>
+                                        in Stock & ready for ship!!!
+                                    </div>
+                                </div>
+                                <!-- end of .row -->
+
+                                <div class="item_description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus
+                                    accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque
+                                    penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla
+                                    luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+                                </div>
+                            </div>
+                            <!-- end of .item_info -->
+                        </div>
+                        <!-- end of .left_part -->
+
+                        <div class="right_part
+                                    main_flex__nowrap
+                                    flex__jcontent_between
+                                    flex__align-items_stretch
+                                    flex__align-content_flex-end">
+
+                            <div class="product_id">
+                                Product ID: 4867
+                            </div>
+
+                            <div class="row
+                                        main_flex__nowrap
+                                        flex__jcontent_between
+                                        flex__align-items_center">
+
+                                <div class="item_price">
+                                    $12.36
+                                </div>
+
+                                <label>
+                                    Qty:
+                                    <input type="text" name="qty">
+                                </label>
+                            </div>
+                            <!-- end of .row -->
+
+                            <button class="add_to_cart_btn
+                                            button
+                                            main_flex__nowrap
+                                            flex__jcontent_center
+                                            flex__align-items_center">
+                                add to cart
+                            </button>
+                            <!-- end of .add_to_cart_btn -->
+
+                            <div class="volume_pricing_info
+                                        main_flex__nowrap
+                                        flex__jcontent_end
+                                        flex__align-items_center">
+
+                                <p>Volume Pricing</p>
+
+                                <a href="#" class="question_icon">
+                                    <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                                        style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                        <path d="M256,0C114.833,0,0,114.833,0,256s114.833,256,256,256s256-114.833,256-256S397.167,0,256,0z M245.333,426.667
+                                        c-17.646,0-32-14.354-32-32s14.354-32,32-32c17.646,0,32,14.354,32,32S262.979,426.667,245.333,426.667z M277.333,296.542v34.125
+                                        c0,5.896-4.771,10.667-10.667,10.667H224c-5.896,0-10.667-4.771-10.667-10.667v-53.333c0-23.521,19.146-42.667,42.667-42.667
+                                        s42.667-19.146,42.667-42.667S279.521,149.333,256,149.333S213.333,168.479,213.333,192v10.667
+                                        c0,5.896-4.771,10.667-10.667,10.667H160c-5.896,0-10.667-4.771-10.667-10.667V192c0-58.813,47.854-106.667,106.667-106.667
+                                        S362.667,133.188,362.667,192C362.667,243.188,326.604,286.563,277.333,296.542z" />
+                                    </svg>
+
+                                    <span>Some text about Volume Pricing</span>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!-- end of .right_part -->
+                    </div>
+                    <!-- end of .products__item-->
+
+                </div>
+                <!-- end of .products -->
+
+                <div class="settings_panel
+                            main_flex__nowrap
+                            flex__jcontent_between
+                            flex__align-items_center">
+                            
+                    <div class="order_list">
+                        <select>
+                            <option>Best Match</option>
+                            <option>Title: A-Z</option>
+                            <option>Newest Products</option>
+                            <option>Price: Lowest to Highest</option>
+                            <option>Price: Highest to Lowest</option>
+                            <option>Rating: Highest to Lowest</option>
+                        </select>
+                    </div>
+
+                    <div class="pagination_block">
+                        <a href="#">&laquo;</a>
+                        <a href="#">1</a>
+                        <a href="#" class="active">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">&raquo;</a>
+                    </div>
+                    <!-- end of .pagination_block -->
+
+                    <div class="page_items_count">
+                        <select>
+                            <option>5 Items Per Page</option>
+                            <option>25 Items Per Page</option>
+                            <option>50 Items Per Page</option>
+                            <option>100 Items Per Page</option>                            
+                        </select>
+                    </div>
+                </div>
+                <!-- end of .settings_panel -->
+
+            </main>
+            <!-- end of .catalog -->
+        </div>
+
+        <footer class="footer
+                        main_flex__nowrap
+                        flex__jcontent_between
+                        flex__align-items_center">
+
+            <div class="footer__map
+                        main_flex__nowrap
+                        flex__jcontent_between
+                        flex__align-items_start">
+
+                <div class="column">
+                    <div class="column__title">
+                        <h4>company</h4>
+                    </div>
+                    <!-- end of .column__title -->
+
+                    <div class="column__items">
+                        <ul>
+                            <li>
+                                <a href="#">company/contact</a>
+                            </li>
+                            <li>
+                                <a href="#">privacy policy</a>
+                            </li>
+                            <li>
+                                <a href="#">press</a>
+                            </li>
+                            <li>
+                                <a href="#">security</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end of .column__items -->
+                </div>
+                <!-- end of .column -->
+
+                <div class="column">
+                    <div class="column__title">
+                        <h4>support</h4>
+                    </div>
+                    <!-- end of .column__title -->
+
+                    <div class="column__items">
+                        <ul>
+                            <li>
+                                <a href="#">returns/rma</a>
+                            </li>
+                            <li>
+                                <a href="#">downloads</a>
+                            </li>
+                            <li>
+                                <a href="#">help</a>
+                            </li>
+                            <li>
+                                <a href="#">terms/conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end of .column__items -->
+                </div>
+                <!-- end of .column -->
+
+                <div class="column">
+                    <div class="column__title">
+                        <h4>sales</h4>
+                    </div>
+                    <!-- end of .column__title -->
+
+                    <div class="column__items">
+                        <ul>
+                            <li>
+                                <a href="#">pre-sale info</a>
+                            </li>
+                            <li>
+                                <a href="#">privacy policy</a>
+                            </li>
+                            <li>
+                                <a href="#">lorem ipsum</a>
+                            </li>
+                            <li>
+                                <a href="#">lorem ipsum</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end of .column__items -->
+                </div>
+                <!-- end of .column -->
+
+                <div class="column">
+                    <div class="column__title">
+                        <h4>search the site</h4>
+                    </div>
+                    <!-- end of .column__title -->
+
+                    <div class="column__items">
+                        <form class="search_keyword" method="post" action="/search-our-site.cfm">
+                            <input name="searchpart" type="text" />
+                            <input type="submit" value="Search Keyword" class="button" />
+                        </form>
+                        <!-- end of .search_keyword -->
+
+                        <form class="search_part_no" method="post" action="/search-our-site.cfm">
+                            <input name="searchkeyword" type="text" />
+                            <input type="submit" value="Search Part No." class="button" />
+                        </form>
+                        <!-- end of .search_part_no -->
+                    </div>
+                    <!-- end of .column__items -->
+                </div>
+                <!-- end of .column -->
+            </div>
+            <!-- end of .footer__map -->
+
+            <div class="footer__map_mobile
+                        main_flex__nowrap
+                        flex__jcontent_between
+                        flex__align-items_start">
+
+                <div class="column">
+                    <div class="column__items">
+                        <ul>
+                            <li>
+                                <a href="#">home</a>
+                            </li>
+                            <li>
+                                <a href="#">company/contact</a>
+                            </li>
+                            <li>
+                                <a href="#">search</a>
+                            </li>
+                            <li>
+                                <a href="#">security</a>
+                            </li>
+                            <li>
+                                <a href="#">privacy policy</a>
+                            </li>
+                            <li>
+                                <a href="#">terms/conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end of .column__items -->
+                </div>
+                <!-- end of .column -->
+
+                <div class="column">
+                    <div class="column__items">
+                        <ul>
+                            <li>
+                                <a href="#">returns/rma</a>
+                            </li>
+                            <li>
+                                <a href="#">pre-sale info</a>
+                            </li>
+                            <li>
+                                <a href="#">press</a>
+                            </li>
+                            <li>
+                                <a href="#">downloads</a>
+                            </li>
+                            <li>
+                                <a href="#">help</a>
+                            </li>
+                            <li>
+                                <a href="#">lorem ipsum</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end of .column__items -->
+                </div>
+                <!-- end of .column -->
+
+            </div>
+            <!-- end of .footer__map_mobile -->
+
+            <div class="footer__copyright">
+                Copyright © 1997-
+                <span id="year">2018</span> USBGear.com Part of COOLGEAR Family. All Rights Reserved.
+            </div>
+            <!-- end of .footer__copyright -->
+        </footer>
+        <!-- end of .footer -->
+    </div>
+
+    <!-- Add all our scripts -->
+    <script src="js/vendors/jquery.min.js"></script>
+    <script src="js/vendors/slick.min.js"></script>
+    <script src="js/vendors/respond.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

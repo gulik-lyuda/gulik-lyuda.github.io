@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Beef Page</title>
+
+    <!-- Connect our stylesheets -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/general-flex-css.css">
+    <link rel="stylesheet" href="css/base.css">
+    <!-- Add favicon -->
+    <link rel="icon" href="images/icons/wizard.ico" type="image/x-icon"/>
+    <!-- Add fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <!-- Additional library for using media queries for IE 8.0 and less -->
+    <script type="text/javascript" src="js/vendors/respond.min.js"></script>
+</head>
+<body>
+    <div class="container
+                add_flex_nowrap
+                flex__jcontent_start
+                flex__align-items_center">
+        
+        <h1 class="page_title">
+            eat your way<br>
+            <span>around the animal</span>
+        </h1>
+
+        <div class="animal_image">
+            <img src="images/content/beef.png" alt="Beef Image">
+        </div>
+
+        <div class="description">
+            Try cuts from the following primals to complete the checklist and receive a gift.
+        </div>
+
+        <div class="beef_types
+                    main_flex__nowrap
+                    flex__jcontent_between
+                    flex__align-items_start">
+
+            <div class="beef_type
+                        add_flex_nowrap
+                        flex__jcontent_start
+                        flex__align-items_center">
+
+                <h2 class="type_name">chuck</h2>
+
+                <div class="type_kinds">
+                    <div class="kinds_item">chuck eye roll</div>
+                    <div class="kinds_item">stew beef</div>
+                    <div class="kinds_item">flat iron</div>
+                    <div class="kinds_item">AC strip</div>
+                    <div class="kinds_item">ranch</div>
+                    <div class="kinds_item">denver</div>
+                </div>
+
+            </div>
+            <!-- end of .beef_type -->
+
+            <div class="beef_type
+                        add_flex_nowrap
+                        flex__jcontent_start
+                        flex__align-items_center">
+
+                <h2 class="type_name">ribs&loin</h2>
+
+                <div class="type_kinds">
+                    <div class="kinds_item">top sirloin</div>
+                    <div class="kinds_item">tri-tip</div>
+                    <div class="kinds_item">tenderloin</div>
+                    <div class="kinds_item">ribeye</div>
+                    <div class="kinds_item">porterhouse</div>
+                    <div class="kinds_item">NY strip</div>
+                </div>
+
+            </div>
+            <!-- end of .beef_type -->
+
+            <div class="beef_type
+                        add_flex_nowrap
+                        flex__jcontent_start
+                        flex__align-items_center">
+
+                <h2 class="type_name">round</h2>
+
+                <div class="type_kinds">
+                    <div class="kinds_item">bottom round</div>
+                    <div class="kinds_item">eye round</div>
+                    <div class="kinds_item">top round</div>
+                    <div class="kinds_item">cross-cut shank</div>
+                </div>
+
+            </div>
+            <!-- end of .beef_type -->
+
+            <div class="beef_type
+                        add_flex_nowrap
+                        flex__jcontent_start
+                        flex__align-items_center">
+
+                <h2 class="type_name">5<span>th</span> primal</h2>
+
+                <div class="type_kinds">
+                    <div class="kinds_item">cheek</div>
+                    <div class="kinds_item">tongue</div>
+                    <div class="kinds_item">tallow</div>
+                    <div class="kinds_item">heart</div>
+                    <div class="kinds_item">bones</div>
+                    <div class="kinds_item">liver</div>
+                </div>
+
+            </div>
+            <!-- end of .beef_type -->
+
+        </div>
+        <!-- end of .beef_types -->
+
+        <div class="checkboxes
+                    add_flex_nowrap
+                    flex__jcontent_start
+                    flex__align-items_stretch">
+
+            <div class="double_items align_center">
+                <div class="column">
+                    <div class="column__item">
+                        <input type="checkbox" name="chuck_left" disabled/>
+                        <label for="chuck_left">chuck</label>
+                    </div>
+                    <div class="column__item">
+                        <input type="checkbox" name="round_left" checked disabled/>
+                        <label for="round_left">round</label>
+                    </div>
+                    <div class="column__item">
+                        <input type="checkbox" name="ribs_left" disabled/>
+                        <label for="ribs_left">ribs+loin</label>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column__item">
+                        <input type="checkbox" name="chuck_left" disabled/>
+                        <label for="chuck_left">chuck</label>
+                    </div>
+                    <div class="column__item">
+                        <input type="checkbox" name="round_left" disabled/>
+                        <label for="round_left">round</label>
+                    </div>
+                    <div class="column__item">
+                        <input type="checkbox" name="ribs_left" disabled/>
+                        <label for="ribs_left">ribs+loin</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="column__item align_center">
+                <input type="checkbox" name="5th" disabled/>
+                <label for="5th">5th</label>
+            </div>
+
+        </div>
+        <!-- end of .checkboxes -->
+
+    </div>
+
+    <!-- Add all our scripts -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>

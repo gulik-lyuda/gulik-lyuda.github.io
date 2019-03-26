@@ -1,0 +1,195 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+a,
+a:hover,
+button,
+button:hover,
+.anime {
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+  cursor: pointer; }
+
+h2 {
+  margin: 0; }
+
+body {
+  background-color: #fff;
+  background-image: url("../images/backgrounds/main_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.46vmax;
+  font-weight: 400;
+  line-height: 1.36;
+  color: #fff; }
+
+.container {
+  width: 66.67vw;
+  padding: 2.34vw 0 3.125vw;
+  margin: 0 auto;
+  position: relative; }
+
+.button {
+  width: auto;
+  background-color: #c40c11;
+  border-radius: 1.93vw; }
+  .button a {
+    padding: 0.89vw 1.77vw;
+    text-decoration: none;
+    color: #fff; }
+  .button:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05); }
+
+h1 {
+  margin: 0;
+  font-size: 2.87vmax;
+  font-weight: 700; }
+
+h2 {
+  font-size: 2.5vmax; }
+
+header {
+  width: 100%;
+  height: auto;
+  margin-bottom: 40vw; }
+  header .logo {
+    width: 10.73vw;
+    height: 2.34vw; }
+    header .logo img {
+      width: 100%;
+      height: 100%; }
+  header .select_language {
+    margin-right: 1.3vw; }
+  header .create_account_btn a {
+    font-size: 0.94vmax;
+    font-weight: 600; }
+
+.general_info {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center; }
+  .general_info .slogan {
+    margin-bottom: 0.5vw; }
+  .general_info .date_info {
+    margin-bottom: 5.35vw; }
+  .general_info .description {
+    width: 57vw;
+    margin-bottom: 2.35vw;
+    font-size: 1.46vmax;
+    line-height: 1.36; }
+  .general_info .call_to_action {
+    width: 57vw;
+    margin-bottom: 5.47vw;
+    font-size: 1.46vmax;
+    font-weight: 700;
+    line-height: 1.36; }
+  .general_info .deposit_now_btn {
+    margin-bottom: 0;
+    font-size: 1.25vmax;
+    font-weight: 700; }
+    .general_info .deposit_now_btn a {
+      padding: 0.89vw 6vw; }
+
+footer {
+  padding: 7.97vw 0 0; }
+  footer .warning {
+    margin-bottom: -1vw;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 0.83vmax;
+    font-weight: 300;
+    line-height: 1.63;
+    text-align: justify;
+    color: #fff; }
+    footer .warning .caption {
+      text-transform: uppercase; }
+    footer .warning .link {
+      text-decoration: none;
+      color: #2d88e6; }
+      footer .warning .link:hover {
+        text-decoration: underline; }
+  footer .copyright {
+    padding: 1.4vw 0;
+    background-color: #0a0602;
+    font-size: 0.83vmax;
+    text-align: left;
+    color: #fff; }
+    footer .copyright .container {
+      padding: 0; }
+
+@media (max-width: 320px), (max-width: 480px), (max-width: 1024px) {
+  body {
+    background-image: url("../images/backgrounds/main_mobile_bg.jpg");
+    font-size: 2.5vmax;
+    z-index: 1; }
+  .container {
+    width: 83.9vw;
+    padding: 4.03vw 0 12.08vw; }
+  .button {
+    border-radius: 7vw; }
+  h1 {
+    font-size: 3.75vmax; }
+  h2 {
+    font-size: 2.75vmax; }
+  header {
+    margin-bottom: 105vw; }
+    header .logo {
+      width: 27.7vw;
+      height: 5.65vw; }
+    header .select_language {
+      width: 11.27vw;
+      height: 4vw;
+      margin-right: 4.43vw; }
+      header .select_language img {
+        width: 100%;
+        height: 100%; }
+    header .create_account_btn {
+      width: 28.66vw;
+      height: 8.45vw; }
+      header .create_account_btn a {
+        font-size: 3.22vmin; }
+  .general_info {
+    margin-bottom: 35vw; }
+    .general_info .date_info,
+    .general_info .description {
+      margin-bottom: 7vw; }
+    .general_info .description,
+    .general_info .call_to_action {
+      width: 100%;
+      font-size: 2.5vmax; }
+    .general_info .call_to_action {
+      margin-bottom: 12vw; }
+    .general_info .deposit_now_btn {
+      font-size: 2.5vmax; }
+      .general_info .deposit_now_btn a {
+        padding: 2.89vw 6vw; }
+  footer {
+    height: auto; }
+    footer .warning {
+      margin-bottom: 13.69vw;
+      padding-top: 20vw;
+      font-size: 4.35vmin;
+      line-height: 1.48;
+      text-align: left; }
+    footer .copyright {
+      font-size: 4.35vmin;
+      line-height: 1.48;
+      text-align: center; }
+      footer .copyright .container {
+        width: 65vw; } }

@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Cart Page</title>
+
+    <!-- Connect our stylesheets -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/vendors/slick.css">
+    <link rel="stylesheet" href="css/vendors/slick-theme.css">
+    <link rel="stylesheet" href="css/general-flex-css.css">
+    <link rel="stylesheet" href="css/base.css">
+    <!-- Add favicon -->
+    <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon" />
+    <!-- Add fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+    <!-- Additional library for using media queries for IE 8.0 and less -->
+    <script type="text/javascript" src="js/vendors/respond.min.js"></script>
+</head>
+
+<body>
+    <div class="disable_page"></div>
+    <!-- end of .disable_page -->
+
+    <!-- Search Panel for mobile devices -->
+    <div id="search_panel">
+        <form class="search_keyword
+                     main_flex__nowrap
+                     flex__jcontent_between
+                     flex__align-items_center" method="post" action="/search-our-site.cfm">
+
+            <input name="searchpart" type="text" />
+            <input type="submit" value="Search Keyword" class="button" />
+
+        </form>
+        <!-- end of .search_keyword -->
+
+        <form class="search_part_no
+                    main_flex__nowrap
+                    flex__jcontent_between
+                    flex__align-items_center" method="post" action="/search-our-site.cfm">
+
+            <input name="searchkeyword" type="text" />
+            <input type="submit" value="Search Part No." class="button" />
+
+        </form>
+        <!-- end of .search_part_no -->
+    </div>
+    <!-- end of Search Panel for mobile devices -->
+
+    <div class="container">
+
+        <div id="cart_popup">
+
+            <div class="cart_items">
+                
+                <div class="cart_item
+                            main_flex__nowrap
+                            flex__jcontent_start
+                            flex__align-items_start">
+
+                    <div class="cart_item__image">
+                        <img src="images/content/product_01_1.jpg" alt="Cart Item Image">
+                    </div>
+
+                    <div class="cart_item__details">
+
+                        <div class="cart_item__title">
+                            Catalog Item Title <br>
+                            in several rows if needed...
+                        </div>
+
+                        <div class="price_info
+                                    main_flex__nowrap
+                                    flex__jcontent_between
+                                    flex__align-items_center"
+                                    >
+                            <div class="cart_item__qty">
+                                Qty:
+                                <span>1</span>
+                            </div>
+
+                            <div class="cart_item__price">
+                                $123.99
+                            </div>
+                        </div>
+                        <!-- end of .price_info -->
+
+                    </div>
+                    <!-- end of .cart_item__details -->
+
+                </div>
+                <!-- end of .cart_item -->
+
+                <div class="cart_item
+                            main_flex__nowrap
+                            flex__jcontent_start
+                            flex__align-items_start">
+
+                    <div class="cart_item__image">
+                        <img src="images/content/product_01_1.jpg" alt="Cart Item Image">
+                    </div>
+
+                    <div class="cart_item__details">
+
+                        <div class="cart_item__title">
+                            Catalog Item Title <br>
+                            in several rows if needed...
+                        </div>
+
+                        <div class="price_info
+                                    main_flex__nowrap
+                                    flex__jcontent_between
+                                    flex__align-items_center"
+                                    >
+                            <div class="cart_item__qty">
+                                Qty:
+                                <span>1</span>
+                            </div>
+
+                            <div class="cart_item__price">
+                                $123.99
+                            </div>
+                        </div>
+                        <!-- end of .price_info -->
+
+                    </div>
+                    <!-- end of .cart_item__details -->
+
+                </div>
+                <!-- end of .cart_item -->
+
+                <div class="cart_item
+                            main_flex__nowrap
+                            flex__jcontent_start
+                            flex__align-items_start">
+
+                    <div class="cart_item__image">
+                        <img src="images/content/product_01_1.jpg" alt="Cart Item Image">
+                    </div>
+
+                    <div class="cart_item__details">
+
+                        <div class="cart_item__title">
+                            Catalog Item Title <br>
+                            in several rows if needed...
+                        </div>
+
+                        <div class="price_info
+                                    main_flex__nowrap
+                                    flex__jcontent_between
+                                    flex__align-items_center"
+                                    >
+                            <div class="cart_item__qty">
+                                Qty:
+                                <span>1</span>
+                            </div>
+
+                            <div class="cart_item__price">
+                                $123.99
+                            </div>
+                        </div>
+                        <!-- end of .price_info -->
+
+                    </div>
+                    <!-- end of .cart_item__details -->
+
+                </div>
+                <!-- end of .cart_item -->
+
+            </div>
+            <!-- end of .cart_items -->
+
+            <div class="cart_subtotal">
+                Cart Subtotal:
+                <span id="cart_subtotal_value">$371.97</span>
+            </div>
+
+            <div class="cart_notes">
+                Tax and shipping will be calculated at checkout
+            </div>
+
+            <button  id="view_shooping_cart_btn"
+                     class="button
+                            main_flex__nowrap
+                            flex__jcontent_center
+                            flex__align-items_center">
+                view shopping cart
+            </button>
+
+        </div>
+        <!-- end of #cart_popup -->
+
+        <header class="header">
+
+            <div class="header__top
+                        main_flex__nowrap
+                        flex__jcontent_between
+                        flex__align-items_center">
+
+                <div class="left_part
+                            main_flex__nowrap
+                            flex__jcontent_between
+                            flex__align-items_center">
+
+                    <div class="logo
+                                main_flex__nowrap
+                                flex__jcontent_center
+                                flex__align-items_center">
+                        <a href="#">
+                            <img src="images/icons/logo.png" alt="Logo Image">
+                        </a>
+                    </div>
+                    <!-- end of .logo -->
+
+                    <div class="phones
+                                main_flex__nowrap
+                                flex__jcontent_between
+                                flex__align-items_start">
+
+                        <div class="phones__top">
+                            <a href="tel:1-888-688-2188">
+                                1 888-688-2188
+                            </a>
+                        </div>
+                        <!-- end of .phones__top -->
+
+                        <div class="phones__bottom">
+                            <p>
+                                1 (727) 209-1300 | Mon-Fri 9a-5p ET
+                            </p>
+                        </div>
+                        <!-- end of .phones__bottom -->
+                    </div>
+                    <!-- end of .phones -->
+                </div>
+                <!-- end of .left_part -->
+
+                <div class="mobile_buttons
+                            main_flex__nowrap
+                            flex__jcontent_between
+                            flex__align-items_center">
+
+                    <div id="search_btn" class="button
+                                main_flex__nowrap
+                                flex__jcontent_center
+                                flex__align-items_center">
+
+                        <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30.239 30.239"
+                            style="enable-background:new 0 0 30.239 30.239;" xml:space="preserve">
+                            <path d="M20.194,3.46c-4.613-4.613-12.121-4.613-16.734,0c-4.612,4.614-4.612,12.121,0,16.735
+                                c4.108,4.107,10.506,4.547,15.116,1.34c0.097,0.459,0.319,0.897,0.676,1.254l6.718,6.718c0.979,0.977,2.561,0.977,3.535,0
+                                c0.978-0.978,0.978-2.56,0-3.535l-6.718-6.72c-0.355-0.354-0.794-0.577-1.253-0.674C24.743,13.967,24.303,7.57,20.194,3.46z
+                                M18.073,18.074c-3.444,3.444-9.049,3.444-12.492,0c-3.442-3.444-3.442-9.048,0-12.492c3.443-3.443,9.048-3.443,12.492,0
+                                C21.517,9.026,21.517,14.63,18.073,18.074z" />
+                        </svg>
+                    </div>
+
+                    <div class="cart_btn 
+                                button">
+
+                        <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 44.16 44.16"
+                            style="enable-background:new 0 0 44.16 44.16;" xml:space="preserve">
+                            <path d="M44.16,6.6H11.592L10.66,1.179H2.408C1.076,1.179,0,2.257,0,3.588v2.408h6.602l4.248,24.709
+                                c0.094,0.544,0.617,0.985,1.17,0.985h28.527c1.332,0,2.41-1.077,2.41-2.411v-2.406H15.078l-0.587-3.414h22.042
+                                c2.66,0,5.172-2.128,5.611-4.75L44.16,6.6z" />
+                            <circle cx="19.47" cy="38.817" r="4.165" />
+                            <path d="M29.762,38.816c0,2.299,1.863,4.164,4.162,4.164c2.301,0,4.168-1.865,4.168-4.164
+                                c0-2.299-1.867-4.166-4.168-4.166C31.625,34.65,29.762,36.518,29.762,38.816z" />
+                        </svg>
+
+                    </div>
+
+                    <div id="hamburger_menu_btn" class="button
+                                                        main_flex__nowrap
+                                                        flex__jcontent_center
+                                                        flex__align-items_center">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+                <div class="right_part
+                            main_flex__nowrap
+                            flex__jcontent_between
+                            flex__align-items_center
+                            flex__align-content_center">
+
+                    <form class="search_keyword" method="post" action="/search-our-site.cfm">
+                        <input name="searchpart" type="text" />
+                        <input type="submit" value="Search Keyword" class="button" />
+                    </form>
+                    <!-- end of .search_keyword -->
+
+                    <form class="search_part_no" method="post" action="/search-our-site.cfm">
+                        <input name="searchkeyword" type="text" />
+                        <input type="submit" value="Search Part No." class="button" />
+                    </form>
+                    <!-- end of .search_part_no -->
+
+                    <div class="button
+                            main_flex__nowrap
+                            flex__jcontent_center
+                            flex__align-items_center" id="cart_button" rel="nofollow">
+
+                        <div class="cart_icon">
+                            <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 44.16 44.16"
+                                style="enable-background:new 0 0 44.16 44.16;" xml:space="preserve">
+                                <path style="fill:#010002;" d="M44.16,6.6H11.592L10.66,1.179H2.408C1.076,1.179,0,2.257,0,3.588v2.408h6.602l4.248,24.709
+                                    c0.094,0.544,0.617,0.985,1.17,0.985h28.527c1.332,0,2.41-1.077,2.41-2.411v-2.406H15.078l-0.587-3.414h22.042
+                                    c2.66,0,5.172-2.128,5.611-4.75L44.16,6.6z" />
+                                <circle style="fill:#010002;" cx="19.47" cy="38.817" r="4.165" />
+                                <path style="fill:#010002;" d="M29.762,38.816c0,2.299,1.863,4.164,4.162,4.164c2.301,0,4.168-1.865,4.168-4.164
+                                    c0-2.299-1.867-4.166-4.168-4.166C31.625,34.65,29.762,36.518,29.762,38.816z" />
+                            </svg>
+                        </div>
+
+                        (
+                        <span id="cic">0</span>) Cart
+
+                    </div>
+                    <!-- end of #cart_button -->
+
+                </div>
+                <!-- end of .right_part -->
+            </div>
+            <!-- end of .header__top -->
+
+            <nav class="main_menu">
+                <ul class="main_flex__nowrap
+                           flex__jcontent_between
+                           flex__align-items_center">
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="company.html">Company/Contact</a>
+                    </li>
+                    <li>
+                        <a href="search.html">Search</a>
+                    </li>
+                    <li>
+                        <a href="security.html">Security</a>
+                    </li>
+                    <li>
+                        <a href="privacy_policy.html">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="terms.html">Terms/Conditions</a>
+                    </li>
+                    <li>
+                        <a href="rma.html">Returns/RMA</a>
+                    </li>
+                    <li>
+                        <a href="presale.html">Pre-Sale Information</a>
+                    </li>
+                    <li>
+                        <a href="press.html">Press</a>
+                    </li>
+                    <li>
+                        <a href="downloads.html">Downloads</a>
+                    </li>
+                    <li>
+                        <a href="gethelp.cfm">Help</a>
+                    </li>
+
+                </ul>
+            </nav>
+            <!-- end of .main_menu -->
+
+        </header>
+        <!-- end of .header -->
+
+        <div class="wrapper
+                    main_flex__nowrap
+                    flex__jcontent_start">
+
+            <main class="cart">
+
+                <h1 class="cart__title">
+                    Shopping Cart
+                </h1>
+                <!-- end of .cart__title -->
+
+                <div class="cart__description">
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+                    </p>
+                </div>
+                <!-- end of .cart__description -->
+
+                <div class="cart__content
+                            main_flex__nowrap
+                            flex__jcontent_between
+                            flex__align-items_start">
+
+                    <div class="left_part">
+
+                        <div class="cart__actions_panel
+                                    main_flex__nowrap
+                                    flex__jcontent_between
+                                    flex__align-items_center">
+
+                            <div class="links
+                                        main_flex__nowrap
+                                        flex__jcontent_between
+                                        flex__align-items_center">
+                                <a href="home.html">Continue Shopping</a>
+                                <a href="#">Clear All</a>
+                            </div>
+                            <!-- end of .links -->
+
+                            <div class="buttons
+                                        main_flex__nowrap
+                                        flex__jcontent_between
+                                        flex__align-items_center">
+
+                                <button  id="refresh_subtotal_btn"
+                                            class="button
+                                                main_flex__nowrap
+                                                flex__jcontent_center
+                                                flex__align-items_center">
+                                    refresh subtotal
+                                </button>
+                                <!-- end of #refresh_subtotal_btn -->
+
+                                
+                                <button  id="proceed_checkout_btn"
+                                            class="button
+                                                main_flex__nowrap
+                                                flex__jcontent_center
+                                                flex__align-items_center">
+                                    proceed to checkout
+                                </button>
+                                <!-- end of #proceed_checkout_btn -->
+
+                            </div>
+                            <!-- end of .buttons -->
+                        </div>
+                        <!-- end of .cart__actions_panel -->
+
+                        <div class="cart__items">
+
+                            <div class="cart_item
+                                        main_flex__nowrap
+                                        flex__jcontent_between
+                                        flex__align-items_center">
+            
+                                <div class="cart_item__image">
+                                    <img src="images/content/product_01_1.jpg" alt="Cart Item Image">
+                                </div>
+            
+                                <div class="cart_item__details">
+            
+                                    <div class="cart_item__title">
+                                        Catalog Item Title <br>
+                                        in several rows if needed...
+                                    </div>
+
+                                    <div class="cart_item__productid">
+                                        Product ID: 1234
+                                    </div>
+                                    <!-- end of .cart_item_productid -->
+            
+                                </div>
+                                <!-- end of .cart_item__details -->
+
+                                <div class="price_info
+                                            main_flex__nowrap
+                                            flex__jcontent_between
+                                            flex__align-items_center"
+                                            >
+                                    <div class="cart_item__qty">
+                                        <label>
+                                            Qty:
+                                            <input type="text" name="qty">
+                                        </label>
+                                    </div>
+                                    <!-- end of .cart_item__qty -->
+        
+                                    <div class="cart_item__price">
+                                        $123.99
+                                    </div>
+                                </div>
+                                <!-- end of .price_info -->
+
+                                <div class="delete_block">
+                                    <div class="delete_icon">
+                                        <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 408.483 408.483" style="enable-background:new 0 0 408.483 408.483;"
+                                            xml:space="preserve">
+                                                <path d="M87.748,388.784c0.461,11.01,9.521,19.699,20.539,19.699h191.911c11.018,0,20.078-8.689,20.539-19.699l13.705-289.316
+                                                    H74.043L87.748,388.784z M247.655,171.329c0-4.61,3.738-8.349,8.35-8.349h13.355c4.609,0,8.35,3.738,8.35,8.349v165.293
+                                                    c0,4.611-3.738,8.349-8.35,8.349h-13.355c-4.61,0-8.35-3.736-8.35-8.349V171.329z M189.216,171.329
+                                                    c0-4.61,3.738-8.349,8.349-8.349h13.355c4.609,0,8.349,3.738,8.349,8.349v165.293c0,4.611-3.737,8.349-8.349,8.349h-13.355
+                                                    c-4.61,0-8.349-3.736-8.349-8.349V171.329L189.216,171.329z M130.775,171.329c0-4.61,3.738-8.349,8.349-8.349h13.356
+                                                    c4.61,0,8.349,3.738,8.349,8.349v165.293c0,4.611-3.738,8.349-8.349,8.349h-13.356c-4.61,0-8.349-3.736-8.349-8.349V171.329z"/>
+                                                <path d="M343.567,21.043h-88.535V4.305c0-2.377-1.927-4.305-4.305-4.305h-92.971c-2.377,0-4.304,1.928-4.304,4.305v16.737H64.916
+                                                    c-7.125,0-12.9,5.776-12.9,12.901V74.47h304.451V33.944C356.467,26.819,350.692,21.043,343.567,21.043z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- end of .cart_item -->
+
+                            <div class="cart_item
+                                        main_flex__nowrap
+                                        flex__jcontent_between
+                                        flex__align-items_center">
+            
+                                <div class="cart_item__image">
+                                    <img src="images/content/product_01_1.jpg" alt="Cart Item Image">
+                                </div>
+            
+                                <div class="cart_item__details">
+            
+                                    <div class="cart_item__title">
+                                        Catalog Item Title <br>
+                                        in several rows if needed...
+                                    </div>
+
+                                    <div class="cart_item__productid">
+                                        Product ID: 1234
+                                    </div>
+                                    <!-- end of .cart_item_productid -->
+            
+                                </div>
+                                <!-- end of .cart_item__details -->
+
+                                <div class="price_info
+                                            main_flex__nowrap
+                                            flex__jcontent_between
+                                            flex__align-items_center"
+                                            >
+                                    <div class="cart_item__qty">
+                                        <label>
+                                            Qty:
+                                            <input type="text" name="qty">
+                                        </label>
+                                    </div>
+                                    <!-- end of .cart_item__qty -->
+        
+                                    <div class="cart_item__price">
+                                        $123.99
+                                    </div>
+                                </div>
+                                <!-- end of .price_info -->
+
+                                <div class="delete_block">
+                                    <div class="delete_icon">
+                                        <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 408.483 408.483" style="enable-background:new 0 0 408.483 408.483;"
+                                            xml:space="preserve">
+                                                <path d="M87.748,388.784c0.461,11.01,9.521,19.699,20.539,19.699h191.911c11.018,0,20.078-8.689,20.539-19.699l13.705-289.316
+                                                    H74.043L87.748,388.784z M247.655,171.329c0-4.61,3.738-8.349,8.35-8.349h13.355c4.609,0,8.35,3.738,8.35,8.349v165.293
+                                                    c0,4.611-3.738,8.349-8.35,8.349h-13.355c-4.61,0-8.35-3.736-8.35-8.349V171.329z M189.216,171.329
+                                                    c0-4.61,3.738-8.349,8.349-8.349h13.355c4.609,0,8.349,3.738,8.349,8.349v165.293c0,4.611-3.737,8.349-8.349,8.349h-13.355
+                                                    c-4.61,0-8.349-3.736-8.349-8.349V171.329L189.216,171.329z M130.775,171.329c0-4.61,3.738-8.349,8.349-8.349h13.356
+                                                    c4.61,0,8.349,3.738,8.349,8.349v165.293c0,4.611-3.738,8.349-8.349,8.349h-13.356c-4.61,0-8.349-3.736-8.349-8.349V171.329z"/>
+                                                <path d="M343.567,21.043h-88.535V4.305c0-2.377-1.927-4.305-4.305-4.305h-92.971c-2.377,0-4.304,1.928-4.304,4.305v16.737H64.916
+                                                    c-7.125,0-12.9,5.776-12.9,12.901V74.47h304.451V33.944C356.467,26.819,350.692,21.043,343.567,21.043z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- end of .cart_item -->
+
+                            <div class="cart_item
+                                        main_flex__nowrap
+                                        flex__jcontent_between
+                                        flex__align-items_center">
+            
+                                <div class="cart_item__image">
+                                    <img src="images/content/product_01_1.jpg" alt="Cart Item Image">
+                                </div>
+            
+                                <div class="cart_item__details">
+            
+                                    <div class="cart_item__title">
+                                        Catalog Item Title <br>
+                                        in several rows if needed...
+                                    </div>
+
+                                    <div class="cart_item__productid">
+                                        Product ID: 1234
+                                    </div>
+                                    <!-- end of .cart_item_productid -->
+            
+                                </div>
+                                <!-- end of .cart_item__details -->
+
+                                <div class="price_info
+                                            main_flex__nowrap
+                                            flex__jcontent_between
+                                            flex__align-items_center"
+                                            >
+                                    <div class="cart_item__qty">
+                                        <label>
+                                            Qty:
+                                            <input type="text" name="qty">
+                                        </label>
+                                    </div>
+                                    <!-- end of .cart_item__qty -->
+        
+                                    <div class="cart_item__price">
+                                        $123.99
+                                    </div>
+                                </div>
+                                <!-- end of .price_info -->
+
+                                <div class="delete_block">
+                                    <div class="delete_icon">
+                                        <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 408.483 408.483" style="enable-background:new 0 0 408.483 408.483;"
+                                            xml:space="preserve">
+                                                <path d="M87.748,388.784c0.461,11.01,9.521,19.699,20.539,19.699h191.911c11.018,0,20.078-8.689,20.539-19.699l13.705-289.316
+                                                    H74.043L87.748,388.784z M247.655,171.329c0-4.61,3.738-8.349,8.35-8.349h13.355c4.609,0,8.35,3.738,8.35,8.349v165.293
+                                                    c0,4.611-3.738,8.349-8.35,8.349h-13.355c-4.61,0-8.35-3.736-8.35-8.349V171.329z M189.216,171.329
+                                                    c0-4.61,3.738-8.349,8.349-8.349h13.355c4.609,0,8.349,3.738,8.349,8.349v165.293c0,4.611-3.737,8.349-8.349,8.349h-13.355
+                                                    c-4.61,0-8.349-3.736-8.349-8.349V171.329L189.216,171.329z M130.775,171.329c0-4.61,3.738-8.349,8.349-8.349h13.356
+                                                    c4.61,0,8.349,3.738,8.349,8.349v165.293c0,4.611-3.738,8.349-8.349,8.349h-13.356c-4.61,0-8.349-3.736-8.349-8.349V171.329z"/>
+                                                <path d="M343.567,21.043h-88.535V4.305c0-2.377-1.927-4.305-4.305-4.305h-92.971c-2.377,0-4.304,1.928-4.304,4.305v16.737H64.916
+                                                    c-7.125,0-12.9,5.776-12.9,12.901V74.47h304.451V33.944C356.467,26.819,350.692,21.043,343.567,21.043z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- end of .cart_item -->
+
+                        </div>
+                        <!-- end of .cart__items -->
+
+                        <div class="cart__actions_panel
+                                    main_flex__nowrap
+                                    flex__jcontent_between
+                                    flex__align-items_center">
+
+                            <div class="links
+                                        main_flex__nowrap
+                                        flex__jcontent_between
+                                        flex__align-items_center">
+                                <a href="home.html">Continue Shopping</a>
+                                <a href="#">Clear All</a>
+                            </div>
+                            <!-- end of .links -->
+
+                            <div class="buttons
+                                        main_flex__nowrap
+                                        flex__jcontent_between
+                                        flex__align-items_center">
+
+                                <button  id="refresh_subtotal_btn"
+                                            class="button
+                                                main_flex__nowrap
+                                                flex__jcontent_center
+                                                flex__align-items_center">
+                                    refresh subtotal
+                                </button>
+                                <!-- end of #refresh_subtotal_btn -->
+
+                                
+                                <button  id="proceed_checkout_btn"
+                                            class="button
+                                                main_flex__nowrap
+                                                flex__jcontent_center
+                                                flex__align-items_center">
+                                    proceed to checkout
+                                </button>
+                                <!-- end of #proceed_checkout_btn -->
+
+                            </div>
+                            <!-- end of .buttons -->
+                        </div>
+                        <!-- end of .cart__actions_panel -->
+
+                        <div class="cart__banner">
+                            <img src="images/content/big_banner.jpg" alt="Cart Banner Image">
+                        </div>
+                        <!-- end of .cart__banner -->
+                    </div>
+                    <!-- end of .left_part -->
+
+                    <div class="right_part">
+
+                        <div class="block
+                                    promo_code_block">
+
+                            <form class="apply_promocode" method="post" action="/">
+
+                                <label>
+                                    Promo Code
+                                    <input name="promocode" type="text" />
+                                </label>
+                                
+                                <input type="submit" value="apply" class="button" />
+
+                            </form>
+
+                        </div>
+                        <!-- end of .promo_code_block -->
+
+                        <div class="block
+                                    shipping_tax_block">
+
+                            <div class="main_flex__nowrap
+                                        flex__jcontent_start
+                                        flex__align-items_center">
+
+                                <h3>Estimate Shipping & Tax</h3>
+
+                                <a href="#" class="question_icon">
+                                    <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                                        style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                        <path d="M256,0C114.833,0,0,114.833,0,256s114.833,256,256,256s256-114.833,256-256S397.167,0,256,0z M245.333,426.667
+                                        c-17.646,0-32-14.354-32-32s14.354-32,32-32c17.646,0,32,14.354,32,32S262.979,426.667,245.333,426.667z M277.333,296.542v34.125
+                                        c0,5.896-4.771,10.667-10.667,10.667H224c-5.896,0-10.667-4.771-10.667-10.667v-53.333c0-23.521,19.146-42.667,42.667-42.667
+                                        s42.667-19.146,42.667-42.667S279.521,149.333,256,149.333S213.333,168.479,213.333,192v10.667
+                                        c0,5.896-4.771,10.667-10.667,10.667H160c-5.896,0-10.667-4.771-10.667-10.667V192c0-58.813,47.854-106.667,106.667-106.667
+                                        S362.667,133.188,362.667,192C362.667,243.188,326.604,286.563,277.333,296.542z" />
+                                    </svg>
+    
+                                    <span>Some text about Shipping & Tax</span>
+                                </a>
+                            </div>
+
+                            <form class="estimate_shipping" method="post" action="/">
+
+                                <label>
+                                    Country *
+                                    <select name="country" required>
+                                        <option value="USA">USA</option>
+                                        <option value="Canada">Canada</option>
+                                    </select>
+                                </label>
+
+                                <label>
+                                    State\Province *
+                                    <select name="country" required>
+                                        <option value="Alberta">Alberta</option>
+                                        <option value="British_Colimbia">British Columbia</option>
+                                        <option value="Manitioba">Manitoba</option>
+                                    </select>
+                                </label>
+
+                                <label>
+                                    ZIP *
+                                    <input name="zip" type="text" />
+                                </label>
+                                
+                                <input type="submit" value="estimate" class="button" />
+
+                            </form>
+
+                        </div>
+                        <!-- end of .shipping_tax_block -->
+
+                        <div class="block
+                                    total_info_block">
+
+                            <div class="main_flex__nowrap
+                                        flex__jcontent_between
+                                        flex__align-items_center">
+
+                                <h3>Subtotal - (<span>3</span> items)</h3>
+
+                                <div class="subtotal_price">$371.97</div>
+
+                            </div>
+
+                            <div class="additional_payments">
+
+                                <div class="row">
+                                    <div class="caption">Estimated Tax</div>
+                                    <div class="value">N/A</div>
+                                </div>
+                                <!-- end of .row -->
+                                <div class="row">
+                                    <div class="caption">Estimated Shipping</div>
+                                    <div class="value not_null_value">$10.78</div>
+                                </div>
+                                <!-- end of .row -->
+
+                            </div>
+                            <!-- end of .additional_payments -->
+
+                            <div class="total_price row">
+                                <div class="caption">Grand Total</div>
+                                <div class="value not_null_value">$382.75</div>
+                            </div>
+                            <!-- end of .total_price -->
+
+                        </div>
+                        <!-- end of .total_info_block -->
+
+                    </div>
+                    <!-- end of .right_part -->
+
+                </div>
+                <!-- end of .cart__content -->
+
+                <div class="cart_similar_items">
+
+                    <h4>With these products people also buy:</h4>
+
+                    <div class="similar_items
+                                main_flex__nowrap
+                                flex__jcontent_between
+                                flex__align-items_stretch">
+
+                    <div class="product__item
+                                main_flex__nowrap
+                                flex__jcontent_between
+                                flex__align-items_center">
+
+                        <div class="item_image">
+                            <img src="images/content/product_01_2.jpg" alt="Product Image">
+                        </div>
+
+                        <div class="item_title">
+                            USB SERIAL RS-232 ADAPTER IN SEVERAL LINES
+                        </div>
+
+                        <div class="item_description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor....
+                        </div>
+                        <!-- end of .item_description -->
+
+                        <a href="#" class="more_info_link">
+                            More Info
+                        </a>
+
+                        <div class="buy_section
+                                    main_flex__nowrap
+                                    flex__jcontent_between
+                                    flex__align-items_center">
+
+                            <div class="item_price">
+                                $12.36
+                            </div>
+
+                            <button class="add_to_cart_btn
+                                            button
+                                            main_flex__nowrap
+                                            flex__jcontent_center
+                                            flex__align-items_center">
+                                add to cart
+                            </button>
+                        </div>
+
+                    </div>
+                    <!-- end of .category__item -->
+
+                    <div class="product__item
+                                main_flex__nowrap
+                                flex__jcontent_between
+                                flex__align-items_center">
+
+                        <div class="item_image">
+                            <img src="images/content/product_01_2.jpg" alt="Product Image">
+                        </div>
+
+                        <div class="item_title">
+                            USB SERIAL RS-232 ADAPTER
+                        </div>
+
+                        <div class="item_description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor....
+                        </div>
+                        <!-- end of .item_description -->
+
+                        <a href="#" class="more_info_link">
+                            More Info
+                        </a>
+
+                        <div class="buy_section
+                                    main_flex__nowrap
+                                    flex__jcontent_between
+                                    flex__align-items_center">
+
+                            <div class="item_price">
+                                $12.36
+                            </div>
+
+                            <button class="add_to_cart_btn
+                                            button
+                                            main_flex__nowrap
+                                            flex__jcontent_center
+                                            flex__align-items_center">
+                                add to cart
+                            </button>
+
+                        </div>
+
+                    </div>
+                    <!-- end of .category__item -->
+
+                    <div class="product__item
+                                main_flex__nowrap
+                                flex__jcontent_between
+                                flex__align-items_center">
+
+                        <div class="item_image">
+                            <img src="images/content/product_01_2.jpg" alt="Product Image">
+                        </div>
+
+                        <div class="item_title">
+                            USB SERIAL RS-232 ADAPTER
+                        </div>
+
+                        <div class="item_description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor....
+                        </div>
+                        <!-- end of .item_description -->
+
+                        <a href="#" class="more_info_link">
+                            More Info
+                        </a>
+
+                        <div class="buy_section
+                                    main_flex__nowrap
+                                    flex__jcontent_between
+                                    flex__align-items_center">
+
+                            <div class="item_price">
+                                $12.36
+                            </div>
+
+                            <button class="add_to_cart_btn
+                                            button
+                                            main_flex__nowrap
+                                            flex__jcontent_center
+                                            flex__align-items_center">
+                                add to cart
+                            </button>
+
+                        </div>
+
+                    </div>
+                    <!-- end of .category__item -->
+
+                    <div class="product__item
+                                main_flex__nowrap
+                                flex__jcontent_between
+                                flex__align-items_center">
+
+                        <div class="item_image">
+                            <img src="images/content/product_01_2.jpg" alt="Product Image">
+                        </div>
+
+                        <div class="item_title">
+                            USB SERIAL RS-232 ADAPTER
+                        </div>
+
+                        <div class="item_description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor....
+                        </div>
+                        <!-- end of .item_description -->
+
+                        <a href="#" class="more_info_link">
+                            More Info
+                        </a>
+
+                        <div class="buy_section
+                                    main_flex__nowrap
+                                    flex__jcontent_between
+                                    flex__align-items_center">
+
+                            <div class="item_price">
+                                $12.36
+                            </div>
+
+                            <button class="add_to_cart_btn
+                                            button
+                                            main_flex__nowrap
+                                            flex__jcontent_center
+                                            flex__align-items_center">
+                                add to cart
+                            </button>
+
+                        </div>
+
+                    </div>
+                    <!-- end of .category__item -->
+
+                    <div class="product__item
+                                main_flex__nowrap
+                                flex__jcontent_between
+                                flex__align-items_center">
+
+                        <div class="item_image">
+                            <img src="images/content/product_01_2.jpg" alt="Product Image">
+                        </div>
+
+                        <div class="item_title">
+                            USB SERIAL RS-232 ADAPTER
+                        </div>
+
+                        <div class="item_description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor....
+                        </div>
+                        <!-- end of .item_description -->
+
+                        <a href="#" class="more_info_link">
+                            More Info
+                        </a>
+
+                        <div class="buy_section
+                                    main_flex__nowrap
+                                    flex__jcontent_between
+                                    flex__align-items_center">
+
+                            <div class="item_price">
+                                $12.36
+                            </div>
+
+                            <button class="add_to_cart_btn
+                                            button
+                                            main_flex__nowrap
+                                            flex__jcontent_center
+                                            flex__align-items_center">
+                                add to cart
+                            </button>
+
+                        </div>
+
+                    </div>
+                    <!-- end of .category__item -->
+
+                </div>
+                <!-- end of .hot_products -->
+                </div>
+                <!-- end of .cart_similar_items -->
+                
+            </main>
+            <!-- end of .cart -->
+        </div>
+
+        <footer class="footer
+                        main_flex__nowrap
+                        flex__jcontent_between
+                        flex__align-items_center">
+
+            <div class="footer__map
+                        main_flex__nowrap
+                        flex__jcontent_between
+                        flex__align-items_start">
+
+                <div class="column">
+                    <div class="column__title">
+                        <h4>company</h4>
+                    </div>
+                    <!-- end of .column__title -->
+
+                    <div class="column__items">
+                        <ul>
+                            <li>
+                                <a href="#">company/contact</a>
+                            </li>
+                            <li>
+                                <a href="#">privacy policy</a>
+                            </li>
+                            <li>
+                                <a href="#">press</a>
+                            </li>
+                            <li>
+                                <a href="#">security</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end of .column__items -->
+                </div>
+                <!-- end of .column -->
+
+                <div class="column">
+                    <div class="column__title">
+                        <h4>support</h4>
+                    </div>
+                    <!-- end of .column__title -->
+
+                    <div class="column__items">
+                        <ul>
+                            <li>
+                                <a href="#">returns/rma</a>
+                            </li>
+                            <li>
+                                <a href="#">downloads</a>
+                            </li>
+                            <li>
+                                <a href="#">help</a>
+                            </li>
+                            <li>
+                                <a href="#">terms/conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end of .column__items -->
+                </div>
+                <!-- end of .column -->
+
+                <div class="column">
+                    <div class="column__title">
+                        <h4>sales</h4>
+                    </div>
+                    <!-- end of .column__title -->
+
+                    <div class="column__items">
+                        <ul>
+                            <li>
+                                <a href="#">pre-sale info</a>
+                            </li>
+                            <li>
+                                <a href="#">privacy policy</a>
+                            </li>
+                            <li>
+                                <a href="#">lorem ipsum</a>
+                            </li>
+                            <li>
+                                <a href="#">lorem ipsum</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end of .column__items -->
+                </div>
+                <!-- end of .column -->
+
+                <div class="column">
+                    <div class="column__title">
+                        <h4>search the site</h4>
+                    </div>
+                    <!-- end of .column__title -->
+
+                    <div class="column__items">
+                        <form class="search_keyword" method="post" action="/search-our-site.cfm">
+                            <input name="searchpart" type="text" />
+                            <input type="submit" value="Search Keyword" class="button" />
+                        </form>
+                        <!-- end of .search_keyword -->
+
+                        <form class="search_part_no" method="post" action="/search-our-site.cfm">
+                            <input name="searchkeyword" type="text" />
+                            <input type="submit" value="Search Part No." class="button" />
+                        </form>
+                        <!-- end of .search_part_no -->
+                    </div>
+                    <!-- end of .column__items -->
+                </div>
+                <!-- end of .column -->
+            </div>
+            <!-- end of .footer__map -->
+
+            <div class="footer__map_mobile
+                        main_flex__nowrap
+                        flex__jcontent_between
+                        flex__align-items_start">
+
+                <div class="column">
+                    <div class="column__items">
+                        <ul>
+                            <li>
+                                <a href="#">home</a>
+                            </li>
+                            <li>
+                                <a href="#">company/contact</a>
+                            </li>
+                            <li>
+                                <a href="#">search</a>
+                            </li>
+                            <li>
+                                <a href="#">security</a>
+                            </li>
+                            <li>
+                                <a href="#">privacy policy</a>
+                            </li>
+                            <li>
+                                <a href="#">terms/conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end of .column__items -->
+                </div>
+                <!-- end of .column -->
+
+                <div class="column">
+                    <div class="column__items">
+                        <ul>
+                            <li>
+                                <a href="#">returns/rma</a>
+                            </li>
+                            <li>
+                                <a href="#">pre-sale info</a>
+                            </li>
+                            <li>
+                                <a href="#">press</a>
+                            </li>
+                            <li>
+                                <a href="#">downloads</a>
+                            </li>
+                            <li>
+                                <a href="#">help</a>
+                            </li>
+                            <li>
+                                <a href="#">lorem ipsum</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end of .column__items -->
+                </div>
+                <!-- end of .column -->
+
+            </div>
+            <!-- end of .footer__map_mobile -->
+
+            <div class="footer__copyright">
+                Copyright © 1997-
+                <span id="year">2018</span> USBGear.com Part of COOLGEAR Family. All Rights Reserved.
+            </div>
+            <!-- end of .footer__copyright -->
+        </footer>
+        <!-- end of .footer -->
+    </div>
+
+    <!-- Add all our scripts -->
+    <script src="js/vendors/jquery.min.js"></script>
+    <script src="js/vendors/slick.min.js"></script>
+    <script src="js/vendors/respond.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

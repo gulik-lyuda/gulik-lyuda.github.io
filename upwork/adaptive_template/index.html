@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Isracard</title>
+    <!-- Add favicon-->
+    <link rel="icon" href="images/icons/wizard.ico" type="image/x-icon"/>
+    <!-- Add fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Assistant:300,400,600,700|Open+Sans:600,700"/>
+    <!-- Add vendor styles for normalization and using flex-->
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/general-flex-css.css"/>
+    <!-- Add library for date range picker-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
+    <link rel="stylesheet" href="css/vendors/datepicker.min.css"/>
+    <!-- Add a library for a multiselect dropdown-->
+    <link rel="stylesheet" href="css/vendors/multi.select.css"/>
+    <!-- Add a library for custom radio-buttons and checkboxes-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css"/>
+    <!-- Add our own styles-->
+    <link rel="stylesheet" href="css/base.css"/>
+  </head>
+  <body>
+    <div class="disable_page"> </div>
+    <div id="offer_saved">
+      <div class="form_title"></div>
+      <div class="form_content">
+        <div class="info_text">תודה, קיבלנו את פרטי המבצע.נבדוק את הפרטים בהקדם,ונעדכן ברגע שהמבצע יאושר</div>
+        <div class="button" id="ok_btn">סיום</div>
+      </div>
+    </div>
+    <!-- end of #offer_saved-->
+    <div id="offer_content">
+      <div class="form_title">תוכן ההודעה<br> <span>(צור את תוכן ההודעה ללקוח)</span></div>
+      <div class="form_content">
+        <div class="offer_text">
+          שם לקוח שלום, ישראכרט ו”זר פרחים” מזמינים אותך ליהנות ממבצע % 55 על זר
+          פורח המבצע יתקיים עד לתאריך כמות מקסימלית ביחידות הכמות המינמלית עבור
+          מוצר זה הינה 500 יחידות
+        </div>
+        <div class="buttons main_flex__nowrap flex__jcontent_between flex__align-items_center">
+          <div class="button" id="approve_btn">אישור</div>
+          <div class="button" id="cancel_btn">ביטול</div>
+        </div>
+        <!-- end of .buttons-->
+      </div>
+      <!-- end of .form_content-->
+    </div>
+    <!-- end of #offer_content-->
+    <div id="create_offer">
+      <svg version="1.1" id="close_btn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51.976 51.976" style="enable-background:new 0 0 51.976 51.976;" xml:space="preserve">
+        <path d="M44.373,7.603c-10.137-10.137-26.632-10.138-36.77,0c-10.138,10.138-10.137,26.632,0,36.77s26.632,10.138,36.77,0 C54.51,34.235,54.51,17.74,44.373,7.603z M36.241,36.241c-0.781,0.781-2.047,0.781-2.828,0l-7.425-7.425l-7.778,7.778 c-0.781,0.781-2.047,0.781-2.828,0c-0.781-0.781-0.781-2.047,0-2.828l7.778-7.778l-7.425-7.425c-0.781-0.781-0.781-2.048,0-2.828 c0.781-0.781,2.047-0.781,2.828,0l7.425,7.425l7.071-7.071c0.781-0.781,2.047-0.781,2.828,0c0.781,0.781,0.781,2.047,0,2.828 l-7.071,7.071l7.425,7.425C37.022,34.194,37.022,35.46,36.241,36.241z"></path>
+      </svg>
+      <!-- end of #close_btn-->
+      <form class="create_offer__form main_flex__nowrap flex__jcontent_between flex__align-items_center" action="">
+        <div class="form_title">מבצעים</div>
+        <div class="offer_type_tabs main_flex flex__jcontent_start">
+          <!-- Tabs-->
+          <!-- Tab 1 - Create a Discount-->
+          <input id="tab_create_discount" type="radio" name="tab-group1" checked="checked"/>
+          <label for="tab_create_discount">יצירת מבצע הנחות</label>
+          <!-- End of Tab 1-->
+          <!-- Tab 2 - Create 1+1 Offer-->
+          <input id="tab_create_1plus1_offer" type="radio" name="tab-group1"/>
+          <label for="tab_create_1plus1_offer">יצירת מבצע 1+1</label>
+          <!-- End of Tab 2-->
+          <!-- Tab 3 - Create 1+1 Offer-->
+          <input id="tab_create_purchase_offer" type="radio" name="tab-group1"/>
+          <label for="tab_create_purchase_offer">יצירת מבצע קנה קבל</label>
+          <!-- End of Tab 3-->
+          <!-- Tabs Content-->
+          <div class="tabs_content">
+            <!-- Tab Create Discount Content-->
+            <div class="tab_content" id="content_create_discount">
+              <form id="create_discount_form" action="" method="post">
+                <div class="steps_tabs main_flex flex__jcontent_start">
+                  <!-- Tab 1 - Step 1-->
+                  <input id="tab_create_discount_step_1" type="radio" name="tab-group2" checked="checked"/>
+                  <label class="step_tab" for="tab_create_discount_step_1">
+                    <div class="row">
+                      <div class="step_no">1</div>
+                      <div class="step_title">הגדרת קהל יעד</div>
+                    </div>
+                    <div class="row">
+                      <label for="age_ranges">טווח גילים</label>
+                      <div class="age_ranges" id="age_ranges_selection"></div>
+                    </div>
+                    <div class="row">
+                      <label for="sex">טווח גילים</label>
+                      <input id="sex-female" type="checkbox" name="sex" value="female"/>
+                      <label for="sex-female">נשים</label>
+                      <input id="sex-male" type="checkbox" name="sex" value="male"/>
+                      <label for="sex-male">גברים</label>
+                    </div>
+                    <div class="row">
+                      <label for="our_client">ללקוחות חוזרים בלבד</label>
+                      <input id="our_client_indicator" type="checkbox" name="our_client"/>
+                      <label for="our_client_indicator">(סמן אם כן)</label>
+                    </div>
+                  </label>
+                  <!-- End of Tab 1-->
+                  <!-- Tab 2 - Step 2-->
+                  <input id="tab_create_discount_step_2" type="radio" name="tab-group2"/>
+                  <label class="step_tab" for="tab_create_discount_step_2">
+                    <div class="row">
+                      <div class="step_no">2</div>
+                      <div class="step_title">הגדרת מבצע</div>
+                    </div>
+                    <div class="row">
+                      <div class="row_element">
+                        <div class="main_flex__nowrap flex__jcontent_start flex__align-items_center">
+                          <label for="offer_start_date_1">תחילת מבצע</label>
+                          <input id="1st_offer_start" name="offer_start_date_1" type="text" data-toggle="datepicker" required="required"/>
+                        </div>
+                        <div class="error_message"></div>
+                      </div>
+                      <div class="row_element">
+                        <div class="main_flex__nowrap flex__jcontent_start flex__align-items_center">
+                          <label for="offer_end_date">סיום </label>
+                          <input id="1st_offer_end" name="offer_end_date" type="text" data-toggle="datepicker" required="required"/>
+                        </div>
+                        <div class="error_message"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="row_element">
+                        <div class="main_flex__nowrap flex__jcontent_start flex__align-items_center">
+                          <label for="product_name">שם המוצר</label>
+                          <input id="1st_offer_product" name="product_name" type="text" required="required" maxlength="32"/>
+                        </div>
+                        <div class="error_message"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="row_element">
+                        <div class="main_flex__nowrap flex__jcontent_start flex__align-items_center">
+                          <label for="discount_percent">% הנחה</label>
+                          <input id="1st_discount" name="discount_percent" type="text" required="required"/>
+                        </div>
+                        <div class="error_message"></div>
+                      </div>
+                      <div id="percentage_picker">
+                        <ul class="percentage_values main_flex flex__jcontent_start flex__align-items_center">
+                          <li class="percentage_item">
+                            <input id="percent_01" type="radio" name="discount_value"/>
+                            <label for="percent_01">20%</label>
+                          </li>
+                          <li class="percentage_item">
+                            <input id="percent_02" type="radio" name="discount_value"/>
+                            <label for="percent_02">25%</label>
+                          </li>
+                          <li class="percentage_item">
+                            <input id="percent_03" type="radio" name="discount_value"/>
+                            <label for="percent_03">30%</label>
+                          </li>
+                          <li class="percentage_item">
+                            <input id="percent_04" type="radio" name="discount_value"/>
+                            <label for="percent_04">35%</label>
+                          </li>
+                          <li class="percentage_item">
+                            <input id="percent_05" type="radio" name="discount_value"/>
+                            <label for="percent_05">40%</label>
+                          </li>
+                          <li class="percentage_item">
+                            <input id="percent_06" type="radio" name="discount_value"/>
+                            <label for="percent_06">45%</label>
+                          </li>
+                          <li class="percentage_item">
+                            <input id="percent_07" type="radio" name="discount_value"/>
+                            <label for="percent_07">50%</label>
+                          </li>
+                          <li class="percentage_item">
+                            <input id="percent_08" type="radio" name="discount_value"/>
+                            <label for="percent_08">55%</label>
+                          </li>
+                          <li class="percentage_item">
+                            <input id="percent_09" type="radio" name="discount_value"/>
+                            <label for="percent_09">60%</label>
+                          </li>
+                          <li class="percentage_item">
+                            <input id="percent_10" type="radio" name="discount_value"/>
+                            <label for="percent_10">65%</label>
+                          </li>
+                          <li class="percentage_item">
+                            <input id="percent_11" type="radio" name="discount_value"/>
+                            <label for="percent_11">70%</label>
+                          </li>
+                          <li class="percentage_item">
+                            <input id="percent_12" type="radio" name="discount_value"/>
+                            <label for="percent_12">75%</label>
+                          </li>
+                          <li class="percentage_item">
+                            <input id="percent_13" type="radio" name="discount_value"/>
+                            <label for="percent_13">80%</label>
+                          </li>
+                          <li class="percentage_item">
+                            <input id="percent_14" type="radio" name="discount_value"/>
+                            <label for="percent_14">85%</label>
+                          </li>
+                          <li class="percentage_item">
+                            <input id="percent_15" type="radio" name="discount_value"/>
+                            <label for="percent_15">90%</label>
+                          </li>
+                          <li class="percentage_item">
+                            <input id="percent_16" type="radio" name="discount_value"/>
+                            <label for="percent_16">95%</label>
+                          </li>
+                        </ul>
+                        <!-- end of .percentage_values-->
+                      </div>
+                      <!-- end of #percentage_picker-->
+                    </div>
+                    <div class="row">
+                      <label for="min_count_value">כמות מינ’</label>
+                      <input id="1st_min_count" name="min_count_value" value="500" type="text" disabled="disabled"/>
+                    </div>
+                    <div class="row">
+                      <div class="row_element">
+                        <div class="main_flex__nowrap flex__jcontent_start flex__align-items_center">
+                          <label for="max_count_value">כמות מקס’</label>
+                          <input id="1st_max_count" name="max_count_value" type="number" min="500" required="required"/>
+                        </div>
+                        <div class="error_message"></div>
+                      </div>
+                    </div>
+                    <div class="row_with_button">
+                      <input class="submit button" type="submit" id="continue_discount_btn" value="המשך"/>
+                    </div>
+                  </label>
+                  <!-- End of label(for="tab_create_discount_step_2")-->
+                </div>
+                <!-- End of the Tab Create Disount Content -->
+              </form>
+            </div>
+            <!-- end of #create_discount_form-->
+            <!-- Tab Create 1+1 Offer Content-->
+            <div class="tab_content" id="content_create_1plus1_offer">
+              <form id="create_1plus1_offer_form" action="" method="post">
+                <div class="steps_tabs main_flex flex__jcontent_start">
+                  <!-- Tab 2 - Step 1-->
+                  <input id="tab_1plus1_offer_step_1" type="radio" name="tab-group3" checked="checked"/>
+                  <label class="step_tab" for="tab_1plus1_offer_step_1">
+                    <div class="row">
+                      <div class="step_no">1</div>
+                      <div class="step_title">הגדרת קהל יעד</div>
+                    </div>
+                    <div class="row">
+                      <label for="age_ranges">טווח גילים</label>
+                      <div class="age_ranges" id="age_ranges_selection"></div>
+                    </div>
+                    <div class="row">
+                      <label for="2nd_sex">טווח גילים</label>
+                      <input id="2nd_sex-female" type="checkbox" name="sex" value="female"/>
+                      <label for="2nd_sex-female">נשים</label>
+                      <input id="2nd_sex-male" type="checkbox" name="sex" value="male"/>
+                      <label for="2nd_sex-male">גברים</label>
+                    </div>
+                    <div class="row">
+                      <label for="2nd_our_client">ללקוחות חוזרים בלבד</label>
+                      <input id="2nd_our_client_indicator" type="checkbox" name="our_client"/>
+                      <label for="2nd_our_client_indicator">(סמן אם כן)</label>
+                    </div>
+                  </label>
+                  <!-- End of Tab 1-->
+                  <!-- Tab 2 - Step 2-->
+                  <input id="tab_1plus1_offer_step_2" type="radio" name="tab-group3"/>
+                  <label class="step_tab" for="tab_1plus1_offer_step_2">
+                    <div class="row">
+                      <div class="step_no">2</div>
+                      <div class="step_title">הגדרת מבצע</div>
+                    </div>
+                    <div class="row">
+                      <div class="row_element">
+                        <div class="main_flex__nowrap flex__jcontent_start flex__align-items_center">
+                          <label for="offer_start_date">תחילת מבצע</label>
+                          <input id="2nd_offer_start" name="offer_start_date" type="text" data-toggle="datepicker" required="required"/>
+                        </div>
+                        <div class="error_message"></div>
+                      </div>
+                      <div class="row_element">
+                        <div class="main_flex__nowrap flex__jcontent_start flex__align-items_center">
+                          <label for="offer_end_date">סיום </label>
+                          <input id="2nd_offer_end" name="offer_end_date" type="text" data-toggle="datepicker" required="required"/>
+                        </div>
+                        <div class="error_message"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="row_element">
+                        <div class="main_flex__nowrap flex__jcontent_start flex__align-items_center">
+                          <label for="product_name">שם המוצר</label>
+                          <input id="2nd_offer_product" name="product_name" type="text" required="required" maxlength="32"/>
+                        </div>
+                        <div class="error_message"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <label for="min_count_value">כמות מינ’</label>
+                      <input id="1st_min_count" name="min_count_value" value="500" type="text" disabled="disabled"/>
+                    </div>
+                    <div class="row">
+                      <div class="row_element">
+                        <div class="main_flex__nowrap flex__jcontent_start flex__align-items_center">
+                          <label for="max_count_value">כמות מקס’</label>
+                          <input id="2nd_max_count" name="max_count_value" type="number" min="500" required="required"/>
+                        </div>
+                        <div class="error_message"></div>
+                      </div>
+                    </div>
+                    <div class="row_with_button">
+                      <input class="submit button" type="submit" id="continue_1plus1_offer_btn" value="המשך"/>
+                    </div>
+                  </label>
+                </div>
+                <!-- End of the Tab Create 1+1 Offer Content -->
+              </form>
+            </div>
+            <!-- end of #create_1plus1_offer_form-->
+            <!-- Tab Create Purchase Offer Content -->
+            <div class="tab_content" id="content_create_purchase_offer">
+              <form id="content_create_purchase_offer" action="" method="post">
+                <div class="steps_tabs main_flex flex__jcontent_start">
+                  <!-- Tab 2 - Step 1-->
+                  <input id="tab_purchase_offer_step_1" type="radio" name="tab-group4" checked="checked"/>
+                  <label class="step_tab" for="tab_purchase_offer_step_1">
+                    <div class="row">
+                      <div class="step_no">1</div>
+                      <div class="step_title">הגדרת קהל יעד</div>
+                    </div>
+                    <div class="row">
+                      <label for="age_ranges">טווח גילים</label>
+                      <div class="age_ranges" id="age_ranges_selection"></div>
+                    </div>
+                    <div class="row">
+                      <label for="3rd_sex">טווח גילים</label>
+                      <input id="3rd_sex-female" type="checkbox" name="sex" value="female"/>
+                      <label for="3rd_sex-female">נשים</label>
+                      <input id="3rd_sex-male" type="checkbox" name="sex" value="male"/>
+                      <label for="3rd_sex-male">גברים</label>
+                    </div>
+                    <div class="row">
+                      <label for="our_client">ללקוחות חוזרים בלבד</label>
+                      <input id="3rd_our_client_indicator" type="checkbox" name="our_client"/>
+                      <label for="3rd_our_client_indicator">(סמן אם כן)</label>
+                    </div>
+                  </label>
+                  <!-- End of Tab 1-->
+                  <!-- Tab 2 - Step 2-->
+                  <input id="tab_purchase_offer_step_2" type="radio" name="tab-group4"/>
+                  <label class="step_tab" for="tab_purchase_offer_step_2">
+                    <div class="row">
+                      <div class="step_no">2</div>
+                      <div class="step_title">הגדרת מבצע</div>
+                    </div>
+                    <div class="row">
+                      <div class="row_element">
+                        <div class="main_flex__nowrap flex__jcontent_start flex__align-items_center">
+                          <label for="offer_start_date">תחילת מבצע</label>
+                          <input id="3rd_offer_start" name="offer_start_date" type="text" data-toggle="datepicker" required="required"/>
+                        </div>
+                        <div class="error_message"></div>
+                      </div>
+                      <div class="row_element">
+                        <div class="main_flex__nowrap flex__jcontent_start flex__align-items_center">
+                          <label for="offer_end_date">סיום </label>
+                          <input id="3rd_offer_end" name="offer_end_date" type="text" data-toggle="datepicker" required="required"/>
+                        </div>
+                        <div class="error_message"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="row_element">
+                        <div class="main_flex__nowrap flex__jcontent_start flex__align-items_center">
+                          <label for="buy_product_name">שם המוצר</label>
+                          <input id="buy_product" name="buy_product_name" type="text" required="required" maxlength="32"/>
+                        </div>
+                        <div class="error_message"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="row_element">
+                        <div class="main_flex__nowrap flex__jcontent_start flex__align-items_center">
+                          <label for="get_product_name">קבל</label>
+                          <input id="get_product" name="get_product_name" type="text" required="required" maxlength="32"/>
+                        </div>
+                        <div class="error_message"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <label for="min_count_value">כמות מינ’</label>
+                      <input id="3rd_min_count" name="min_count_value" value="500" type="text" disabled="disabled"/>
+                    </div>
+                    <div class="row">
+                      <div class="row_element">
+                        <div class="main_flex__nowrap flex__jcontent_start flex__align-items_center">
+                          <label for="max_count_value">כמות מקס’</label>
+                          <input id="3rd_max_count" name="max_count_value" type="number" min="500" required="required"/>
+                        </div>
+                        <div class="error_message"></div>
+                      </div>
+                    </div>
+                    <div class="row_with_button">
+                      <input class="submit button" type="submit" id="continue_purchase_btn" value="המשך"/>
+                    </div>
+                  </label>
+                </div>
+                <!-- End of the Tab Create Purchase Offer Content -->
+              </form>
+            </div>
+            <!-- end of #create_purchase_offer_form-->
+          </div>
+          <!-- end of .tabs_content-->
+        </div>
+        <!-- end of .offer_type_tabs-->
+      </form>
+    </div>
+    <!-- end of #create_offer-->
+    <header class="header_main">
+      <div class="container main_flex__nowrap flex__jcontent_between flex__align-items_center">
+        <div class="right_part main_flex__nowrap flex__jcontent_end flex__align-items_center">
+          <div class="advance_payments_block add_flex__nowrap flex__jcontent_start flex__align-items_center"><img src="images/content/advance_payments_img.png" alt="Advance Payments Image"/>
+            <p class="description">באפשרותך להקדים   <br>₪תשלומים בסך 1000 </p><a class="button" href="#">הקדמת תשלומים</a>
+          </div>
+          <!-- end of .advance_payments_block-->
+          <div class="create_offer_block add_flex__nowrap flex__jcontent_start flex__align-items_center"><img src="images/content/create_offer_img.png" alt="Create Offer Image"/>
+            <p class="description">כדאי אולי להוסיף<br> פה משפט כדי לאזן ביניהם </p><a class="button" id="create_offer_btn" href="#">יצירת מבצע</a>
+          </div>
+          <!-- end of .create_offer_blocks-->
+        </div>
+        <!-- end of .right_part-->
+        <div class="left_part add_flex_nowrap flex__jcontent_start flex__align-items_center">
+          <div class="greetings main_flex__nowrap flex__jcontent_end flex__align-items_center">
+            <p class="greeting_text">צהריים טובים, בית עסק</p><img src="images/content/sun.png"/>
+          </div>
+          <!-- end of .greetings-->
+          <div class="general_stat main_flex__nowrap_reverse flex__jcontent_end flex__align-items_center">
+            <div class="general_year_income main_flex__nowrap flex__jcontent_start flex__align-items_baseline"><span class="item_value" id="general_year_income__value">6720k</span>
+              <p class="item_description">הכנסות מצטברות מתחילת השנה</p>
+            </div>
+            <div class="general_month_income main_flex__nowrap flex__jcontent_start flex__align-items_baseline"><span class="item_value" id="general_month_income__value">620k</span>
+              <p class="item_description">הכנסות מצטברות מתחילת החודש</p>
+            </div>
+          </div>
+          <!-- end of .general_stat-->
+          <div class="calendar_picker main_flex__nowrap flex__jcontent_end flex__align-items_center">
+            <p id="selected_date_range">22.11.2018 - 23.11.2018</p>
+            <div class="calendar_icon"><img src="images/icons/calendar_icon.png" alt="Calendar Icon"/></div>
+          </div>
+          <!-- end of calendar_picker-->
+        </div>
+        <!-- end of .left_part-->
+      </div>
+      <!-- end of .container-->
+    </header>
+    <header class="header_mobile">
+      <div class="add_flex__nowrap flex__jcontent_between flex__align-items_center">
+        <div class="header_top main_flex__nowrap flex__jcontent_between flex__align-items_center">
+          <div class="container main_flex__nowrap flex__jcontent_between flex__align-items_center">
+            <div class="greetings"><img src="images/content/sun.png"/></div>
+            <div class="calendar_picker main_flex__nowrap flex__jcontent_end flex__align-items_center">
+              <p id="selected_date_range">22.11.2018 - 23.11.2018</p>
+              <div class="calendar_icon"><img src="images/icons/calendar_icon.png" alt="Calendar Icon"/></div>
+            </div>
+            <!-- end of calendar_picker-->
+          </div>
+        </div>
+        <!-- end of .header_top-->
+        <div class="container">
+          <div class="header_buttons_block main_flex__nowrap flex__jcontent_end flex__align-items_center">
+            <div class="advance_payments_block add_flex__nowrap flex__jcontent_start flex__align-items_center"><img src="images/content/advance_payments_img.png" alt="Advance Payments Image"/>
+              <p class="description">באפשרותך להקדים   <br>₪תשלומים בסך 1000 </p><a class="button" href="#">הקדמת תשלומים</a>
+            </div>
+            <!-- end of .advance_payments_block-->
+            <div class="create_offer_block add_flex__nowrap flex__jcontent_start flex__align-items_center"><img src="images/content/create_offer_img.png" alt="Create Offer Image"/>
+              <p class="description">כדאי אולי להוסיף<br> פה משפט כדי לאזן ביניהם </p><a class="create_offer_btn button" href="#">יצירת מבצע</a>
+            </div>
+            <!-- end of .create_offer_blocks-->
+          </div>
+          <div class="general_stat main_flex__nowrap_reverse flex__jcontent_end flex__align-items_center">
+            <div class="general_year_income main_flex__nowrap flex__jcontent_start flex__align-items_baseline"><span class="item_value" id="general_year_income__value">6720k</span>
+              <p class="item_description">הכנסות מצטברות מתחילת השנה</p>
+            </div>
+            <div class="general_month_income main_flex__nowrap flex__jcontent_start flex__align-items_baseline"><span class="item_value" id="general_month_income__value">620k</span>
+              <p class="item_description">הכנסות מצטברות מתחילת החודש</p>
+            </div>
+          </div>
+          <!-- end of .general_stat-->
+        </div>
+      </div>
+    </header>
+    <div class="home_page open">
+      <div class="container">
+        <div class="incomes_graph graph_block">
+          <div class="block_title">? מה מצב ההכנסות שלי</div>
+          <div class="block_content main_flex__nowrap flex__jcontent_around flex__align-items_center">
+            <div class="percent_from_month_average add_flex__nowrap flex__jcontent_between flex__align-items_center">
+              <div class="incomes_sum">22.34K</div>
+              <div class="incomes_indicator main_flex__nowrap flex__jcontent_end flex__align-items_center"><span id="incomes_percentage_indicator" style="width: 75.56%"></span></div>
+              <div id="incomes_percentage">75.56%</div>
+              <div class="description">מהממוצע החודשי</div>
+            </div>
+            <div class="average_market_incomes main_flex__nowrap flex__jcontent_start flex__align-items_center"> 
+              <div class="right_part">
+                <!-- graph will be inserted automatically-->
+                <div class="graph_1"></div>
+              </div>
+              <div class="left_part add_flex__nowrap flex__jcontent_between flex__align-items_start">
+                <div class="item main_flex__nowrap flex__jcontent_start flex__align-items_center">                   
+                  <div class="item_icon"><img src="images/content/incomes_icon_1.png" alt="Incomes Type Icon"/></div>
+                  <div class="item_description">עסקים לידך וכמוך</div>
+                </div>
+                <div class="item main_flex__nowrap flex__jcontent_start flex__align-items_center">                   
+                  <div class="item_icon"><img src="images/content/incomes_icon_2.png" alt="Incomes Type Icon"/></div>
+                  <div class="item_description">עסקים כמוך</div>
+                </div>
+                <div class="item main_flex__nowrap flex__jcontent_start flex__align-items_center">                   
+                  <div class="item_icon"><img src="images/content/incomes_icon_3.png" alt="Incomes Type Icon"/></div>
+                  <div class="item_description">ההכנסות שלי</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <graphs_row class="main_flex flex__jcontent_between flex__align-items_stretch">  
+          <div class="graph_block block_content one_third">       
+            <div class="surprising_month_products">
+              <div class="block_title">מהם המוצרים המפתיעים של החודש</div>
+              <div class="block_content main_flex__nowrap_reverse flex__jcontent_around flex__align-items_end">
+                <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                  <div class="item_image"><img src="images/content/star_down.png" alt="Star Down Image"/></div>
+                  <div class="item_description">ההפתעה המבאסת</div>
+                  <div class="item_product_name">מטרנה </div>
+                  <div class="item_percentage main_flex__nowrap flex__jcontent_between flex__align-items_end">
+                    <div class="percentage">25%</div>
+                    <div class="arrow_down">
+                      <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 476.213 476.213" style="enable-background:new 0 0 476.213 476.213;" xml:space="preserve">
+                        <polygon points="287.5,384.394 253.107,418.787 253.107,0 223.107,0 223.107,418.787 188.713,384.394 167.5,405.606 238.107,476.213 308.713,405.606 "></polygon>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                  <div class="item_image"><img src="images/content/star_up.png" alt="Star Down Image"/></div>
+                  <div class="item_description">ההפתעה הטובה</div>
+                  <div class="item_product_name">חומוס</div>
+                  <div class="item_percentage main_flex__nowrap flex__jcontent_between flex__align-items_end">
+                    <div class="percentage">25%</div>
+                    <div class="arrow_up">
+                      <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 476.213 476.213" style="enable-background:new 0 0 476.213 476.213;" xml:space="preserve">
+                        <polygon points="287.5,384.394 253.107,418.787 253.107,0 223.107,0 223.107,418.787 188.713,384.394 167.5,405.606 238.107,476.213 308.713,405.606 "></polygon>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="show_products_detailed_info block_title blue_font">ספר לי עוד על המוצרים שלי</div>
+            </div>
+          </div>
+          <div class="graph_block block_content two_thirds">
+            <div class="customers_info_graph">
+              <div class="block_content main_flex__nowrap flex__jcontent_between flex__align-items_end">      
+                <div class="how_much_they_spend">
+                  <div class="block_title">כמה הם מוציאים אצלך</div>
+                  <!-- graph will be inserted automatically-->
+                  <div class="graph_2"></div>
+                  <div class="percentages_description main_flex__nowrap flex__jcontent_between flex__align-items_end">
+                    <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                      <div class="item_image"><img src="images/content/quite_lot.png" alt=""/></div>
+                      <div class="item_percent">25%</div>
+                      <div class="item_description">די הרבה</div>
+                    </div>
+                    <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                      <div class="item_image"><img src="images/content/quite_few.png" alt=""/></div>
+                      <div class="item_percent">55%</div>
+                      <div class="item_description">לא מעט</div>
+                    </div>
+                    <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                      <div class="item_image"><img src="images/content/too_little.png" alt=""/></div>
+                      <div class="item_percent">20%</div>
+                      <div class="item_description">מעט מדי         </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="how_often_they_visit_you">
+                  <div class="block_title">כמה הם מבקרים אצלך</div>
+                  <!-- graph will be inserted automatically-->
+                  <div class="graph_3"></div>
+                  <div class="percentages_description main_flex__nowrap_reverse flex__jcontent_between flex__align-items_end">
+                    <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                      <div class="item_image"><img src="images/content/not_enough.png" alt=""/></div>
+                      <div class="item_description">לא מספיק</div>
+                    </div>
+                    <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                      <div class="item_image"><img src="images/content/from_time2time.png" alt=""/></div>
+                      <div class="item_description">מדי פעם</div>
+                    </div>
+                    <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                      <div class="item_image"><img src="images/content/on_regular_basis.png" alt=""/></div>
+                      <div class="item_description">על בסיס קבוע</div>
+                    </div>
+                    <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                      <div class="item_image"><img src="images/content/new.png" alt=""/></div>
+                      <div class="item_description">חדשים</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="show_clients_detailed_info block_title blue_font">ספר לי עוד על הלקוחות שלי</div>
+            </div>
+          </div>
+        </graphs_row>
+        <graphs_row class="main_flex flex__jcontent_between flex__align-items_stretch">
+          <div class="graph_block block_content two_thirds">
+            <div class="tabs_with_graphs">
+              <!-- Tabs-->
+              <!-- Tab 1 - Total Sales Graph-->
+              <input id="tab_total_sales_graph" type="radio" name="tab-group5" checked="checked"/>
+              <label for="tab_total_sales_graph">סך מכירות</label>
+              <!-- End of Tab 1-->
+              <!-- Tab 2 - Products Quantity Graph-->
+              <input id="tab_products_qty_graph" type="radio" name="tab-group5"/>
+              <label for="tab_products_qty_graph">כמות מוצרים</label>
+              <!-- End of Tab 2-->
+              <!-- Tab 3 - Transactions Quantity Graph-->
+              <input id="tab_transactions_qty_graph" type="radio" name="tab-group5"/>
+              <label for="tab_transactions_qty_graph">כמות עסקאות</label>
+              <!-- End of Tab 3-->
+              <!-- Tab 4 - Average Deal Graph-->
+              <input id="tab_average_deal_graph" type="radio" name="tab-group5"/>
+              <label for="tab_average_deal_graph">עסקה ממוצעת</label>
+              <!-- End of Tab 4-->
+              <!-- Tabs Content-->
+              <div class="tabs_content">
+                <!-- Tab Total Sales Graph-->
+                <div class="tab_content" id="content_total_sales_graph">
+                  <!-- graph will be inserted automatically-->
+                  <div class="graph_6"></div>
+                </div>
+                <!-- Tab Products Quantity Graph-->
+                <div class="tab_content" id="content_products_qty_graph">
+                  <!-- graph will be inserted automatically-->
+                  <div class="graph_6"></div>
+                </div>
+                <!-- Tab Transactions Quantity Graph-->
+                <div class="tab_content" id="content_transactions_qty_graph">
+                  <!-- graph will be inserted automatically-->
+                  <div class="graph_6"></div>
+                </div>
+                <!-- Tab Average Deal Graph-->
+                <div class="tab_content" id="content_average_deal_graph">
+                  <!-- graph will be inserted automatically-->
+                  <div class="graph_6"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="graph_block block_content one_third">
+            <div class="receipts_dividing_graph">
+              <div class="block_title">איך התקבולים מתחלקים בעסק</div>
+              <div class="block_content main_flex__nowrap flex__jcontent_center flex__align-items_center">
+                <!-- graph will be inserted automatically-->
+                <div class="graph_4"></div>
+              </div>
+            </div>
+          </div>
+        </graphs_row>
+      </div>
+    </div>
+    <!-- end of .home_page-->
+    <div class="home_page_mobile"> 
+      <div class="container">
+        <div class="graph_block block_content full_width">
+          <div class="block_title">Title 1</div>
+          <div class="percent_from_month_average add_flex__nowrap flex__jcontent_between flex__align-items_center">
+            <div class="incomes_sum">22.34K</div>
+            <div class="incomes_indicator main_flex__nowrap flex__jcontent_end flex__align-items_center"><span id="incomes_percentage_indicator" style="width: 75.56%"></span></div>
+            <div id="incomes_percentage">75.56%</div>
+            <div class="description">מהממוצע החודשי</div>
+          </div>
+        </div>
+        <div class="graph_block block_content full_width">
+          <div class="block_title">Title 2</div>
+          <div class="average_market_incomes main_flex__nowrap flex__jcontent_start flex__align-items_center"> 
+            <div class="right_part">
+              <!-- graph will be inserted automatically-->
+              <div class="graph_1"></div>
+            </div>
+            <div class="left_part add_flex__nowrap flex__jcontent_between flex__align-items_start">
+              <div class="item main_flex__nowrap flex__jcontent_start flex__align-items_center">                   
+                <div class="item_icon"><img src="images/content/incomes_icon_1.png" alt="Incomes Type Icon"/></div>
+                <div class="item_description">עסקים לידך וכמוך</div>
+              </div>
+              <div class="item main_flex__nowrap flex__jcontent_start flex__align-items_center">                   
+                <div class="item_icon"><img src="images/content/incomes_icon_2.png" alt="Incomes Type Icon"/></div>
+                <div class="item_description">עסקים כמוך</div>
+              </div>
+              <div class="item main_flex__nowrap flex__jcontent_start flex__align-items_center">                   
+                <div class="item_icon"><img src="images/content/incomes_icon_3.png" alt="Incomes Type Icon"/></div>
+                <div class="item_description">ההכנסות שלי</div>
+              </div>
+            </div>
+          </div>
+          <div class="average_market_incomes_mobile add_flex__nowrap flex__jcontent_start flex__align-items_center">
+            <div class="graph_1"></div>
+            <div class="bottom_part main_flex__nowrap flex__jcontent_between flex__align-items_end">
+              <div class="item add_flex__nowrap flex__jcontent_start flex__align-items_center">                   
+                <div class="item_icon"><img src="images/content/incomes_icon_1.png" alt="Incomes Type Icon"/></div>
+                <div class="item_description">עסקים לידך וכמוך</div>
+              </div>
+              <div class="item add_flex__nowrap flex__jcontent_start flex__align-items_center">                   
+                <div class="item_icon"><img src="images/content/incomes_icon_2.png" alt="Incomes Type Icon"/></div>
+                <div class="item_description">עסקים כמוך</div>
+              </div>
+              <div class="item add_flex__nowrap flex__jcontent_start flex__align-items_center">                   
+                <div class="item_icon"><img src="images/content/incomes_icon_3.png" alt="Incomes Type Icon"/></div>
+                <div class="item_description">ההכנסות שלי</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="graph_block block_content full_width">
+          <div class="how_often_they_visit_you">
+            <div class="block_title">כמה הם מבקרים אצלך</div>
+            <!-- graph will be inserted automatically-->
+            <div class="graph_3"></div>
+            <div class="percentages_description main_flex__nowrap_reverse flex__jcontent_between flex__align-items_end">
+              <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                <div class="item_image"><img src="images/content/not_enough.png" alt=""/></div>
+                <div class="item_description">לא מספיק</div>
+              </div>
+              <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                <div class="item_image"><img src="images/content/from_time2time.png" alt=""/></div>
+                <div class="item_description">מדי פעם</div>
+              </div>
+              <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                <div class="item_image"><img src="images/content/on_regular_basis.png" alt=""/></div>
+                <div class="item_description">על בסיס קבוע</div>
+              </div>
+              <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                <div class="item_image"><img src="images/content/new.png" alt=""/></div>
+                <div class="item_description">חדשים</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="graph_block block_content full_width">
+          <div class="how_much_they_spend">
+            <div class="block_title">כמה הם מוציאים אצלך</div>
+            <!-- graph will be inserted automatically-->
+            <div class="graph_2"></div>
+            <div class="percentages_description main_flex__nowrap flex__jcontent_between flex__align-items_end">
+              <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                <div class="item_image"><img src="images/content/quite_lot.png" alt=""/></div>
+                <div class="item_percent">25%</div>
+                <div class="item_description">די הרבה</div>
+              </div>
+              <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                <div class="item_image"><img src="images/content/quite_few.png" alt=""/></div>
+                <div class="item_percent">55%</div>
+                <div class="item_description">לא מעט</div>
+              </div>
+              <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                <div class="item_image"><img src="images/content/too_little.png" alt=""/></div>
+                <div class="item_percent">20%</div>
+                <div class="item_description">מעט מדי         </div>
+              </div>
+            </div>
+          </div>
+          <div class="show_clients_detailed_info block_title blue_font">ספר לי עוד על הלקוחות שלי</div>
+        </div>
+        <div class="graph_block block_content full_width">
+          <div class="surprising_month_products">
+            <div class="block_title">מהם המוצרים המפתיעים של החודש</div>
+            <div class="block_content main_flex__nowrap_reverse flex__jcontent_around flex__align-items_end">
+              <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                <div class="item_image"><img src="images/content/star_down.png" alt="Star Down Image"/></div>
+                <div class="item_description">ההפתעה המבאסת</div>
+                <div class="item_product_name">מטרנה </div>
+                <div class="item_percentage main_flex__nowrap flex__jcontent_between flex__align-items_end">
+                  <div class="percentage">25%</div>
+                  <div class="arrow_down">
+                    <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 476.213 476.213" style="enable-background:new 0 0 476.213 476.213;" xml:space="preserve">
+                      <polygon points="287.5,384.394 253.107,418.787 253.107,0 223.107,0 223.107,418.787 188.713,384.394 167.5,405.606 238.107,476.213 308.713,405.606 "></polygon>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                <div class="item_image"><img src="images/content/star_up.png" alt="Star Down Image"/></div>
+                <div class="item_description">ההפתעה הטובה</div>
+                <div class="item_product_name">חומוס</div>
+                <div class="item_percentage main_flex__nowrap flex__jcontent_between flex__align-items_end">
+                  <div class="percentage">25%</div>
+                  <div class="arrow_up">
+                    <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 476.213 476.213" style="enable-background:new 0 0 476.213 476.213;" xml:space="preserve">
+                      <polygon points="287.5,384.394 253.107,418.787 253.107,0 223.107,0 223.107,418.787 188.713,384.394 167.5,405.606 238.107,476.213 308.713,405.606 "></polygon>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="show_products_detailed_info block_title blue_font">ספר לי עוד על המוצרים שלי</div>
+          </div>
+        </div>
+        <div class="graph_block block_content full_width">
+          <div class="receipts_dividing_graph">
+            <div class="block_title">איך התקבולים מתחלקים בעסק</div>
+            <div class="block_content main_flex__nowrap flex__jcontent_center flex__align-items_center">
+              <!-- graph will be inserted automatically-->
+              <div class="graph_4"></div>
+            </div>
+          </div>
+        </div>
+        <div class="graph_block block_content full_width">
+          <div class="tabs_with_graphs_mobile">
+            <!-- Tabs-->
+            <!-- Tab 1 - Total Sales Graph-->
+            <input id="tab_total_sales_mobile_graph" type="radio" name="tab-group8" checked="checked"/>
+            <label for="tab_total_sales_mobile_graph">סך מכירות</label>
+            <!-- End of Tab 1-->
+            <!-- Tab 2 - Products Quantity Graph-->
+            <input id="tab_products_qty_mobile_graph" type="radio" name="tab-group8"/>
+            <label for="tab_products_qty_mobile_graph">כמות מוצרים</label>
+            <!-- End of Tab 2-->
+            <!-- Tab 3 - Transactions Quantity Graph-->
+            <input id="tab_transactions_qty_mobile_graph" type="radio" name="tab-group8"/>
+            <label for="tab_transactions_qty_mobile_graph">כמות עסקאות</label>
+            <!-- End of Tab 3-->
+            <!-- Tab 4 - Average Deal Graph-->
+            <input id="tab_average_deal_mobile_graph" type="radio" name="tab-group8"/>
+            <label for="tab_average_deal_mobile_graph">עסקה ממוצעת</label>
+            <!-- End of Tab 4-->
+            <!-- Tabs Content-->
+            <div class="tabs_content">
+              <!-- Tab Total Sales Graph-->
+              <div class="tab_content" id="content_total_sales_mobile_graph">
+                <!-- graph will be inserted automatically-->
+                <div class="graph_6"></div>
+              </div>
+              <!-- Tab Products Quantity Graph-->
+              <div class="tab_content" id="content_products_qty_mobile_graph">
+                <!-- graph will be inserted automatically-->
+                <div class="graph_6"></div>
+              </div>
+              <!-- Tab Transactions Quantity Graph-->
+              <div class="tab_content" id="content_transactions_qty_mobile_graph">
+                <!-- graph will be inserted automatically-->
+                <div class="graph_6"></div>
+              </div>
+              <!-- Tab Average Deal Graph-->
+              <div class="tab_content" id="content_average_deal_mobile_graph">
+                <!-- graph will be inserted automatically-->
+                <div class="graph_6"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="customers_detailed_info">
+      <div class="popup_header">
+        <div class="container main_flex__nowrap_reverse flex__jcontent_between flex__align-items_center">
+          <div class="close_btn">
+            <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 47.971 47.971" style="enable-background:new 0 0 47.971 47.971;" xml:space="preserve">
+              <path d="M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88 c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242 C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879	s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z"></path>
+            </svg>
+          </div>
+          <div class="popup_title">?אפשר לספר לך קצת על הלקוחות שלך</div>
+        </div>
+      </div>
+      <!-- end of .popup_header-->
+      <div class="popup_content">
+        <div class="container add_flex__nowrap flex__jcontent_start flex__align-items_start">
+          <div class="tools_bar"></div>
+          <div class="settings_bar main_flex__nowrap flex__jcontent_between flex__align-items_center">
+            <div class="right_part main_flex__nowrap flex__jcontent_between flex__align-items_center">
+              <div class="setting add_flex__nowrap flex__jcontent_start flex__align-items_start">
+                <div class="title">צריך להוסיף משפט הסבר</div>
+                <select class="notes">
+                  <option value="1">כמות</option>
+                </select>
+              </div>
+              <div class="setting add_flex__nowrap flex__jcontent_start flex__align-items_start">
+                <div class="title">חברי המועדון שלך בלבד</div>
+                <div class="club_members_switcher main_flex__nowrap_reverse flex__jcontent_start flex__align-items_center"><span class="left_value">כן</span>
+                  <label class="switcher is_club_member">
+                    <input id="cub_member" type="checkbox"/><span class="slider"></span>
+                  </label><span class="right_value disabled">לא</span>
+                </div>
+              </div>
+            </div>
+            <!-- end of .right_part-->
+            <div class="our_client_switcher main_flex__nowrap_reverse flex__jcontent_start flex__align-items_center"><span class="left_value">הלקוחות<br> שלי</span>
+              <label class="switcher is_our_client">
+                <input id="our_client" type="checkbox"/><span class="slider"></span>
+              </label><span class="right_value disabled">עסקים<br> כמוך ולידך</span>
+            </div>
+            <!-- end of .left_part-->
+          </div>
+          <!-- end of .settings_bar-->
+          <div class="graphs_row main_flex flex__jcontent_between flex__align-items_stretch">
+            <div class="graph_block block_content one_third">
+              <div class="customers_sex">
+                <div class="block_title">מאיזה מגדר הם</div>
+                <div class="sex_percentages_description main_flex__nowrap flex__jcontent_between flex__align-items_end">
+                  <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                    <div class="item_image"> 
+                      <div class="hide_block" id="male_hide_percent" style="height: 45%"></div><img src="images/icons/male.png" alt="Male Sign Image"/>
+                    </div>
+                    <div class="item_percent">55%</div>
+                    <div class="item_description">גברים</div>
+                  </div>
+                  <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                    <div class="item_image"> 
+                      <div class="hide_block" id="female_hide_percent" style="height: 55%"></div><img src="images/icons/female.png" alt="Female Sign Image"/>
+                    </div>
+                    <div class="item_percent">45%</div>
+                    <div class="item_description">נשים</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="graph_block block_content one_third">
+              <div class="how_much_they_spend">
+                <div class="block_title">כמה הם מוציאים אצלך</div>
+                <!-- graph will be inserted automatically-->
+                <div class="graph_2"></div>
+                <div class="percentages_description main_flex__nowrap flex__jcontent_between flex__align-items_end">
+                  <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                    <div class="item_image"><img src="images/content/quite_lot.png" alt=""/></div>
+                    <div class="item_percent">25%</div>
+                    <div class="item_description">די הרבה</div>
+                  </div>
+                  <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                    <div class="item_image"><img src="images/content/quite_few.png" alt=""/></div>
+                    <div class="item_percent">55%</div>
+                    <div class="item_description">לא מעט</div>
+                  </div>
+                  <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                    <div class="item_image"><img src="images/content/too_little.png" alt=""/></div>
+                    <div class="item_percent">20%</div>
+                    <div class="item_description">מעט מדי         </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="graph_block block_content one_third">
+              <div class="how_often_they_visit_you">
+                <div class="block_title">כמה הם מבקרים אצלך</div>
+                <!-- graph will be inserted automatically-->
+                <div class="graph_3"></div>
+                <div class="percentages_description main_flex__nowrap_reverse flex__jcontent_between flex__align-items_end">
+                  <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                    <div class="item_image"><img src="images/content/not_enough.png" alt=""/></div>
+                    <div class="item_description">לא מספיק</div>
+                  </div>
+                  <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                    <div class="item_image"><img src="images/content/from_time2time.png" alt=""/></div>
+                    <div class="item_description">מדי פעם</div>
+                  </div>
+                  <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                    <div class="item_image"><img src="images/content/on_regular_basis.png" alt=""/></div>
+                    <div class="item_description">על בסיס קבוע</div>
+                  </div>
+                  <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                    <div class="item_image"><img src="images/content/new.png" alt=""/></div>
+                    <div class="item_description">חדשים</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end of .graphs_row-->
+          <div class="graphs_row main_flex flex__jcontent_between flex__align-items_stretch">
+            <div class="graph_block block_content one_half">
+              <div class="block_title">בני כמה הם</div>
+              <!-- graph will be inserted automatically-->
+              <div class="graph_2"></div>
+            </div>
+            <div class="graph_block block_content one_half">
+              <block_title>באיזה שלב הם בחיים</block_title>
+              <!-- graph will be inserted automatically-->
+              <div class="graph_2"></div>
+            </div>
+          </div>
+          <!-- end of .graphs_row-->
+          <div class="graphs_row main_flex flex__jcontent_between flex__align-items_stretch">
+            <div class="graph_block block_content two_thirds">
+              <div class="block_title">מאיפה הם מגיעים אלייך</div>
+              <!-- graph will be inserted automatically-->
+              <div class="graph_2"></div>
+            </div>
+            <div class="graph_block block_content one_third">
+              <div class="do_they_use_digital_devices add_flex__nowrap flex__jcontent_between flex__align-items_start">
+                <div class="block_title">עד כמה הם דיגיטלים</div>
+                <div class="block_content">
+                  <div class="item main_flex__nowrap flex__jcontent_start flex__align-items_center">
+                    <div class="item_image"><img src="images/content/digital_very.png" alt="Item Icon"/></div>
+                    <div class="item_percentage">25%</div>
+                    <div class="item_description">מאוד דיגיטלים</div>
+                  </div>
+                  <div class="item main_flex__nowrap flex__jcontent_start flex__align-items_center">
+                    <div class="item_image"><img src="images/content/digital_pretty.png" alt="Item Icon"/></div>
+                    <div class="item_percentage">25%</div>
+                    <div class="item_description">די דיגיטלים</div>
+                  </div>
+                  <div class="item main_flex__nowrap flex__jcontent_start flex__align-items_center">
+                    <div class="item_image"><img src="images/content/digital_not_quite.png" alt="Item Icon"/></div>
+                    <div class="item_percentage">25%</div>
+                    <div class="item_description">לא ממש דיגיטלים</div>
+                  </div>
+                  <div class="item main_flex__nowrap flex__jcontent_start flex__align-items_center">
+                    <div class="item_image"><img src="images/content/digital_not.png" alt="Item Icon"/></div>
+                    <div class="item_percentage">25%</div>
+                    <div class="item_description">בכלל לא דיגיטלים</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end of .graphs_row-->
+          <div class="graphs_row main_flex flex__jcontent_between flex__align-items_stretch">
+            <div class="graph_block block_content full_width">
+              <div class="tabs_with_graphs">
+                <!-- Tabs-->
+                <!-- Tab 1 - How Much You Spent Graph-->
+                <input id="tab_how_much_you_spend_graph" type="radio" name="tab-group6" checked="checked"/>
+                <label for="tab_how_much_you_spend_graph">כמה מוציאים אצלך</label>
+                <!-- End of Tab 1-->
+                <!-- Tab 2 - How Many Visitors Graph-->
+                <input id="tab_how_many_visitors_graph" type="radio" name="tab-group6"/>
+                <label for="tab_how_many_visitors_graph">כמה מבקרים אצלך</label>
+                <!-- End of Tab 2-->
+                <!-- Tabs Content-->
+                <div class="tabs_content">
+                  <!-- Tab 1-->
+                  <div class="tab_content" id="content_how_much_you_spend_graph">
+                    <!-- graph will be inserted automatically-->
+                    <div class="graph_6"></div>
+                  </div>
+                  <!-- Tab 2-->
+                  <div class="tab_content" id="content_how_many_visitors_graph">
+                    <!-- graph will be inserted automatically-->
+                    <div class="graph_6"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of .popup_content-->
+    </div>
+    <!-- end of .customers_detailed_info-->
+    <div class="customers_detailed_info_mobile">
+      <div class="popup_header">
+        <div class="container main_flex__nowrap_reverse flex__jcontent_between flex__align-items_center">
+          <div class="close_btn">
+            <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 47.971 47.971" style="enable-background:new 0 0 47.971 47.971;" xml:space="preserve">
+              <path d="M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88 c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242 C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879	s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z"></path>
+            </svg>
+          </div>
+          <div class="popup_title">?אפשר לספר לך קצת על הלקוחות שלך</div>
+        </div>
+      </div>
+      <!-- end of .popup_header-->
+      <div class="popup_content">
+        <div class="container add_flex__nowrap flex__jcontent_start flex__align-items_start">
+          <div class="tools_bar"></div>
+          <div class="settings_bar main_flex__nowrap flex__jcontent_between flex__align-items_center">
+            <div class="right_part main_flex__nowrap flex__jcontent_between flex__align-items_center">
+              <div class="setting add_flex__nowrap flex__jcontent_start flex__align-items_start">
+                <div class="title">צריך להוסיף משפט הסבר</div>
+                <select class="notes">
+                  <option value="1">כמות</option>
+                </select>
+              </div>
+              <div class="setting add_flex__nowrap flex__jcontent_start flex__align-items_start">
+                <div class="title">חברי המועדון שלך בלבד</div>
+                <div class="club_members_switcher main_flex__nowrap_reverse flex__jcontent_start flex__align-items_center"><span class="left_value">כן</span>
+                  <label class="switcher is_club_member">
+                    <input id="cub_member" type="checkbox"/><span class="slider"></span>
+                  </label><span class="right_value disabled">לא</span>
+                </div>
+              </div>
+            </div>
+            <!-- end of .right_part-->
+            <div class="our_client_switcher main_flex__nowrap_reverse flex__jcontent_start flex__align-items_center"><span class="left_value">הלקוחות<br> שלי</span>
+              <label class="switcher is_our_client">
+                <input id="our_client" type="checkbox"/><span class="slider"></span>
+              </label><span class="right_value disabled">עסקים<br> כמוך ולידך</span>
+            </div>
+            <!-- end of .left_part-->
+          </div>
+          <!-- end of .settings_bar-->
+          <div class="graph_block block_content full_width">
+            <div class="customers_sex">
+              <div class="block_title">מאיזה מגדר הם</div>
+              <div class="sex_percentages_description main_flex__nowrap flex__jcontent_between flex__align-items_end">
+                <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                  <div class="item_image"> 
+                    <div class="hide_block" id="male_hide_percent" style="height: 45%"></div><img src="images/icons/male.png" alt="Male Sign Image"/>
+                  </div>
+                  <div class="item_percent">55%</div>
+                  <div class="item_description">גברים</div>
+                </div>
+                <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                  <div class="item_image"> 
+                    <div class="hide_block" id="female_hide_percent" style="height: 55%"></div><img src="images/icons/female.png" alt="Female Sign Image"/>
+                  </div>
+                  <div class="item_percent">45%</div>
+                  <div class="item_description">נשים</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="graph_block block_content full_width">
+            <div class="how_often_they_visit_you">
+              <div class="block_title">כמה הם מבקרים אצלך</div>
+              <!-- graph will be inserted automatically-->
+              <div class="graph_3"></div>
+              <div class="percentages_description main_flex__nowrap_reverse flex__jcontent_between flex__align-items_end">
+                <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                  <div class="item_image"><img src="images/content/not_enough.png" alt=""/></div>
+                  <div class="item_description">לא מספיק</div>
+                </div>
+                <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                  <div class="item_image"><img src="images/content/from_time2time.png" alt=""/></div>
+                  <div class="item_description">מדי פעם</div>
+                </div>
+                <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                  <div class="item_image"><img src="images/content/on_regular_basis.png" alt=""/></div>
+                  <div class="item_description">על בסיס קבוע</div>
+                </div>
+                <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                  <div class="item_image"><img src="images/content/new.png" alt=""/></div>
+                  <div class="item_description">חדשים</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="graph_block block_content full_width">
+            <div class="how_much_they_spend">
+              <div class="block_title">כמה הם מוציאים אצלך</div>
+              <!-- graph will be inserted automatically-->
+              <div class="graph_2"></div>
+              <div class="percentages_description main_flex__nowrap flex__jcontent_between flex__align-items_end">
+                <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                  <div class="item_image"><img src="images/content/quite_lot.png" alt=""/></div>
+                  <div class="item_percent">25%</div>
+                  <div class="item_description">די הרבה</div>
+                </div>
+                <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                  <div class="item_image"><img src="images/content/quite_few.png" alt=""/></div>
+                  <div class="item_percent">55%</div>
+                  <div class="item_description">לא מעט</div>
+                </div>
+                <div class="item add_flex__nowrap flex__jcontent_end flex__align-items_center">
+                  <div class="item_image"><img src="images/content/too_little.png" alt=""/></div>
+                  <div class="item_percent">20%</div>
+                  <div class="item_description">מעט מדי         </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="graph_block block_content full_width">
+            <div class="block_title">בני כמה הם</div>
+            <!-- graph will be inserted automatically-->
+            <div class="graph_2"></div>
+          </div>
+          <div class="graph_block block_content full_width">
+            <div class="block_title">באיזה שלב הם בחיים</div>
+            <!-- graph will be inserted automatically-->
+            <div class="graph_2"></div>
+          </div>
+          <div class="graph_block block_content full_width">
+            <div class="block_title">מאיפה הם מגיעים אלייך</div>
+            <!-- graph will be inserted automatically-->
+            <div class="graph_2"></div>
+          </div>
+          <div class="graph_block block_content full_width">
+            <div class="do_they_use_digital_devices add_flex__nowrap flex__jcontent_between flex__align-items_start">
+              <div class="block_title">עד כמה הם דיגיטלים</div>
+              <div class="block_content">
+                <div class="item main_flex__nowrap flex__jcontent_start flex__align-items_center">
+                  <div class="item_image"><img src="images/content/digital_very.png" alt="Item Icon"/></div>
+                  <div class="item_percentage">25%</div>
+                  <div class="item_description">מאוד דיגיטלים</div>
+                </div>
+                <div class="item main_flex__nowrap flex__jcontent_start flex__align-items_center">
+                  <div class="item_image"><img src="images/content/digital_pretty.png" alt="Item Icon"/></div>
+                  <div class="item_percentage">25%</div>
+                  <div class="item_description">די דיגיטלים</div>
+                </div>
+                <div class="item main_flex__nowrap flex__jcontent_start flex__align-items_center">
+                  <div class="item_image"><img src="images/content/digital_not_quite.png" alt="Item Icon"/></div>
+                  <div class="item_percentage">25%</div>
+                  <div class="item_description">לא ממש דיגיטלים</div>
+                </div>
+                <div class="item main_flex__nowrap flex__jcontent_start flex__align-items_center">
+                  <div class="item_image"><img src="images/content/digital_not.png" alt="Item Icon"/></div>
+                  <div class="item_percentage">25%</div>
+                  <div class="item_description">בכלל לא דיגיטלים</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="graph_block block_content full_width">
+            <div class="tabs_with_graphs_mobile">
+              <!-- Tabs-->
+              <!-- Tab 1 - How Much You Spent Graph-->
+              <input id="tab_how_much_you_spend_mobile_graph" type="radio" name="tab-group8" checked="checked"/>
+              <label for="tab_how_much_you_spend_mobile_graph">כמה מוציאים אצלך</label>
+              <!-- End of Tab 1-->
+              <!-- Tab 2 - How Many Visitors Graph-->
+              <input id="tab_how_many_visitors_mobile_graph" type="radio" name="tab-group8"/>
+              <label for="tab_how_many_visitors_mobile_graph">כמה מבקרים אצלך</label>
+              <!-- End of Tab 2-->
+              <!-- Tabs Content-->
+              <div class="tabs_content">
+                <!-- Tab 1-->
+                <div class="tab_content" id="content_how_much_you_spend_mobile_graph">
+                  <!-- graph will be inserted automatically-->
+                  <div class="graph_6"></div>
+                </div>
+                <!-- Tab 2-->
+                <div class="tab_content" id="content_how_many_visitors_mobile_graph">
+                  <!-- graph will be inserted automatically-->
+                  <div class="graph_6"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="products_detailed_info">
+      <div class="popup_header">
+        <div class="container main_flex__nowrap_reverse flex__jcontent_between flex__align-items_center">
+          <div class="close_btn">
+            <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 47.971 47.971" style="enable-background:new 0 0 47.971 47.971;" xml:space="preserve">
+              <path d="M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88 c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242 C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879	s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z"></path>
+            </svg>
+          </div>
+          <div class="popup_title">?אפשר לספר לך קצת על המוצרים שלך</div>
+        </div>
+      </div>
+      <!-- end of .popup_header-->
+      <div class="popup_content">
+        <div class="container add_flex__nowrap flex__jcontent_start flex__align-items_start">
+          <div class="graphs_row main_flex flex__jcontent_between flex__align-items_stretch">
+            <div class="graph_block block_content one_half">
+              <div class="main_flex flex__jcontent_between flex__align-items_start">
+                <div class="add_flex flex__jcontent_start flex__align-items_start">
+                  <div class="block_title">בני כמה הם</div>
+                  <div class="quantity_of_products">כמות מוצרים</div>
+                  <div class="percent_of_total"> מתוך הסה”כ %</div>
+                </div>
+                <div class="leading_amount_products_switcher main_flex__nowrap_reverse flex__jcontent_start flex__align-items_center"><span class="left_value">הכי טובים</span>
+                  <label class="switcher leading_amount">
+                    <input id="leading_amount" type="checkbox"/><span class="slider"></span>
+                  </label><span class="right_value disabled">הכי גרועים</span>
+                </div>
+              </div>
+              <!-- graph will be inserted automatically-->
+              <div class="graph_2"></div>
+            </div>
+            <div class="graph_block block_content one_half">
+              <div class="main_flex flex__jcontent_between flex__align-items_start">
+                <div class="add_flex flex__jcontent_start flex__align-items_start">
+                  <div class="block_title">באיזה שלב הם בחיים</div>
+                  <div class="quantity_of_products">כמות מוצרים</div>
+                  <div class="percent_of_total"> מתוך הסה”כ %</div>
+                </div>
+                <div class="leading_quantity_products_switcher main_flex__nowrap_reverse flex__jcontent_start flex__align-items_center"><span class="left_value">הכי טובים</span>
+                  <label class="switcher leading_quantity">
+                    <input id="leading_quantity" type="checkbox"/><span class="slider"></span>
+                  </label><span class="right_value disabled">הכי גרועים</span>
+                </div>
+              </div>
+              <!-- graph will be inserted automatically-->
+              <div class="graph_2"></div>
+            </div>
+          </div>
+          <!-- end of .graphs_row-->
+          <div class="graphs_row main_flex flex__jcontent_between flex__align-items_stretch">
+            <div class="graph_block block_content one_half">
+              <div class="main_flex flex__jcontent_between flex__align-items_start">
+                <div class="block_title">?מי הם הכוכבים היורדים שלך</div>
+                <div class="descending_stars">ירדו החודש</div>
+              </div>
+              <!-- graph will be inserted automatically-->
+              <div class="graph_2"></div>
+            </div>
+            <div class="graph_block block_content one_half">
+              <div class="main_flex flex__jcontent_between flex__align-items_start">
+                <block_title>?מי הם הכוכבים העולים שלך</block_title>
+                <div class="immigrant_stars">עלו החודש</div>
+              </div>
+              <!-- graph will be inserted automatically-->
+              <div class="graph_2"></div>
+            </div>
+          </div>
+          <!-- end of .graphs_row-->
+        </div>
+      </div>
+    </div>
+    <div class="products_detailed_info_mobile">
+      <div class="popup_header">
+        <div class="container main_flex__nowrap_reverse flex__jcontent_between flex__align-items_center">
+          <div class="close_btn">
+            <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 47.971 47.971" style="enable-background:new 0 0 47.971 47.971;" xml:space="preserve">
+              <path d="M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88 c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242 C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879	s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z"></path>
+            </svg>
+          </div>
+          <div class="popup_title">?אפשר לספר לך קצת על המוצרים שלך</div>
+        </div>
+      </div>
+      <!-- end of .popup_header-->
+      <div class="popup_content">
+        <div class="container add_flex__nowrap flex__jcontent_start flex__align-items_start">
+          <div class="graphs_row main_flex flex__jcontent_between flex__align-items_stretch">
+            <div class="graph_block block_content full_width">
+              <div class="main_flex flex__jcontent_between flex__align-items_start">
+                <div class="add_flex flex__jcontent_start flex__align-items_start">
+                  <div class="block_title">בני כמה הם</div>
+                  <div class="quantity_of_products">כמות מוצרים</div>
+                  <div class="percent_of_total"> מתוך הסה”כ %</div>
+                </div>
+                <div class="leading_amount_products_switcher main_flex__nowrap_reverse flex__jcontent_start flex__align-items_center"><span class="left_value">הכי טובים</span>
+                  <label class="switcher leading_amount">
+                    <input id="leading_amount" type="checkbox"/><span class="slider"></span>
+                  </label><span class="right_value disabled">הכי גרועים</span>
+                </div>
+              </div>
+              <!-- graph will be inserted automatically-->
+              <div class="graph_2"></div>
+            </div>
+            <div class="graph_block block_content full_width">
+              <div class="main_flex flex__jcontent_between flex__align-items_start">
+                <div class="add_flex flex__jcontent_start flex__align-items_start">
+                  <div class="block_title">באיזה שלב הם בחיים</div>
+                  <div class="quantity_of_products">כמות מוצרים</div>
+                  <div class="percent_of_total"> מתוך הסה”כ %</div>
+                </div>
+                <div class="leading_quantity_products_switcher main_flex__nowrap_reverse flex__jcontent_start flex__align-items_center"><span class="left_value">הכי טובים</span>
+                  <label class="switcher leading_quantity">
+                    <input id="leading_quantity" type="checkbox"/><span class="slider"></span>
+                  </label><span class="right_value disabled">הכי גרועים</span>
+                </div>
+              </div>
+              <!-- graph will be inserted automatically-->
+              <div class="graph_2"></div>
+            </div>
+          </div>
+          <!-- end of .graphs_row-->
+          <div class="graphs_row main_flex flex__jcontent_between flex__align-items_stretch">
+            <div class="graph_block block_content full_width">
+              <div class="main_flex flex__jcontent_between flex__align-items_start">
+                <div class="block_title">?מי הם הכוכבים היורדים שלך</div>
+                <div class="descending_stars">ירדו החודש</div>
+              </div>
+              <!-- graph will be inserted automatically-->
+              <div class="graph_2"></div>
+            </div>
+            <div class="graph_block block_content full_width">
+              <div class="main_flex flex__jcontent_between flex__align-items_start">
+                <block_title>?מי הם הכוכבים העולים שלך</block_title>
+                <div class="immigrant_stars">עלו החודש</div>
+              </div>
+              <!-- graph will be inserted automatically-->
+              <div class="graph_2"></div>
+            </div>
+          </div>
+          <!-- end of .graphs_row-->
+        </div>
+      </div>
+    </div>
+    <footer class="footer_main"><img src="images/backgrounds/footer_bg.png"/></footer>
+    <!-- Add libraries for a date range picker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="js/vendors/datepicker.min.js"></script>
+    <!-- Add a library for a multiselect dropdown-->
+    <script src="js/vendors/multi.select.js"></script>
+    <!-- Add all our scripts -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
