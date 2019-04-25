@@ -20,7 +20,7 @@
       <div class="container main_flex__nowrap flex__jcontent_between flex__align-items_center">
         <div class="left_part main_flex__nowrap flex__jcontent_center flex__align-items_center"><a class="header_logo" href="index.html"><img src="images/icons/header_logo.png" alt=" Logo"/></a></div>
         <!-- end of .left_part-->
-        <div class="right_part main_flex__nowrap main_flex__nowrap flex__jcontent_end flex__align-items_center">
+        <div class="right_part main_flex__nowrap flex__jcontent_end flex__align-items_center">
           <nav class="main_menu main_flex__nowrap flex__jcontent_center flex__align-items_center">
             <ul class="#{active} main_flex__nowrap flex__jcontent_between flex__align-items_center">
               <li class="main_item has_submenu">Logisth.AI
@@ -67,8 +67,189 @@
       <!-- end of .container-->
     </header>
     <div class="page_content">
-      <h1>Preise</h1>
+      <h1 class="no_bottom_margin">Preise</h1>
+      <div class="main_flex__nowrap flex__jcontent_between flex__align-items_start">
+        <div class="price_tables">
+          <div class="table">
+            <h3 class="table_caption">Logisth.AI Produkte</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th class="width_70">Produkt</th>
+                  <th>Preise</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border_bottom">
+                  <td> <strong>Logisth.</strong><span>AI </span>Expert Lizenz für eine Schnittstelle</td>
+                  <td class="align_right strong">€ 30.000,00</td>
+                </tr>
+                <tr class="border_bottom">
+                  <td> <strong>Logisth.</strong><span>AI </span>Testlizenz für 3 Monate Vollversion, unlimitiertes Belegvolumen</td>
+                  <td class="align_right strong">€ 5.000,00</td>
+                </tr>
+                <tr>
+                  <td>
+                     Option <strong>Logisth.</strong><span>AI </span>Archiv</td>
+                  <td class="align_right strong">€ 10.000,00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- end of table 1-->
+          <div class="table">
+            <h3 class="table_caption">Belegvoluminas</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th class="width_50">Anzahl Belege (*)</th>
+                  <th class="width_20">Preis/Beleg</th>
+                  <th class="width_30">Paketpreise</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border_bottom">
+                  <td class="align_center">10.000</td>
+                  <td class="align_center">0,30</td>
+                  <td class="align_right strong">€ 3.000,00</td>
+                </tr>
+                <tr class="border_bottom">
+                  <td class="align_center">25.000</td>
+                  <td class="align_center">0,25</td>
+                  <td class="align_right strong">€ 6.250,00</td>
+                </tr>
+                <tr class="border_bottom">
+                  <td class="align_center">50.000</td>
+                  <td class="align_center">0,22</td>
+                  <td class="align_right strong">€ 11.000,00</td>
+                </tr>
+                <tr class="border_bottom">
+                  <td class="align_center">100.000</td>
+                  <td class="align_center">0,20</td>
+                  <td class="align_right strong">€ 20.000,00</td>
+                </tr>
+                <tr>
+                  <td class="align_center">250.000</td>
+                  <td class="align_center">0,15</td>
+                  <td class="align_right strong">€ 37.500,00</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="align_text_right">(*) Ein Beleg ist eine Rechnung mit beliebig vielen Seiten.    </p>
+          </div>
+          <!-- end of table 2-->
+        </div>
+        <!-- end of .price_tables-->
+        <div class="price_caclulator">
+          <div class="product_selector">
+            <h3 class="table_caption">Produkt auswählen</h3>
+            <ul class="product_items main_flex__nowrap flex__jcontent_between flex__align-items_start">
+              <li class="product_item">
+                <input id="product_1" type="checkbox"/>
+                <label class="main_flex__nowrap flex__jcontent_center flex__align-items_center" for="product_1">
+                  <div class="add_flex__nowrap flex__jcontent_start flex__align-items_center">
+                    <p> <strong>Logisth.</strong><span>AI </span>Expert Lizenz für eine Schnittstelle</p>
+                    <div class="checked_icon">
+                      <svg viewBox="0 0 36 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M35.4728 0.527238C34.7699 -0.175746 33.6303 -0.175746 32.9272 0.527238L11.3621 22.0925L3.07283 13.8033C2.36992 13.1003 1.23029 13.1004 0.527238 13.8033C-0.175746 14.5062 -0.175746 15.6458 0.527238 16.3488L10.0893 25.9107C10.792 26.6136 11.9325 26.6131 12.6349 25.9107L35.4728 3.07283C36.1758 2.36991 36.1757 1.23022 35.4728 0.527238Z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </label>
+              </li>
+              <li class="product_item">
+                <input id="product_2" type="checkbox"/>
+                <label class="main_flex__nowrap flex__jcontent_center flex__align-items_center" for="product_2">
+                  <div class="add_flex__nowrap flex__jcontent_start flex__align-items_center">
+                    <p> <strong>Logisth.</strong><span>AI </span>Testlizenz für 3 Monate Vollversion, unlimitiertes Belegvolumen</p>
+                    <div class="checked_icon">
+                      <svg viewBox="0 0 36 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M35.4728 0.527238C34.7699 -0.175746 33.6303 -0.175746 32.9272 0.527238L11.3621 22.0925L3.07283 13.8033C2.36992 13.1003 1.23029 13.1004 0.527238 13.8033C-0.175746 14.5062 -0.175746 15.6458 0.527238 16.3488L10.0893 25.9107C10.792 26.6136 11.9325 26.6131 12.6349 25.9107L35.4728 3.07283C36.1758 2.36991 36.1757 1.23022 35.4728 0.527238Z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </label>
+              </li>
+              <li class="product_item">
+                <input id="product_3" type="checkbox"/>
+                <label class="main_flex__nowrap flex__jcontent_center flex__align-items_center" for="product_3">
+                  <div class="add_flex__nowrap flex__jcontent_start flex__align-items_center">
+                    <p>
+                       Option<strong>Logisth.</strong><span>AI </span>Archiv</p>
+                    <div class="checked_icon disabled">
+                      <svg viewBox="0 0 36 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M35.4728 0.527238C34.7699 -0.175746 33.6303 -0.175746 32.9272 0.527238L11.3621 22.0925L3.07283 13.8033C2.36992 13.1003 1.23029 13.1004 0.527238 13.8033C-0.175746 14.5062 -0.175746 15.6458 0.527238 16.3488L10.0893 25.9107C10.792 26.6136 11.9325 26.6131 12.6349 25.9107L35.4728 3.07283C36.1758 2.36991 36.1757 1.23022 35.4728 0.527238Z">                       </path>
+                      </svg>
+                    </div>
+                  </div>
+                </label>
+              </li>
+            </ul>
+            <!-- end of .product_items-->
+          </div>
+          <!-- end of .product_selector-->
+          <div class="document_scale_selector">
+            <h3 class="table_caption">Belegvoluminas auswählen</h3>
+            <ul class="scale_items main_flex__nowrap flex__jcontent_between flex__align-items_start">
+              <li class="scale_item add_flex__nowrap flex__jcontent_center flex__align-items_center">
+                <input id="scale_1" type="radio" name="scale"/>
+                <label for="scale_1"> </label>
+                <div class="scale_item__caption">10.000</div>
+              </li>
+              <li class="scale_item">
+                <input id="scale_2" type="radio" name="scale"/>
+                <label for="scale_2"> </label>
+                <div class="scale_item__caption">25.000</div>
+              </li>
+              <li class="scale_item">
+                <input id="scale_3" type="radio" name="scale"/>
+                <label for="scale_3"> </label>
+                <div class="scale_item__caption">50.000</div>
+              </li>
+              <li class="scale_item">
+                <input id="scale_4" type="radio" name="scale"/>
+                <label for="scale_4"> </label>
+                <div class="scale_item__caption">100.000</div>
+              </li>
+              <li class="scale_item">
+                <input id="scale_5" type="radio" name="scale"/>
+                <label for="scale_5"> </label>
+                <div class="scale_item__caption">250.000</div>
+              </li>
+            </ul>
+          </div>
+          <!-- end of .document_scale_selector-->
+          <div class="table">
+            <h3 class="table_caption align_text_left">GESAMTWERT</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th class="width_70">Bezeichnung</th>
+                  <th>Preis</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border_bottom">
+                  <td> <strong>Logisth.</strong><span>AI </span>Expert Lizenz für eine Schnittstelle</td>
+                  <td class="align_right strong">€ 30.000,00</td>
+                </tr>
+                <tr class="border_bottom">
+                  <td>Anzahl Belege - 25.000</td>
+                  <td class="align_right strong">€ 6.250,00</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="align_right strong total_sum">€ 36.250,00   </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- end of calculator results table-->
+        </div>
+        <!-- end of .price_caclulator-->
+      </div>
     </div>
+    <!-- end of .page_content-->
     <sidebar class="main_sidebar">
       <nav class="sidebar_nav">
         <ul class="add_flex__nowrap flex__jcontent_start flex__align-items_center">
