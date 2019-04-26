@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -191,6 +192,100 @@ span {
 .align_text_left {
   text-align: left; }
 
+.slides {
+  width: 100%;
+  height: auto;
+  padding-bottom: 3.125vw;
+  list-style: none; }
+  .slides input {
+    display: none; }
+  .slides .slide_container {
+    width: 85vw;
+    height: 44.58vw;
+    margin-left: -5.6vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    opacity: 0;
+    position: absolute;
+    top: 9.69vw;
+    left: 15.63vw;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transition: all .7s ease-in-out;
+    transition: all .7s ease-in-out; }
+    .slides .slide_container .left_part {
+      width: 35vw;
+      height: 100%;
+      margin-right: 4.17vw;
+      position: relative; }
+    .slides .slide_container .right_part {
+      width: 50vw;
+      height: 100%;
+      font-size: 2.4rem;
+      line-height: 4.4rem; }
+      .slides .slide_container .right_part.top_padding {
+        padding-top: 5vw; }
+      .slides .slide_container .right_part p {
+        width: 40vw;
+        margin-top: 0;
+        font-size: 2.2rem; }
+      .slides .slide_container .right_part ul {
+        padding-top: 0;
+        list-style: none;
+        /* Remove list bullets */ }
+        .slides .slide_container .right_part ul li:before {
+          content: "•";
+          /* Insert content that looks like bullets */
+          padding: 0 8px;
+          font-size: 5rem;
+          color: #0C4DA2;
+          display: inline-block;
+          margin: 0; }
+  .slides input:checked + .slide_container {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out; }
+  .slides .nav_dots {
+    height: 10.41vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    right: 3.125vw;
+    top: calc(50% - 5.21vw); }
+    .slides .nav_dots .nav_dot {
+      width: 0.52vw;
+      height: 0.52vw;
+      border-radius: 50%;
+      background-color: #0C4DA2; }
+  .slides input#slide_1:checked ~ .nav_dots label#slide_dot_1,
+  .slides input#slide_2:checked ~ .nav_dots label#slide_dot_2,
+  .slides input#slide_3:checked ~ .nav_dots label#slide_dot_3,
+  .slides input#slide_4:checked ~ .nav_dots label#slide_dot_4,
+  .slides input#slide_6:checked ~ .nav_dots label#slide_dot_6,
+  .slides input#slide_5:checked ~ .nav_dots label#slide_dot_5 {
+    width: 0.84vw;
+    height: 0.84vw; }
+
 .header_main {
   width: 91.56vw;
   height: 4.17vw;
@@ -303,7 +398,7 @@ span {
     width: 100%; }
 
 .page_content {
-  padding: 6.09vw 3.125vw 3.44vw 11.98vw;
+  padding: 6.09vw 3.125vw 0 11.98vw;
   overflow-y: scroll; }
 
 .upload_data_block {
@@ -417,6 +512,45 @@ span {
       .price_caclulator .scale_items input[type="radio"]:checked + label {
         -webkit-transform: scale(1.5);
                 transform: scale(1.5); }
+
+.main_header {
+  margin-top: 1vw;
+  margin-bottom: 2.6vw;
+  font-size: 9.6rem;
+  font-weight: 700;
+  text-align: right; }
+
+.main_subheader {
+  margin-bottom: 4vw;
+  font-size: 3.6rem;
+  font-weight: 700;
+  text-align: right; }
+
+.more_details_btn {
+  width: 3.75vw;
+  height: 4.06vw;
+  margin-bottom: 3.75vw;
+  float: right; }
+  .more_details_btn svg {
+    width: 100%;
+    height: 100%;
+    fill: #0C4DA2; }
+
+.slide_img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 7vw;
+  right: 0; }
+  .slide_img img {
+    width: 100%;
+    height: auto; }
+  .slide_img.custom_img {
+    width: auto;
+    height: 18.54vw; }
+    .slide_img.custom_img img {
+      height: 100%;
+      width: auto; }
 
 .main_sidebar {
   width: auto;
