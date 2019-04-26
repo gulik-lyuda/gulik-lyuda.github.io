@@ -295,7 +295,21 @@ span {
     height: 0.84vw; }
 
 .content {
-  padding-left: 3vw; }
+  padding-left: 3vw;
+  margin-bottom: 3vw; }
+  .content__image {
+    width: auto;
+    height: auto; }
+    .content__image.margin_right img {
+      margin-right: 3vw; }
+    .content__image.margin_left img {
+      margin-left: 3vw; }
+    .content__image img {
+      width: 30vw;
+      height: auto; }
+  .content__text {
+    width: 45vw;
+    height: auto; }
 
 .header_main {
   width: 91.56vw;
