@@ -312,6 +312,12 @@ ul.text_list {
       margin-right: 3vw; }
     .content__image.margin_left img {
       margin-left: 3vw; }
+    .content__image.centered_image img {
+      display: block;
+      margin: 0 auto; }
+    .content__image.width_17vw img {
+      width: 17vw;
+      padding-top: 2vw; }
     .content__image img {
       width: 30vw;
       height: auto; }
@@ -597,52 +603,53 @@ ul.text_list {
       height: 100%;
       width: auto; }
 
-.diagram {
-  padding-top: 0.84vw; }
-  .diagram__item {
-    width: 17.19vw;
-    height: auto;
-    position: relative; }
-    .diagram__item.with_next_arrow::after {
-      width: 3.44vw;
-      height: 1.93vw;
-      content: "";
-      background-image: url("../images/content/right_arrow_icon.png");
-      background-size: cover;
-      top: 2vw;
-      left: 100%;
-      position: absolute; }
-    .diagram__item.width_23vw {
-      width: 23vw; }
-    .diagram__item .item_icon {
+.diagram.with_top_padding {
+  padding-top: 1.25vw; }
+
+.diagram__item {
+  width: 17.19vw;
+  height: auto;
+  position: relative; }
+  .diagram__item.with_next_arrow::after {
+    width: 3.44vw;
+    height: 1.93vw;
+    content: "";
+    background-image: url("../images/content/right_arrow_icon.png");
+    background-size: cover;
+    top: 2vw;
+    left: 100%;
+    position: absolute; }
+  .diagram__item.width_23vw {
+    width: 23vw; }
+  .diagram__item .item_icon {
+    width: auto;
+    height: 3.75vw;
+    margin-bottom: 2.08vw;
+    display: block; }
+    .diagram__item .item_icon.big_icon {
+      height: 5.5vw; }
+    .diagram__item .item_icon img {
       width: auto;
-      height: 3.75vw;
-      margin-bottom: 2.08vw;
+      height: 100%;
+      margin: 0 auto;
       display: block; }
-      .diagram__item .item_icon.big_icon {
-        height: 5.5vw; }
-      .diagram__item .item_icon img {
-        width: auto;
-        height: 100%;
-        margin: 0 auto;
-        display: block; }
-    .diagram__item .item_title {
-      width: 13vw;
-      margin: -0.84vw auto 1.67vw;
-      font-weight: 600;
-      font-size: 2.4rem;
-      line-height: 2.9rem;
-      text-align: center;
-      text-transform: uppercase; }
-    .diagram__item .item_content {
-      width: 100%;
-      height: auto;
-      text-align: justify;
-      line-height: 2.4rem; }
-      .diagram__item .item_content.align_center {
-        text-align: center; }
-      .diagram__item .item_content.small_font {
-        font-size: 1.8rem; }
+  .diagram__item .item_title {
+    width: 13vw;
+    margin: -0.84vw auto 1.67vw;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    text-align: center;
+    text-transform: uppercase; }
+  .diagram__item .item_content {
+    width: 100%;
+    height: auto;
+    text-align: justify;
+    line-height: 2.4rem; }
+    .diagram__item .item_content.align_center {
+      text-align: center; }
+    .diagram__item .item_content.small_font {
+      font-size: 1.8rem; }
 
 .step_number {
   margin: 0 3.44vw;
