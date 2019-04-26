@@ -276,7 +276,8 @@ span {
       width: 0.52vw;
       height: 0.52vw;
       border-radius: 50%;
-      background-color: #0C4DA2; }
+      background-color: #0C4DA2;
+      cursor: pointer; }
   .slides input#slide_1:checked ~ .nav_dots label#slide_dot_1,
   .slides input#slide_2:checked ~ .nav_dots label#slide_dot_2,
   .slides input#slide_3:checked ~ .nav_dots label#slide_dot_3,
