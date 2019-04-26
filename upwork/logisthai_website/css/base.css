@@ -52,7 +52,7 @@ body {
           align-items: center; }
 
 h1 {
-  margin-bottom: 2.08vw;
+  margin-bottom: 1.25vw;
   font-size: 2.4rem;
   line-height: 3.7rem;
   font-weight: 600;
@@ -66,6 +66,13 @@ h2 {
   line-height: 3rem;
   font-weight: 600;
   color: #0A0A0A; }
+
+p {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0.75vw;
+          margin-block-end: 0.75vw;
+  line-height: 2.4rem; }
 
 label {
   font-weight: 700;
@@ -287,6 +294,9 @@ span {
     width: 0.84vw;
     height: 0.84vw; }
 
+.content {
+  padding-left: 3vw; }
+
 .header_main {
   width: 91.56vw;
   height: 4.17vw;
@@ -399,7 +409,7 @@ span {
     width: 100%; }
 
 .page_content {
-  padding: 6.09vw 3.125vw 0 11.98vw;
+  padding: 5vw 3.125vw 0 11.98vw;
   overflow-y: scroll; }
 
 .upload_data_block {
@@ -552,6 +562,35 @@ span {
     .slide_img.custom_img img {
       height: 100%;
       width: auto; }
+
+.diagram__item {
+  width: 17.19vw;
+  height: auto;
+  position: relative; }
+  .diagram__item.with_next_arrow::after {
+    width: 3.44vw;
+    height: 1.93vw;
+    content: "";
+    background-image: url("../images/content/right_arrow_icon.png");
+    background-size: cover;
+    top: 2vw;
+    left: 100%;
+    position: absolute; }
+  .diagram__item .item_icon {
+    width: auto;
+    height: 5.6vw;
+    margin-bottom: 2.08vw;
+    display: block; }
+    .diagram__item .item_icon img {
+      width: auto;
+      height: 100%;
+      margin: 0 auto;
+      display: block; }
+  .diagram__item .item_content {
+    width: 100%;
+    height: auto;
+    text-align: justify;
+    line-height: 2.4rem; }
 
 .main_sidebar {
   width: auto;
