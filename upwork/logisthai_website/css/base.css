@@ -305,6 +305,8 @@ ul.text_list {
   padding-left: 3vw;
   margin-bottom: 3vw;
   position: relative; }
+  .content.height_80 {
+    height: 80%; }
   .content__image {
     width: auto;
     height: auto; }
@@ -324,6 +326,22 @@ ul.text_list {
   .content__text {
     width: 45vw;
     height: auto; }
+  .content .left_part {
+    width: 35vw; }
+    .content .left_part.width_45vw {
+      width: 45vw; }
+  .content .right_part {
+    position: absolute;
+    bottom: 0;
+    right: 0; }
+    .content .right_part .content__image {
+      float: right; }
+      .content .right_part .content__image img {
+        width: 40vw;
+        height: auto; }
+      .content .right_part .content__image.width_37vw img {
+        width: 37vw;
+        padding-right: 2vw; }
 
 .header_main {
   width: 91.56vw;

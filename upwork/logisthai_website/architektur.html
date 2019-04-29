@@ -20,7 +20,7 @@
       <div class="container main_flex__nowrap flex__jcontent_between flex__align-items_center">
         <div class="left_part main_flex__nowrap flex__jcontent_center flex__align-items_center"><a class="header_logo" href="index.html"><img src="images/icons/header_logo.png" alt=" Logo"/></a></div>
         <!-- end of .left_part-->
-        <div class="right_part main_flex__nowrap main_flex__nowrap flex__jcontent_end flex__align-items_center">
+        <div class="right_part main_flex__nowrap flex__jcontent_end flex__align-items_center">
           <nav class="main_menu main_flex__nowrap flex__jcontent_center flex__align-items_center">
             <ul class="#{active} main_flex__nowrap flex__jcontent_between flex__align-items_center">
               <li class="main_item has_submenu">Logisth.AI
@@ -68,6 +68,31 @@
     </header>
     <div class="page_content">
       <h1>Architektur</h1>
+      <div class="content height_80 main_flex__nowrap">
+        <div class="left_part">
+          <p><strong>Front-End Processor:</strong></p>
+          <p>
+            Benutzerinterface mit Authentication, Entgegennahme der Belege. Nach Rechnungstrennung werden die Belege an das Logisth.AI Backend zur Bearbeitung weitergeleitet.
+            Das Frontend wird über den Fortschritt oder gegebenenfalls Fehler informiert
+          </p>
+          <p><strong>Logisth.AI Backend Engine</strong></p>
+          <p>Verarbeitet die übergebenen Belegdateien vom OCR Prozess bis zur Erstellung der Ergebnisse. Kommuniziert mit dem Schnittstellenserver auf Kundenseite. Die Ergebnisse werden in ein Queuing System für den Import gestellt</p>
+          <p><strong>Schnittstellen Server</strong></p>
+          <p>Dieser ist auf Kundenseite in dessen Infrastruktur installiert. Stellt der Logisth.AI Backend Engine und dem Front-End Prozessor Informationen zur Laufzeit zur Verfügung. So kann zu einer eingegebenen Kundennummer am Frontend ein Firmenname mit UID Nummer angezeigt werden oder das Backend Beleginformationen mit dem jeweiligen Kunden/Lieferantenstamm vergleichen.</p>
+          <p><strong>Import Service</strong></p>
+          <p>Übernimmt vom der Backend Engine die Resultate und übermittelt diese in die Buchhaltungssysteme</p>
+          <p><strong>Archiv Server (optional)</strong></p>
+          <p>
+            Dokumenten Up-und Download mit Authentifizierung und Suchfunktionen    
+            
+          </p>
+        </div>
+        <!-- end of .left_part-->
+        <div class="right_part">
+          <div class="content__image width_37vw"><img src="images/content/architecture_scheme.png" alt="Architecture Scheme Image"/></div>
+        </div>
+        <!-- end of .right_part-->
+      </div>
     </div>
     <sidebar class="main_sidebar">
       <nav class="sidebar_nav">
