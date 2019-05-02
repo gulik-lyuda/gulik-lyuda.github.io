@@ -67,6 +67,14 @@ h2 {
   font-weight: 600;
   color: #0A0A0A; }
 
+h3 {
+  margin-top: 0;
+  margin-bottom: 1.25vw;
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 600;
+  color: #0C4DA2; }
+
 p {
   -webkit-margin-before: 0;
           margin-block-start: 0;
@@ -217,6 +225,42 @@ ul.text_list {
     font-size: 5rem;
     color: #0C4DA2; }
 
+ul.jobs_list {
+  margin-top: 1.67vw; }
+  ul.jobs_list li {
+    margin-bottom: 1.25vw;
+    cursor: pointer; }
+    ul.jobs_list li a {
+      text-decoration: none;
+      color: #0A0A0A; }
+      ul.jobs_list li a:after {
+        height: 1.67vw;
+        width: 1.5vw;
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -2.08vw;
+        background-image: url("../images/icons/more_arrow.svg");
+        background-size: contain; }
+      ul.jobs_list li a:hover, ul.jobs_list li a:active {
+        text-decoration: underline;
+        color: #0C4DA2; }
+      ul.jobs_list li a:active:after {
+        -webkit-transform: rotate(180deg);
+                transform: rotate(180deg); }
+
+.vacancy_description {
+  width: 40vw; }
+  .vacancy_description__item {
+    padding: 2.08vw;
+    border: 1px solid #0C4DA2; }
+    .vacancy_description__item:not(:target) {
+      display: none; }
+    .vacancy_description__item:target {
+      display: block; }
+    .vacancy_description__item .text_list {
+      margin-bottom: 1.25vw; }
+
 .slides {
   width: 100%;
   height: auto;
@@ -261,7 +305,8 @@ ul.text_list {
       .slides .slide_container .right_part p {
         width: 40vw;
         margin-top: 0;
-        font-size: 2.2rem; }
+        font-size: 2.2rem;
+        line-height: 3.5rem; }
   .slides input:checked + .slide_container {
     opacity: 1;
     -webkit-transform: scale(1);
@@ -342,6 +387,19 @@ ul.text_list {
       .content .right_part .content__image.width_37vw img {
         width: 37vw;
         padding-right: 2vw; }
+
+.columns {
+  width: 100%;
+  height: auto; }
+  .columns .column {
+    width: 31%;
+    height: auto;
+    margin-top: 1.67vw; }
+    .columns .column .column_title {
+      margin-bottom: 1.25vw;
+      font-weight: 600;
+      font-size: 2rem;
+      line-height: 3rem; }
 
 .header_main {
   width: 91.56vw;
@@ -598,7 +656,7 @@ ul.text_list {
 .more_details_btn {
   width: 3.75vw;
   height: 4.06vw;
-  margin-bottom: 3.75vw;
+  margin-bottom: 2.08vw;
   float: right; }
   .more_details_btn svg {
     width: 100%;
@@ -609,7 +667,7 @@ ul.text_list {
   width: 100%;
   height: auto;
   position: absolute;
-  bottom: 7vw;
+  bottom: 8vw;
   right: 0; }
   .slide_img img {
     width: 100%;
@@ -751,7 +809,7 @@ ul.text_list {
     height: 100%; }
 
 .footer_main {
-  padding-top: 1.25vw;
+  padding-top: 1vw;
   padding-bottom: 2.08vw;
   position: absolute;
   right: 3.125vw;

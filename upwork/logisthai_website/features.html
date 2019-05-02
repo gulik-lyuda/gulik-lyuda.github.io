@@ -12,6 +12,8 @@
     <!-- Add vendor styles for normalization and using flex-->
     <link rel="stylesheet" href="css/normalize.css"/>
     <link rel="stylesheet" href="css/general-flex-css.css"/>
+    <!-- Add styles for player library-->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.5.4/plyr.css"/>
     <!-- Add our own styles-->
     <link rel="stylesheet" href="css/base.css"/>
   </head>
@@ -56,6 +58,7 @@
               <li class="main_item has_submenu">Company
                 <ul class="submenu add_flex__nowrap flex__jcontent_start flex__align-items_start">
                   <li><a href="about.html">About Über XION</a></li>
+                  <li><a href="jobs.html">Jobs@Logisth.AI</a></li>
                 </ul>
               </li>
             </ul>
@@ -66,9 +69,68 @@
       </div>
       <!-- end of .container-->
     </header>
-    <div class="page_content">
+    <div class="page_content with_down_arrow">
       <h1>Features</h1>
-      <div class="content"></div>
+      <div class="content height_80">
+        <p>Ready to Use Cloud Lösung, laufende Produkterweiterung und Verbesserung</p>
+        <div class="columns main_flex__nowrap flex__jcontent_between flex__align-items_start">
+          <div class="column">
+            <div class="column_title">Benutzeroberfläche</div>
+            <div class="column_content">
+              <ul class="text_list"> 
+                <li>Mitarbeiter und Rechteverwaltung</li>
+                <li>Auch für Kunden – Belegportal als Alternative zu Dropbox & Co – incl. Service Belegsuche (bei Option Archiv)</li>
+                <li>Belegupload – 1 Beleg pro Datei oder beliebig viele Belege in einer Datei – beliebig viele Dateien</li>
+                <li>Preview der Belege</li>
+                <li>Belegtrennung, Austausch, Split, Löschen von Seiten</li>
+                <li>Vorschlag nächste Belegnummer für Kassasymbole</li>
+                <li>Journalstatistik mit Belegerkennungsrate</li>
+                <li>Auswertung Journal manuell verbuchter Belege</li>
+                <li>Option Barcodes zur Belegtrennung</li>
+                <li>Leerseitenerkennung</li>
+              </ul>
+            </div>
+          </div>
+          <div class="column">
+            <div class="column_title">Logisth.AI Belegerkennung</div>
+            <div class="column_content">
+              <ul class="text_list"> 
+                <li>Hohe Verarbeitungsgeschwindigkeit (ca. 1 Sekunde pro Beleg)</li>
+                <li>Erkennung von Lieferanten/Kunden – Abgleich mit dem Kundenstamm</li>
+                <li>QR/Barcode Erkennung und Auswertung</li>
+                <li>Prüfung von UID Nummern (Prüfsumme und Gültigkeit)</li>
+                <li>IBAN/BIC Validierung</li>
+                <li>Währungen mit automatischer Umrechnung</li>
+                <li>Erkennung von Gutschriften (Vorzeichenumkehr)</li>
+                <li>Ausgangsrechnungserkennung bei Kassa</li>
+                <li>Erkennung gültiger Mehrwertsteuersätze</li>
+                <li>Reverse Charge</li>
+                <li>Lernen von Konten und automatische Anlieferung auch bei Kassabelegen</li>
+                <li>Unterstützung aller gängigen Datumsformate</li>
+                <li>Markierung der gefundenen Daten zur einfachen Kontrolle (für Ausdruck des Originalbeleges ausblendbar – Originalbeleg wird nicht verändert)</li>
+                <li>Skonto – bei Kassa automatisch abgezogen</li>
+                <li>Erkennung beliebiger Rechnungsformate ohne Anlernen</li>
+                <li>Spezielle Rechnungsformate mit Auswertung (Warengruppen bei Metro, Lekkerland) bzw. Gehaltsformulare und Bankauszüge</li>
+                <li>Automatische Drehen und Ausrichten von Belegen</li>
+              </ul>
+            </div>
+          </div>
+          <div class="column">
+            <div class="column_title">Überleitung an die Buchhaltung</div>
+            <div class="column_content">
+              <ul class="text_list"> 
+                <li>Automatisch ohne manuellen Eingriff (Queuing System)</li>
+                <li>Benachrichtigung per Email</li>
+                <li>Import der markierten PDF Belege oder Unterstützung eines externen Archives</li>
+                <li>Übergabe inklusive Steuercodes</li>
+                <li>Berücksichtigung von Perioden (Monat/Quartal), Ust Befreiung (Anpassung der Steuercodes, Mwst Sätze und Belegdatum)</li>
+                <li>Einzel oder Splitbuchungen</li>
+                <li>Ampelsystem für Belegkontrolle</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <sidebar class="main_sidebar">
       <nav class="sidebar_nav">
@@ -93,6 +155,7 @@
     </sidebar>
     <footer class="footer_main container main_flex__nowrap flex__jcontent_end flex__align-items_center">   <a class="footer_link" href="#">Contact Us</a></footer>
     <!-- Add all our scripts -->
+    <script src="https://cdn.plyr.io/3.5.4/plyr.polyfilled.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
