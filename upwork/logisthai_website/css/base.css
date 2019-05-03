@@ -450,6 +450,32 @@ ul.jobs_list {
   max-width: 40vw;
   -o-object-fit: cover;
      object-fit: cover; }
+  .video_block.width_25vw {
+    max-width: 25vw;
+    margin: 0 auto 0.84vw;
+    position: relative; }
+    .video_block.width_25vw:before {
+      width: 3.125vw;
+      height: 3.125vw;
+      content: "";
+      position: absolute;
+      left: -4.17vw;
+      top: 10%;
+      z-index: 100;
+      background-image: url("../images/icons/right-arrow-angle.png");
+      background-size: 100% 100%; }
+    .video_block.width_25vw:after {
+      width: 3.125vw;
+      height: 3.125vw;
+      content: "";
+      position: absolute;
+      right: -4.17vw;
+      bottom: 10%;
+      z-index: 100;
+      background-image: url("../images/icons/right-arrow-angle.png");
+      background-size: 100% 100%;
+      -webkit-transform: rotate(90deg) scale(1, -1);
+              transform: rotate(90deg) scale(1, -1); }
 
 .header_main {
   width: 91.56vw;
@@ -573,7 +599,6 @@ ul.jobs_list {
     position: absolute;
     left: 12vw;
     bottom: 2vw;
-    z-index: 20;
     z-index: 100;
     background-image: url("../images/icons/down_arrow.png");
     background-size: 100% 100%; }
@@ -594,13 +619,30 @@ ul.jobs_list {
     .upload_data_block .uploaded_files__item {
       width: 50%;
       margin-right: 2vw; }
-  .upload_data_block .results_thumbnails__item {
+
+.results_thumbnails__item {
+  width: 6.88vw;
+  height: 9.69vw;
+  margin-right: 1vw; }
+  .results_thumbnails__item img {
+    width: 100%;
+    height: 100%; }
+
+.inputs_thumbnails,
+.outputs_thumbnails {
+  margin-bottom: 0.52vw; }
+  .inputs_thumbnails__item,
+  .outputs_thumbnails__item {
     width: 6.88vw;
     height: 9.69vw;
     margin-right: 1vw; }
-    .upload_data_block .results_thumbnails__item img {
+    .inputs_thumbnails__item img,
+    .outputs_thumbnails__item img {
       width: 100%;
       height: 100%; }
+
+.outputs_thumbnails {
+  float: right; }
 
 .price_tables {
   width: 33.44vw;
