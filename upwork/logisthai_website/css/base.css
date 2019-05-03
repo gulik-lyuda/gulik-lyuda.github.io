@@ -451,7 +451,8 @@ ul.jobs_list {
   -o-object-fit: cover;
      object-fit: cover; }
   .video_block.width_25vw {
-    max-width: 25vw;
+    max-width: 35vw;
+    width: 25vw;
     margin: 0 auto 0.84vw;
     position: relative; }
     .video_block.width_25vw:before {
@@ -659,9 +660,6 @@ ul.jobs_list {
     .outputs_thumbnails__item img {
       width: 100%;
       height: 100%; }
-
-.outputs_thumbnails {
-  float: right; }
 
 .price_tables {
   width: 33.44vw;
