@@ -477,6 +477,25 @@ ul.jobs_list {
       -webkit-transform: rotate(90deg) scale(1, -1);
               transform: rotate(90deg) scale(1, -1); }
 
+.partner_logo {
+  width: auto;
+  height: 5vw;
+  margin-bottom: 2.2vw; }
+  .partner_logo.padding_1 {
+    padding-left: 20vw; }
+  .partner_logo.padding_2 {
+    padding-left: 30vw; }
+  .partner_logo.padding_3 {
+    padding-left: 45vw; }
+  .partner_logo.padding_4 {
+    padding-left: 60vw; }
+  .partner_logo img {
+    width: auto;
+    height: 100%; }
+
+.disabled {
+  display: none; }
+
 .header_main {
   width: 91.56vw;
   height: 4.17vw;
