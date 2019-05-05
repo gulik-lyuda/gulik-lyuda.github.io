@@ -19,13 +19,18 @@
   </head>
   <body>
     <header class="header_main">
-      <div class="container main_flex__nowrap flex__jcontent_between flex__align-items_center">
+      <div class="container main_flex__nowrap flex__jcontent_between flex__align-items_start">
         <div class="left_part main_flex__nowrap flex__jcontent_center flex__align-items_center"><a class="header_logo" href="index.html"><img src="images/icons/header_logo.png" alt=" Logo"/></a></div>
         <!-- end of .left_part-->
-        <div class="right_part main_flex__nowrap flex__jcontent_end flex__align-items_center">
-          <nav class="main_menu main_flex__nowrap flex__jcontent_center flex__align-items_center">
-            <ul class="#{active} main_flex__nowrap flex__jcontent_between flex__align-items_center">
-              <li class="main_item has_submenu">Logisth.AI
+        <div class="right_part main_flex__nowrap flex__jcontent_end flex__align-items_start">
+          <input class="menu_btn" type="checkbox" id="menu_btn"/>
+          <label class="menu_icon" for="menu_btn"><span class="navicon"></span></label>
+          <nav class="main_menu">
+            <!--.main_flex__nowrap.flex__jcontent_center.flex__align-items_center-->
+            <ul class="#{active} main_flex__nowrap flex__jcontent_between flex__align-items_">
+              <li class="main_item has_submenu"> <a href="#">Logisth.AI
+                  <label class="drop_icon" for="sm_logisth_ai"></label></a>
+                <input type="radio" id="sm_logisth_ai" name="open_submenu"/>
                 <ul class="submenu logisth_ai add_flex__nowrap flex__jcontent_start flex__align-items_start">
                   <li><a href="was_ist_logisthai.html">Was ist Logisth.AI</a></li>
                   <li><a href="history.html">Geschichte (History)</a></li>
@@ -36,7 +41,9 @@
                   <li><a href="preise.html">Preise</a></li>
                 </ul>
               </li>
-              <li class="main_item has_submenu">Experience.IT
+              <li class="main_item has_submenu"> <a href="#">Experience.IT
+                  <label class="drop_icon" for="sm_experience_it"></label></a>
+                <input type="radio" id="sm_experience_it" name="open_submenu"/>
                 <ul class="submenu add_flex__nowrap flex__jcontent_start flex__align-items_start">
                   <li><a href="in_action.html">In Action</a></li>
                   <li class="disabled"><a href="test_logisthai.html">Test Logisth.AI</a></li>
@@ -47,7 +54,9 @@
                   <li><a href="coming_soon.html">Coming Soon</a></li>
                 </ul>
               </li>
-              <li class="main_item has_submenu">Branchen
+              <li class="main_item has_submenu"> <a href="#">Branchen
+                  <label class="drop_icon" for="sm_branchen"></label></a>
+                <input type="radio" id="sm_branchen" name="open_submenu"/>
                 <ul class="submenu add_flex__nowrap flex__jcontent_start flex__align-items_start">
                   <li><a href="steuerberater.html">Steuerberater</a></li>
                   <li><a href="finanzdienstleister.html">Finanzdienstleister</a></li>
@@ -55,7 +64,9 @@
                 </ul>
               </li>
               <li class="main_item"><a href="referenzen.html">Referenzen</a></li>
-              <li class="main_item has_submenu">Company
+              <li class="main_item has_submenu"> <a href="#">Company
+                  <label class="drop_icon" for="sm_company"></label></a>
+                <input type="radio" id="sm_company" name="open_submenu"/>
                 <ul class="submenu add_flex__nowrap flex__jcontent_start flex__align-items_start">
                   <li class="disabled"><a href="about.html">About Über XION</a></li>
                   <li><a href="jobs.html">Jobs@Logisth.AI</a></li>
